@@ -1,0 +1,16 @@
+catalog:
+  - url: https://www.techleads.club/c/fundamentos-do-desenvolvimento-de-software-enterprise
+    title: Fundamentos do Desenvolvimento de Software Enterprise
+    author: Waldemar Neto
+    type: course
+    is_paid: true
+    tags:
+      - Excelência Técnica
+      - Arquitetura e Design
+    levels:
+      - intermediate
+      - advanced
+    career_bands:
+      - mid
+      - staff
+    language: pt_br
