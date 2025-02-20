@@ -140,7 +140,7 @@ Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunida
 | [Aprenda de vez SLI, SLO e SLA (por Fabricio Veronez)](https://www.youtube.com/watch?v=JQTaWPEE80w) | Excelência Técnica, Site Reliability Engineering | intermediate | ✅ |
 | [Risk and Error Budgets (class SRE implements DevOps) (por Fabricio Veronez)](https://www.youtube.com/watch?v=y2ILKr8kCJU) | Excelência Técnica, Site Reliability Engineering | intermediate | ✅ |
 | [O Que é Tracing Distribuído e Por Que Você Precisa Usar Agora (por Fabricio Veronez)](https://www.youtube.com/watch?v=gMPvWXesHO4) | Excelência Técnica, Site Reliability Engineering | intermediate | ✅ |
-| [Monitoramento de aplicações por onde começar ? | 4 golden signals do SRE (por Fabricio Veronez)](https://www.youtube.com/watch?v=ahy6PDWoVHM) | Excelência Técnica, Site Reliability Engineering | intermediate | ✅ |
+| [Monitoramento de aplicações por onde começar ? - 4 golden signals do SRE (por Fabricio Veronez)](https://www.youtube.com/watch?v=ahy6PDWoVHM) | Excelência Técnica, Site Reliability Engineering | intermediate | ✅ |
 | [Terraform para Desenvolvedores: Como dominar a Cloud usando código
  (por Fabricio Veronez)](https://www.youtube.com/watch?v=UUSbQPyS5xs) | Excelência Técnica, Site Reliability Engineering | intermediate | ✅ |
 | [Introdução a observabilidade com OpenTelemetry (por Rodrigo Klaes)](https://www.techleads.club/c/aulas-da-comunidade/aula-introducao-a-observabilidade-com-opentelemetry) | Excelência Técnica, Site Reliability Engineering | intermediate | ❌ |

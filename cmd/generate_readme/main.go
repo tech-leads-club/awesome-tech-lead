@@ -240,10 +240,15 @@ func formatCatalogItems(items []catalog.CatalogItem) []FormattedItem {
 
 func getTitle(item catalog.CatalogItem) string {
 	if item.Author != nil {
-		return fmt.Sprintf("%s (por %s)", item.Title, *item.Author)
+		return fmt.Sprintf("%s (por %s)", formatTitle((item.Title)), *item.Author)
 	}
 
-	return item.Title
+	return formatTitle(item.Title)
+}
+
+func formatTitle(title string) string {
+	// Prevent the pipe from breaking the markdown format.
+	return strings.ReplaceAll(title, "|", "-")
 }
 
 func safeJoin(slice []string, sep string) string {
