@@ -649,22 +649,6 @@ catalog:
         - staff
         - principal
       language: en_us
-    - url: https://www.techleads.club/c/fundamentos-do-desenvolvimento-de-software-enterprise
-      title: Fundamentos do Desenvolvimento de Software Enterprise
-      author: Waldemar Neto
-      type: course
-      tags:
-        - Excelência Técnica
-        - Site Reliability Engineering
-      is_paid: true
-      level: advanced
-      career_bands:
-        - staff
-        - mid
-        - senior
-        - tl
-        - principal
-      language: pt_br
     - url: https://www.amazon.com.br/Site-Reliability-Engineering-Production-Systems-ebook/dp/B01DCPXKZ6/ref=tmm_kin_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.qI7Oz3BO-9LLMjJ4XMORPb6OEA0x1uakatS7uikyJyex96BfP9nm77bDQhWj3Rw2jSmH_Y9AnHjIQHhIffmIFoYVLN9oXUo7m9YkLfPEhSc3e9ulmfRPvt5wUDWdkkM7.2MiKPMrXDUL2s1BDxb4eBFBQ3ZEDGdVaOOYHxVIaNhY&qid=1737233771&sr=8-1
       title: 'Site Reliability Engineering: How Google Runs Production Systems - Google SRE Team'
       author: 'Niall Richard Murphy, Betsy Beyer, Chris Jones, Jennifer Petoff '
@@ -1159,22 +1143,6 @@ catalog:
         - senior
         - tl
         - staff
-        - principal
-      language: pt_br
-    - url: https://www.techleads.club/c/fundamentos-do-desenvolvimento-de-software-enterprise
-      title: Fundamentos do Desenvolvimento de Software Enterprise
-      author: Waldemar Neto
-      type: course
-      tags:
-        - Excelência Técnica
-        - Arquitetura e Design
-      is_paid: true
-      level: advanced
-      career_bands:
-        - staff
-        - mid
-        - senior
-        - tl
         - principal
       language: pt_br
     - url: https://www.techleads.club/c/eventos-da-comunidade/live-design-e-arquitetura-de-software-na-pratica-com-rodrigo-branas

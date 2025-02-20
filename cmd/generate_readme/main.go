@@ -12,6 +12,7 @@ import (
 
 type FormattedItem struct {
 	Title  string
+	Author *string
 	Type   string
 	Tags   string
 	Level  string
@@ -129,70 +130,70 @@ Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunida
 {{if .Books}}
 ## 📚 Livros 
 
-| Título                      | Tags  | Nível | Pago? | 
-|-----------------------------|-------|-------|-------|
+| Título                                                          | Tags  | Nível | Pago? | 
+|-----------------------------------------------------------------|-------|-------|-------|
 {{- range .Books }}
-| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
 {{- end }}
 {{end}}
 
 {{if .Articles}}
 ## 📰 Artigos
 
-| Título                      | Tags  | Nível | Pago? | 
-|-----------------------------|-------|-------|-------|
+| Título                                                                    | Tags  | Nível | Pago? | 
+|---------------------------------------------------------------------------|-------|--------|-------|
 {{- range .Articles }}
-| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
 {{- end }}
 {{end}}
 
 {{if .Courses}}
 ## 🎓 Cursos
 
-| Título                      | Tags  | Nível | Pago? | 
-|-----------------------------|-------|-------|-------|
+| Título                                                                    | Tags  | Nível | Pago? | 
+|---------------------------------------------------------------------------|-------|--------|-------|
 {{- range .Courses }}
-| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
 {{- end }}
 {{end}}
 
 {{if .Videos}}
 ## 🎥 Vídeos
 
-| Título                      | Tags  | Nível | Pago? | 
-|-----------------------------|-------|-------|-------|
+| Título                                                                    | Tags  | Nível | Pago? | 
+|---------------------------------------------------------------------------|-------|--------|-------|
 {{- range .Videos }}
-| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
 {{- end }}
 {{end}}
 
 {{if .Podcasts}}
 ## 🎙️ Podcasts
 
-| Título                      | Tags  | Nível | Pago? | 
-|-----------------------------|-------|-------|-------|
+| Título                                                                    | Tags  | Nível | Pago? | 
+|---------------------------------------------------------------------------|-------|--------|-------|
 {{- range .Podcasts }}
-| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
 {{- end }}
 {{end}}
 
 {{if .Feeds}}
 ## 📡 Feeds
 
-| Título                      | Tags  | Nível | Pago? | 
-|-----------------------------|-------|-------|-------|
+| Título                                                                    | Tags  | Nível | Pago? | 
+|---------------------------------------------------------------------------|-------|--------|-------|
 {{- range .Feeds }}
-| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
 {{- end }}
 {{end}}
 
 {{if .Roadmaps}}
 ## 🗺️ Roadmaps
 
-| Título                      | Tags  | Nível | Pago? | 
-|-----------------------------|-------|-------|-------|
+| Título                                                                    | Tags  | Nível | Pago? | 
+|---------------------------------------------------------------------------|-------|--------|-------|
 {{- range .Roadmaps }}
-| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
 {{- end }}
 {{end}}
 `
@@ -227,6 +228,7 @@ func formatCatalogItems(items []catalog.CatalogItem) []FormattedItem {
 	for _, item := range items {
 		formattedItems = append(formattedItems, FormattedItem{
 			Title:  getTitle(item),
+			Author: item.Author,
 			Type:   translate(item.Type),
 			Tags:   safeJoin(item.Tags, ", "),
 			Level:  item.Level,
@@ -239,16 +241,8 @@ func formatCatalogItems(items []catalog.CatalogItem) []FormattedItem {
 }
 
 func getTitle(item catalog.CatalogItem) string {
-	if item.Author != nil {
-		return fmt.Sprintf("%s (por %s)", formatTitle((item.Title)), *item.Author)
-	}
-
-	return formatTitle(item.Title)
-}
-
-func formatTitle(title string) string {
 	// Prevent the pipe from breaking the markdown format.
-	return strings.ReplaceAll(title, "|", "-")
+	return strings.ReplaceAll(item.Title, "|", "-")
 }
 
 func safeJoin(slice []string, sep string) string {
