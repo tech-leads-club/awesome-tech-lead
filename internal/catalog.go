@@ -13,7 +13,7 @@ type CatalogItem struct {
 	Type        string   `yaml:"type"`
 	Tags        []string `yaml:"tags"`
 	IsPaid      bool     `yaml:"is_paid"`
-	Levels      []string `yaml:"levels"`
+	Level       string   `yaml:"level"`
 	CareerBands []string `yaml:"career_bands"`
 	Language    string   `yaml:"language"`
 	Duration    *string  `yaml:"duration,omitempty"`
@@ -39,13 +39,13 @@ func ParseCatalog(data []byte) ([]CatalogItem, error) {
 	return catalog.Catalog, nil
 }
 
-// validateCatalogItem ensures a CatalogItem meets requirements.
 func validateCatalogItem(item CatalogItem) error {
 	allowedTypes := map[string]bool{
 		"article": true,
 		"book":    true,
 		"course":  true,
 		"feed":    true,
+		"podcast": true,
 		"roadmap": true,
 		"video":   true,
 	}

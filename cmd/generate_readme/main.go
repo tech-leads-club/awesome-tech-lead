@@ -14,7 +14,7 @@ type FormattedItem struct {
 	Title  string
 	Type   string
 	Tags   string
-	Levels string
+	Level  string
 	IsPaid string
 	URL    string
 }
@@ -91,7 +91,7 @@ Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunida
 | Título                      | Tipo | Tags  | Nível | Pago? | 
 |-----------------------------|------|-------|-------|-------|
 {{- range . }}
-| [{{ .Title }}]({{ .URL }}) | {{ .Type }} | {{ .Tags }} | {{ .Levels }} | {{ .IsPaid }} | 
+| [{{ .Title }}]({{ .URL }}) | {{ .Type }} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
 {{- end }}
 `
 
@@ -116,7 +116,7 @@ func formatCatalogItems(items []catalog.CatalogItem) []FormattedItem {
 			Title:  getTitle(item),
 			Type:   translate(item.Type),
 			Tags:   safeJoin(item.Tags, ", "),
-			Levels: getLevels(item),
+			Level:  item.Level,
 			IsPaid: getFreeBadge(item.IsPaid),
 			URL:    item.URL,
 		})
@@ -131,16 +131,6 @@ func getTitle(item catalog.CatalogItem) string {
 	}
 
 	return item.Title
-}
-
-func getLevels(item catalog.CatalogItem) string {
-	var levels []string
-
-	for _, level := range item.Levels {
-		levels = append(levels, translate(level))
-	}
-
-	return safeJoin(levels, ", ")
 }
 
 func safeJoin(slice []string, sep string) string {
