@@ -72,8 +72,48 @@ func translate(key string) string {
 	return key
 }
 
+type FilterItemFn func(catalog.CatalogItem) bool
+
+func filterItem(items []catalog.CatalogItem, predicate FilterItemFn) []catalog.CatalogItem {
+	filtered := make([]catalog.CatalogItem, 0)
+
+	for _, item := range items {
+		if predicate(item) {
+			filtered = append(filtered, item)
+		}
+	}
+
+	return filtered
+}
+
 func GenerateREADME(items []catalog.CatalogItem) (string, error) {
-	formattedItems := formatCatalogItems(items)
+	books := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
+		return item.Type == "book"
+	}))
+
+	articles := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
+		return item.Type == "article"
+	}))
+
+	courses := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
+		return item.Type == "course"
+	}))
+
+	videos := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
+		return item.Type == "video"
+	}))
+
+	podcasts := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
+		return item.Type == "podcast"
+	}))
+
+	feeds := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
+		return item.Type == "feed"
+	}))
+
+	roadmaps := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
+		return item.Type == "roadmaps"
+	}))
 
 	const readmeTemplate = `
 # Awesome Tech Lead [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
@@ -86,13 +126,75 @@ Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunida
 - Entrega de Valor
 - Liderança e Inspiração
 
-## Conteúdo 
+{{if .Books}}
+## 📚 Livros 
 
-| Título                      | Tipo | Tags  | Nível | Pago? | 
-|-----------------------------|------|-------|-------|-------|
-{{- range . }}
-| [{{ .Title }}]({{ .URL }}) | {{ .Type }} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+| Título                      | Tags  | Nível | Pago? | 
+|-----------------------------|-------|-------|-------|
+{{- range .Books }}
+| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
 {{- end }}
+{{end}}
+
+{{if .Articles}}
+## 📰 Artigos
+
+| Título                      | Tags  | Nível | Pago? | 
+|-----------------------------|-------|-------|-------|
+{{- range .Articles }}
+| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+{{- end }}
+{{end}}
+
+{{if .Courses}}
+## 🎓 Cursos
+
+| Título                      | Tags  | Nível | Pago? | 
+|-----------------------------|-------|-------|-------|
+{{- range .Courses }}
+| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+{{- end }}
+{{end}}
+
+{{if .Videos}}
+## 🎥 Vídeos
+
+| Título                      | Tags  | Nível | Pago? | 
+|-----------------------------|-------|-------|-------|
+{{- range .Videos }}
+| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+{{- end }}
+{{end}}
+
+{{if .Podcasts}}
+## 🎙️ Podcasts
+
+| Título                      | Tags  | Nível | Pago? | 
+|-----------------------------|-------|-------|-------|
+{{- range .Podcasts }}
+| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+{{- end }}
+{{end}}
+
+{{if .Feeds}}
+## 📡 Feeds
+
+| Título                      | Tags  | Nível | Pago? | 
+|-----------------------------|-------|-------|-------|
+{{- range .Feeds }}
+| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+{{- end }}
+{{end}}
+
+{{if .Roadmaps}}
+## 🗺️ Roadmaps
+
+| Título                      | Tags  | Nível | Pago? | 
+|-----------------------------|-------|-------|-------|
+{{- range .Roadmaps }}
+| [{{ .Title }}]({{ .URL }}) | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+{{- end }}
+{{end}}
 `
 
 	tmpl, err := template.New("readme").Parse(readmeTemplate)
@@ -101,7 +203,18 @@ Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunida
 	}
 
 	var buf bytes.Buffer
-	if err := tmpl.Execute(&buf, formattedItems); err != nil {
+
+	templateData := map[string][]FormattedItem{
+		"Books":    books,
+		"Articles": articles,
+		"Courses":  courses,
+		"Videos":   videos,
+		"Podcasts": podcasts,
+		"Feeds":    feeds,
+		"Roadmaps": roadmaps,
+	}
+
+	if err := tmpl.Execute(&buf, templateData); err != nil {
 		return "", err
 	}
 

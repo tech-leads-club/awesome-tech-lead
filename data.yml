@@ -512,7 +512,7 @@ catalog:
         - tl
         - staff
         - principal
-      language: ""
+      language: en_us
     - url: https://www.goodreads.com/book/show/15014.Crucial_Conversations
       title: 'Crucial Conversations: Tools for Talking When Stakes are High'
       author: Kerry Patterson, Stephen R. Covey, Joseph Grenny, Ron McMillan, Al Switzler
@@ -524,7 +524,7 @@ catalog:
       career_bands:
         - senior
         - tl
-      language: ""
+      language: en_us
     - url: https://www.goodreads.com/book/show/6452796-drive
       title: 'Drive: The Surprising Truth About What Motivates Us'
       author: Daniel H. Pink
@@ -538,7 +538,7 @@ catalog:
         - tl
         - staff
         - principal
-      language: ""
+      language: en_us
     - url: https://www.goodreads.com/book/show/27537.Working_with_Emotional_Intelligence
       title: Working with Emotional Intelligence
       author: Daniel Goleman
@@ -552,7 +552,7 @@ catalog:
         - tl
         - staff
         - principal
-      language: ""
+      language: en_us
     - url: https://www.goodreads.com/book/show/21343.The_Five_Dysfunctions_of_a_Team
       title: 'The Five Dysfunctions of a Team: A Leadership Fable'
       author: Patrick Lencioni
@@ -566,7 +566,7 @@ catalog:
         - tl
         - staff
         - principal
-      language: ""
+      language: en_us
     - url: https://www.goodreads.com/book/show/387190.Test_Driven_Development
       title: 'Test-Driven Development: By Example'
       author: Kent Beck
@@ -579,7 +579,7 @@ catalog:
       career_bands:
         - junior
         - mid
-      language: ""
+      language: en_us
     - url: https://www.goodreads.com/book/show/31183020-99-bottles-of-oop
       title: 99 Bottles of OOP
       author: Sandi Metz, Katrina Owen
@@ -592,7 +592,7 @@ catalog:
       career_bands:
         - junior
         - mid
-      language: ""
+      language: en_us
     - url: https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer
       title: 'The Pragmatic Programmer: From Journeyman to Master'
       author: Dave Thomas, Andy Hunt
@@ -605,7 +605,7 @@ catalog:
         - junior
         - mid
         - senior
-      language: ""
+      language: en_us
     - url: https://martinfowler.com/articles/on-pair-programming.html
       title: On Pair Programming
       author: Birgitta Böckeler, Nina Siessegger
@@ -727,7 +727,7 @@ catalog:
         - staff
         - principal
       language: pt_br
-      duration: 62h
+      duration: "3720"
     - url: https://www.amazon.com.br/Site-Reliability-Workbook-Betsy-Beyer/dp/1492029505
       title: 'The Site Reliability Workbook: Practical Ways to Implement SRE'
       author: Betsy Beyer, Niall Richard Murphy, David K. Rensin, Kent Kawahara
@@ -757,7 +757,7 @@ catalog:
         - staff
         - principal
       language: pt_br
-      duration: 5h
+      duration: "300"
     - url: https://www.atlassian.com/br/incident-management/get-the-handbook
       title: Manual de incidentes da Atlassian
       author: Atlassian
@@ -1062,7 +1062,7 @@ catalog:
         - staff
         - principal
       language: pt_br
-      duration: 120h
+      duration: "7200"
     - url: https://www.techleads.club/c/aulas-semanais/aula-arquitetura-assincrona-e-diferenca-entre-event-broker-e-message-broker
       title: Arquitetura assíncrona e diferença entre Event Broker e Message Broker
       author: Waldemar Neto
@@ -1209,7 +1209,7 @@ catalog:
         - tl
         - principal
       language: pt_br
-    - url: ""
+    - url: https://www.youtube.com/watch?v=_lVf836ZJ4o
       title: Arquiteturas Modulares em Go e Node.js - Elton Minetto e Waldemar Neto
       author: Waldemar Neto, Elton Minetto
       type: podcast
@@ -1465,7 +1465,7 @@ catalog:
         - Arquitetura e Design
         - Impacto no Negócio
         - Abrangência de Impacto
-      is_paid: false
+      is_paid: true
       level: intermediate
       career_bands:
         - senior
@@ -1685,8 +1685,7 @@ catalog:
         - principal
       language: pt_br
     - url: https://youtu.be/t4o1tOV3q78?si=dhSqzGGnAg3-S4yq
-      title: |
-        DVC 13 - Arquitetura de Software com Rodrigo Branas e Elton Minetto
+      title: DVC 13 - Arquitetura de Software com Rodrigo Branas e Elton Minetto
       author: Waldemar Neto, Rodrigo Branas e Elton Minetto
       type: video
       tags:
@@ -1727,6 +1726,195 @@ catalog:
         - Excelência Técnica
         - Arquitetura e Design
       is_paid: false
+      level: advanced
+      career_bands:
+        - senior
+        - tl
+        - staff
+        - principal
+      language: en_us
+    - url: https://www.goodreads.com/book/show/35747076-accelerate
+      title: 'Accelerate: Building and Scaling High Performing Technology Organizations'
+      author: Nicole Forsgren, Jez Humble, Gene Kim
+      type: book
+      tags:
+        - Excelência Técnica
+        - Liderança e Inspiração
+        - Entrega de Valor
+        - Site Reliability Engineering
+      is_paid: true
+      level: advanced
+      career_bands:
+        - senior
+        - tl
+        - staff
+        - principal
+      language: en_us
+    - url: https://www.goodreads.com/book/show/44135420-team-topologies
+      title: 'Team Topologies: Organizing Business and Technology Teams for Fast Flow'
+      author: Matthew Skelton, Manuel Pais
+      type: book
+      tags:
+        - Liderança e Inspiração
+      is_paid: true
+      level: advanced
+      career_bands:
+        - senior
+        - tl
+        - staff
+        - principal
+      language: en_us
+    - url: https://www.goodreads.com/book/show/26083308-the-devops-handbook
+      title: 'The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations'
+      author: Gene Kim, Patrick Debois, John Willis, Jez Humble
+      type: book
+      tags:
+        - Excelência Técnica
+        - Site Reliability Engineering
+        - Qualidade
+      is_paid: true
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+        - tl
+        - staff
+      language: en_us
+    - url: https://press.stripe.com/scaling-people
+      title: Scaling People
+      author: Claire Hughes Johnson
+      type: book
+      tags:
+        - Liderança e Inspiração
+        - Carreira
+        - Gestão
+        - Abrangência de Impacto
+        - Impacto no Negócio
+      is_paid: true
+      level: intermediate
+      career_bands:
+        - staff
+        - principal
+      language: en_us
+    - url: https://press.stripe.com/the-art-of-doing-science-and-engineering
+      title: The Art of Doing Science and Engineering
+      author: Richard W. Hamming
+      type: book
+      tags:
+        - Excelência Técnica
+      is_paid: true
+      level: advanced
+      career_bands:
+        - principal
+        - staff
+        - senior
+      language: en_us
+    - url: https://press.stripe.com/an-elegant-puzzle
+      title: 'An Elegant Puzzle: Systems of Engineering Management'
+      author: Will Larson
+      type: book
+      tags:
+        - Liderança e Inspiração
+        - Gestão
+        - Carreira
+        - Impacto no Negócio
+      is_paid: true
+      level: intermediate
+      career_bands:
+        - junior
+        - mid
+        - senior
+        - tl
+        - staff
+        - principal
+      language: en_us
+    - url: https://www.amazon.com/Writing-Well-Classic-Guide-Nonfiction/dp/0060891548
+      title: 'On Writing Well: The Classic Guide to Writing Nonfiction '
+      author: 'William Zinsser '
+      type: book
+      tags:
+        - Excelência Técnica
+        - Qualidade
+        - Abrangência de Impacto
+        - Impacto no Negócio
+      is_paid: true
+      level: beginner
+      career_bands:
+        - junior
+        - mid
+        - senior
+        - tl
+        - staff
+        - principal
+      language: en_us
+    - url: https://www.amazon.com/Pragmatic-Thinking-Learning-Refactor-Programmers/dp/1934356050
+      title: 'Pragmatic Thinking and Learning: Refactor Your Wetware'
+      author: 'Andy Hunt '
+      type: book
+      tags:
+        - Excelência Técnica
+      is_paid: true
+      level: beginner
+      career_bands:
+        - junior
+        - mid
+        - senior
+        - tl
+        - staff
+        - principal
+      language: en_us
+    - url: https://www.goodreads.com/book/show/17948832-making-reliable-distributed-systems-in-the-presence-of-software-errors
+      title: Making Reliable Distributed Systems in the Presence of Software Errors
+      author: Joe Armstrong
+      type: book
+      tags:
+        - Site Reliability Engineering
+        - Excelência Técnica
+      is_paid: true
+      level: advanced
+      career_bands:
+        - junior
+        - mid
+        - senior
+        - tl
+        - staff
+        - principal
+      language: en_us
+    - url: https://www.amazon.com/Database-Internals-Deep-Distributed-Systems/dp/1492040347
+      title: 'Database Internals: A Deep Dive into How Distributed Data Systems Work'
+      author: Alex Petrov
+      type: book
+      tags:
+        - Excelência Técnica
+      is_paid: true
+      level: advanced
+      career_bands:
+        - tl
+        - staff
+        - principal
+      language: en_us
+    - url: https://www.youtube.com/@CMUDatabaseGroup
+      title: CMU Database Group
+      author: Carnegie Mellon
+      type: feed
+      tags:
+        - Excelência Técnica
+        - Site Reliability Engineering
+      is_paid: false
+      level: advanced
+      career_bands:
+        - principal
+        - staff
+        - senior
+        - tl
+      language: en_us
+    - url: https://craftinginterpreters.com/
+      title: Crafting Interpreters
+      author: Robert Nystrom
+      type: book
+      tags:
+        - Excelência Técnica
+      is_paid: true
       level: advanced
       career_bands:
         - senior
