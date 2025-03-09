@@ -88,5 +88,49 @@ Após enviar seu Pull Request, a equipe de mantenedores irá revisar suas
 alterações. Podemos solicitar ajustes ou esclarecimentos antes de mesclar suas
 contribuições.
 
+## Gerando o README
+
+O arquivo README.md é gerado automaticamente a partir dos dados do catálogo.
+Após adicionar novos itens ao arquivo `catalog.yml`, você deve regenerar o
+README.
+
+1. Certifique-se de ter o Go instalado em sua máquina (versão 1.16 ou superior)
+2. Execute o comando:
+
+```bash
+make generate-readme
+```
+
+Este comando irá processar o arquivo `catalog.yml` e atualizar o README.md com
+os novos itens do catálogo.
+
+## Configurando o Ambiente de Desenvolvimento
+
+### Pré-requisitos
+
+- [Go](https://golang.org/doc/install) (versão 1.16 ou superior)
+- [Git](https://git-scm.com/downloads)
+
+### Instalando Dependências
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/awesome-tech-lead.git
+cd awesome-tech-lead
+```
+
+2. Instale as dependências:
+
+```bash
+make setup
+```
+
+3. Verifique se tudo está funcionando corretamente gerando o README:
+
+```bash
+make generate-readme
+```
+
 Agradecemos sua contribuição para tornar este catálogo ainda mais valioso para a
 comunidade de TechLeads.club!
