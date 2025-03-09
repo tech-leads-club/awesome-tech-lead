@@ -198,6 +198,11 @@ Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
 O conteúdo está categorizado nos três pilares da comunidade: Excelência
 Técnica, Entrega de Valor e Liderança e Inspiração.
 
+## 🎽 Contribuir
+
+Deseja contribuir com esse repositório? Saiba mais em
+[CONTRIBUTING.md](./CONTRIBUTING.md).
+
 {{if .TechnicalExcellence}}
 ## 🏆 Excelência Técnica
 

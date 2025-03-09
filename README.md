@@ -1,10 +1,22 @@
 
 # Awesome Tech Lead [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade [TechLeads.club 💎](https://comece.techleads.club?utm_source=awesome-tech-lead&utm_medium=readme).
+Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
+[TechLeads.club 💎](https://comece.techleads.club?utm_source=awesome-tech-lead&utm_medium=readme).
+
+O conteúdo está categorizado nos três pilares da comunidade: Excelência
+Técnica, Entrega de Valor e Liderança e Inspiração.
+
+## 🎽 Contribuir
+
+Deseja contribuir com esse repositório? Saiba mais em
+[CONTRIBUTING.md](./CONTRIBUTING.md).
 
 
 ## 🏆 Excelência Técnica
+
+Pilar focado no domínio e aplicação eficaz de tecnologias, práticas e
+arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 
 | Título                                                          | Tags        | 
 |-----------------------------------------------------------------|-------------|
@@ -99,6 +111,10 @@ Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunida
 
 ## 📦 Entrega de Valor 
 
+Pilar relacionado a práticas ágeis e à capacidade de entregar projetos de
+software de maneira eficiente, com alinhamento estratégico e foco nas
+necessidades do negócio.
+
 | Título                                                          | Tags        |
 |-----------------------------------------------------------------|-------------|
 | [A Day in the Life of a Thoughtworks' Tech Lead: Robin Doherty](https://www.thoughtworks.com/insights/blog/day-life-thoughtworks-tech-lead-robin-doherty) por Robin Doherty | `Intermediário` `Artigo` `Grátis` |
@@ -131,6 +147,9 @@ Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunida
 
 
 ## 🤝 Liderança e Inspiração 
+
+Pilar focado na habilidade de liderar times, pessoas, alinhar expectativas, mentorar colegas e
+dar feedback.
 
 | Título                                                          | Tags        |
 |-----------------------------------------------------------------|-------------|
