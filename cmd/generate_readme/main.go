@@ -35,9 +35,9 @@ var translations = map[string]string{
 }
 
 func main() {
-	data, err := os.ReadFile("data.yml")
+	data, err := os.ReadFile("catalog.yml")
 	if err != nil {
-		fmt.Println("error reading data.yml:", err)
+		fmt.Println("error reading catalog.yml:", err)
 		os.Exit(1)
 	}
 
@@ -192,10 +192,17 @@ func GenerateREADME(items []catalog.CatalogItem) (string, error) {
 	const readmeTemplate = `
 # Awesome Tech Lead [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade [TechLeads.club 💎](https://comece.techleads.club?utm_source=awesome-tech-lead&utm_medium=readme).
+Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
+[TechLeads.club 💎](https://comece.techleads.club?utm_source=awesome-tech-lead&utm_medium=readme).
+
+O conteúdo está categorizado nos três pilares da comunidade: Excelência
+Técnica, Entrega de Valor e Liderança e Inspiração.
 
 {{if .TechnicalExcellence}}
 ## 🏆 Excelência Técnica
+
+Pilar focado no domínio e aplicação eficaz de tecnologias, práticas e
+arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 
 | Título                                                          | Tags        | 
 |-----------------------------------------------------------------|-------------|
@@ -207,6 +214,10 @@ Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunida
 {{if .DeliveringValue}}
 ## 📦 Entrega de Valor 
 
+Pilar relacionado a práticas ágeis e à capacidade de entregar projetos de
+software de maneira eficiente, com alinhamento estratégico e foco nas
+necessidades do negócio.
+
 | Título                                                          | Tags        |
 |-----------------------------------------------------------------|-------------|
 {{- range .DeliveringValue }}
@@ -216,6 +227,9 @@ Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunida
 
 {{if .LeadershipAndInspiration}}
 ## 🤝 Liderança e Inspiração 
+
+Pilar focado na habilidade de liderar times, pessoas, alinhar expectativas, mentorar colegas e
+dar feedback.
 
 | Título                                                          | Tags        |
 |-----------------------------------------------------------------|-------------|

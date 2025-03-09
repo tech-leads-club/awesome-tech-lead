@@ -24,12 +24,10 @@ func ParseCatalog(data []byte) ([]CatalogItem, error) {
 		Catalog []CatalogItem `yaml:"catalog"`
 	}
 
-	// Parse YAML data
 	if err := yaml.Unmarshal(data, &catalog); err != nil {
 		return nil, fmt.Errorf("invalid YAML: %w", err)
 	}
 
-	// Validate each item
 	for _, item := range catalog.Catalog {
 		if err := validateCatalogItem(item); err != nil {
 			return nil, fmt.Errorf("validation error for item %q: %w", item.Title, err)
