@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"os"
+	"sort"
 	"strings"
 	"text/template"
 
@@ -13,10 +14,7 @@ import (
 type FormattedItem struct {
 	Title  string
 	Author *string
-	Type   string
 	Tags   string
-	Level  string
-	IsPaid string
 	URL    string
 }
 
@@ -26,6 +24,7 @@ var translations = map[string]string{
 	"book":    "Livro",
 	"course":  "Curso",
 	"feed":    "Feed",
+	"podcast": "Podcast",
 	"roadmap": "Roadmap",
 	"video":   "Vídeo",
 
@@ -87,113 +86,141 @@ func filterItem(items []catalog.CatalogItem, predicate FilterItemFn) []catalog.C
 	return filtered
 }
 
+func removeTag(item catalog.CatalogItem, tag string) catalog.CatalogItem {
+	tagInLowerCase := strings.ToLower(tag)
+	newTags := make([]string, 0, len(item.Tags))
+
+	for _, t := range item.Tags {
+		if strings.ToLower(t) != tagInLowerCase {
+			newTags = append(newTags, t)
+		}
+	}
+
+	return catalog.CatalogItem{
+		Title:  item.Title,
+		URL:    item.URL,
+		Type:   item.Type,
+		Tags:   newTags,
+		Level:  item.Level,
+		IsPaid: item.IsPaid,
+		Author: item.Author,
+	}
+}
+
+func hasTag(item catalog.CatalogItem, tag string) bool {
+	tagInLowerCase := strings.ToLower(tag)
+
+	for _, v := range item.Tags {
+		if strings.ToLower(v) == tagInLowerCase {
+			return true
+		}
+	}
+
+	return false
+}
+
+func formatCatalogItems(items []catalog.CatalogItem) []FormattedItem {
+	var formattedItems []FormattedItem
+
+	for _, item := range items {
+		item = removeTag(item, "Excelência Técnica")
+		item = removeTag(item, "Liderança e Inspiração")
+		item = removeTag(item, "Entrega de Valor")
+
+		item.Tags = append(item.Tags, translate(item.Level))
+		item.Tags = append(item.Tags, translate(item.Type))
+
+		if item.IsPaid {
+			item.Tags = append(item.Tags, "Pago")
+		} else {
+			item.Tags = append(item.Tags, "Grátis")
+		}
+
+		formattedItems = append(formattedItems, FormattedItem{
+			Title:  getTitle(item),
+			Author: item.Author,
+			Tags:   formatTags(item.Tags),
+			URL:    item.URL,
+		})
+	}
+
+	return formattedItems
+}
+
+func getTitle(item catalog.CatalogItem) string {
+	title := strings.ReplaceAll(item.Title, "|", "-")
+	title = strings.ReplaceAll(title, "\n", " ")
+
+	return strings.TrimSpace(title)
+}
+
+func formatTags(tags []string) string {
+	newTags := make([]string, 0, len(tags))
+
+	for _, t := range tags {
+		newTags = append(newTags, fmt.Sprintf("`%s`", t))
+	}
+
+	return safeJoin(newTags, " ")
+}
+
+func safeJoin(slice []string, sep string) string {
+	if slice == nil {
+		return ""
+	}
+
+	return strings.Join(slice, sep)
+}
+
 func GenerateREADME(items []catalog.CatalogItem) (string, error) {
-	books := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
-		return item.Type == "book"
+	sort.Slice(items, func(i, j int) bool {
+		return strings.ToLower(items[i].Title) < strings.ToLower(items[j].Title)
+	})
+
+	technicalExcellence := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
+		return hasTag(item, "Excelência Técnica")
 	}))
 
-	articles := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
-		return item.Type == "article"
+	leadershipAndInspiration := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
+		return hasTag(item, "Liderança e Inspiração")
 	}))
 
-	courses := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
-		return item.Type == "course"
-	}))
-
-	videos := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
-		return item.Type == "video"
-	}))
-
-	podcasts := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
-		return item.Type == "podcast"
-	}))
-
-	feeds := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
-		return item.Type == "feed"
-	}))
-
-	roadmaps := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
-		return item.Type == "roadmaps"
+	deliveringValue := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
+		return hasTag(item, "Entrega de Valor")
 	}))
 
 	const readmeTemplate = `
 # Awesome Tech Lead [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade [TechLeads.club](https://comece.techleads.club?utm_source=awesome-tech-lead).
+Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade [TechLeads.club 💎](https://comece.techleads.club?utm_source=awesome-tech-lead&utm_medium=readme).
 
-## Pilares
+{{if .TechnicalExcellence}}
+## 🏆 Excelência Técnica
 
-- Excelência Técnica
-- Entrega de Valor
-- Liderança e Inspiração
-
-{{if .Books}}
-## 📚 Livros 
-
-| Título                                                          | Tags  | Nível | Pago? | 
-|-----------------------------------------------------------------|-------|-------|-------|
-{{- range .Books }}
-| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+| Título                                                          | Tags        | 
+|-----------------------------------------------------------------|-------------|
+{{- range .TechnicalExcellence }}
+| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} |
 {{- end }}
 {{end}}
 
-{{if .Articles}}
-## 📰 Artigos
+{{if .DeliveringValue}}
+## 📦 Entrega de Valor 
 
-| Título                                                                    | Tags  | Nível | Pago? | 
-|---------------------------------------------------------------------------|-------|--------|-------|
-{{- range .Articles }}
-| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+| Título                                                          | Tags        |
+|-----------------------------------------------------------------|-------------|
+{{- range .DeliveringValue }}
+| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} |
 {{- end }}
 {{end}}
 
-{{if .Courses}}
-## 🎓 Cursos
+{{if .LeadershipAndInspiration}}
+## 🤝 Liderança e Inspiração 
 
-| Título                                                                    | Tags  | Nível | Pago? | 
-|---------------------------------------------------------------------------|-------|--------|-------|
-{{- range .Courses }}
-| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
-{{- end }}
-{{end}}
-
-{{if .Videos}}
-## 🎥 Vídeos
-
-| Título                                                                    | Tags  | Nível | Pago? | 
-|---------------------------------------------------------------------------|-------|--------|-------|
-{{- range .Videos }}
-| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
-{{- end }}
-{{end}}
-
-{{if .Podcasts}}
-## 🎙️ Podcasts
-
-| Título                                                                    | Tags  | Nível | Pago? | 
-|---------------------------------------------------------------------------|-------|--------|-------|
-{{- range .Podcasts }}
-| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
-{{- end }}
-{{end}}
-
-{{if .Feeds}}
-## 📡 Feeds
-
-| Título                                                                    | Tags  | Nível | Pago? | 
-|---------------------------------------------------------------------------|-------|--------|-------|
-{{- range .Feeds }}
-| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
-{{- end }}
-{{end}}
-
-{{if .Roadmaps}}
-## 🗺️ Roadmaps
-
-| Título                                                                    | Tags  | Nível | Pago? | 
-|---------------------------------------------------------------------------|-------|--------|-------|
-{{- range .Roadmaps }}
-| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} | {{ .Level }} | {{ .IsPaid }} | 
+| Título                                                          | Tags        |
+|-----------------------------------------------------------------|-------------|
+{{- range .LeadershipAndInspiration }}
+| [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} |
 {{- end }}
 {{end}}
 `
@@ -206,13 +233,9 @@ Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunida
 	var buf bytes.Buffer
 
 	templateData := map[string][]FormattedItem{
-		"Books":    books,
-		"Articles": articles,
-		"Courses":  courses,
-		"Videos":   videos,
-		"Podcasts": podcasts,
-		"Feeds":    feeds,
-		"Roadmaps": roadmaps,
+		"TechnicalExcellence":      technicalExcellence,
+		"DeliveringValue":          deliveringValue,
+		"LeadershipAndInspiration": leadershipAndInspiration,
 	}
 
 	if err := tmpl.Execute(&buf, templateData); err != nil {
@@ -220,43 +243,4 @@ Uma lista de conteúdo sobre lideraça técnica curada pelos membros da comunida
 	}
 
 	return buf.String(), nil
-}
-
-func formatCatalogItems(items []catalog.CatalogItem) []FormattedItem {
-	var formattedItems []FormattedItem
-
-	for _, item := range items {
-		formattedItems = append(formattedItems, FormattedItem{
-			Title:  getTitle(item),
-			Author: item.Author,
-			Type:   translate(item.Type),
-			Tags:   safeJoin(item.Tags, ", "),
-			Level:  item.Level,
-			IsPaid: getFreeBadge(item.IsPaid),
-			URL:    item.URL,
-		})
-	}
-
-	return formattedItems
-}
-
-func getTitle(item catalog.CatalogItem) string {
-	// Prevent the pipe from breaking the markdown format.
-	return strings.ReplaceAll(item.Title, "|", "-")
-}
-
-func safeJoin(slice []string, sep string) string {
-	if slice == nil {
-		return ""
-	}
-
-	return strings.Join(slice, sep)
-}
-
-func getFreeBadge(isPaid bool) string {
-	if isPaid {
-		return "❌"
-	}
-
-	return "✅"
 }
