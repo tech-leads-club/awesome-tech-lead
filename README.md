@@ -20,6 +20,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 
 | Título                                                          | Tags        | 
 |-----------------------------------------------------------------|-------------|
+| [17 Traits of Awesome Tech Leads](https://www.trinitytakei.io/blog/17-traits-of-awesome-tech-leads) por Trinity Takei | `Intermediário` `Artigo` `Grátis` |
 | [99 Bottles of OOP](https://www.goodreads.com/book/show/31183020-99-bottles-of-oop) por Sandi Metz, Katrina Owen | `Qualidade` `Iniciante` `Livro` `Pago` |
 | [99 Bottles of OOP - 2nd Edition](https://sandimetz.com/99bottles) por Sandi Metz | `Arquitetura e Design` `Intermediário` `Livro` `Pago` |
 | [A Philosophy of Software Design](https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201) por John Ousterhout  | `Arquitetura e Design` `Iniciante` `Livro` `Pago` |
@@ -32,8 +33,8 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [Arquitetura Event Driven com Kafka - Atualização - Tópicos e Schemas](https://www.techleads.club/c/aulas-semanais/aula-arquitetura-event-driven-com-kafka-atualizacao-topicos-e-schemas) por Waldemar Neto | `Arquitetura e Design` `Intermediário` `Vídeo` `Pago` |
 | [Arquitetura Frontend com William Grasel](https://www.techleads.club/c/eventos-da-comunidade/live-arquitetura-frontend-com-william-grasel) por William Grasel | `Arquitetura e Design` `Intermediário` `Vídeo` `Pago` |
 | [Arquitetura Limpa: o Guia do Artesão Para Estrutura e Design de Software](https://www.amazon.com.br/Arquitetura-Limpa-Artes%C3%A3o-Estrutura-Software/dp/8550804606) por Robert C. Martin  | `Arquitetura e Design` `Intermediário` `Livro` `Pago` |
-| [Arquiteturas Modulares em Go e Node.js - Elton Minetto e Waldemar Neto](https://www.youtube.com/live/_lVf836ZJ4o?si=J7Z9ywnUY2M9hQ3W) por Waldemar Neto, Elton Minetto | `Abrangência de Impacto` `Arquitetura e Design` `Intermediário` `Vídeo` `Grátis` |
 | [Arquiteturas Modulares em Go e Node.js - Elton Minetto e Waldemar Neto](https://www.youtube.com/watch?v=_lVf836ZJ4o) por Waldemar Neto, Elton Minetto | `Arquitetura e Design` `Intermediário` `Podcast` `Pago` |
+| [Arquiteturas Modulares em Go e Node.js - Elton Minetto e Waldemar Neto](https://www.youtube.com/live/_lVf836ZJ4o?si=J7Z9ywnUY2M9hQ3W) por Waldemar Neto, Elton Minetto | `Abrangência de Impacto` `Arquitetura e Design` `Intermediário` `Vídeo` `Grátis` |
 | [Aumentando a disponibilidade e oferta de integrações com serviços](https://www.techleads.club/c/desenvolvimento-e-arquitetura-de-software/aumentando-a-disponibilidade-e-oferta-de-integracoes-com-servicos) por William Calderipe | `Arquitetura e Design` `Intermediário` `Artigo` `Pago` |
 | [Balancing Coupling in Software Design: Universal Design Principles for Architecting Modular Software Systems](https://www.amazon.com/Balancing-Coupling-Software-Design-Addison-wesley/dp/0137353480) por Vlad Khononov | `Arquitetura e Design` `Avançado` `Livro` `Pago` |
 | [Building Event-Driven Microservices: Leveraging Organizational Data at Scale](https://www.amazon.com/Building-Event-Driven-Microservices-Leveraging-Organizational/dp/1492057894) por Adam Bellemare | `Arquitetura e Design` `Impacto no Negócio` `Abrangência de Impacto` `Avançado` `Livro` `Pago` |
