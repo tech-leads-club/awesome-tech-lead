@@ -20,7 +20,6 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 
 | Título                                                          | Tags        | 
 |-----------------------------------------------------------------|-------------|
-| [17 Traits of Awesome Tech Leads](https://www.trinitytakei.io/blog/17-traits-of-awesome-tech-leads) por Trinity Takei | `Intermediário` `Artigo` `Grátis` |
 | [99 Bottles of OOP](https://www.goodreads.com/book/show/31183020-99-bottles-of-oop) por Sandi Metz, Katrina Owen | `Qualidade` `Iniciante` `Livro` `Pago` |
 | [99 Bottles of OOP - 2nd Edition](https://sandimetz.com/99bottles) por Sandi Metz | `Arquitetura e Design` `Intermediário` `Livro` `Pago` |
 | [A Philosophy of Software Design](https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201) por John Ousterhout  | `Arquitetura e Design` `Iniciante` `Livro` `Pago` |
@@ -154,6 +153,7 @@ dar feedback.
 
 | Título                                                          | Tags        |
 |-----------------------------------------------------------------|-------------|
+| [17 Traits of Awesome Tech Leads](https://www.trinitytakei.io/blog/17-traits-of-awesome-tech-leads) por Trinity Takei | `Intermediário` `Artigo` `Grátis` |
 | [A Day in the Life of a Thoughtworks' Tech Lead: Robin Doherty](https://www.thoughtworks.com/insights/blog/day-life-thoughtworks-tech-lead-robin-doherty) por Robin Doherty | `Intermediário` `Artigo` `Grátis` |
 | [Accelerate: Building and Scaling High Performing Technology Organizations](https://www.goodreads.com/book/show/35747076-accelerate) por Nicole Forsgren, Jez Humble, Gene Kim | `Site Reliability Engineering` `Avançado` `Livro` `Pago` |
 | [An Elegant Puzzle: Systems of Engineering Management](https://press.stripe.com/an-elegant-puzzle) por Will Larson | `Gestão` `Carreira` `Impacto no Negócio` `Intermediário` `Livro` `Pago` |
