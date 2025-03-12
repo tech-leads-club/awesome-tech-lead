@@ -35,6 +35,9 @@ Para adicionar um novo item ao catálogo, você deve editar o arquivo
   language: pt_br
 ```
 
+> [!IMPORTANT]
+> O arquivo README.md é gerado e você não deve modifica-lo manualmente.
+
 ## Esquema do Catálogo
 
 | Campo          | Descrição                                               | Obrigatório |
