@@ -1890,8 +1890,8 @@ catalog:
         - staff
         - principal
       language: en_us
-    - url: https://newsletter.weskao.com/p/looks-good-to-me-is-a-lazy-default-managers-should-give-feedback 
-      title: “Looks good to me” is a lazy default: Why managers should give feedback on work output
+    - url: https://newsletter.weskao.com/p/looks-good-to-me-is-a-lazy-default-managers-should-give-feedback/
+      title: Looks good to me is a lazy default - Why managers should give feedback on work output
       author: Wes Kao
       type: article
       tags:
@@ -1906,4 +1906,4 @@ catalog:
         - tl
         - staff
         - principal
-      language: en
+      language: en_us
