@@ -1920,3 +1920,21 @@ catalog:
         - staff
         - principal
       language: en
+    - url: https://jvns.ca/blog/brag-documents/
+      title: Get your work recognized - write a brag document
+      author: Julia Evans
+      type: article
+      tags:
+        - Liderança e Inspiração
+        - Gestão
+        - Carreira
+      is_paid: false
+      level: beginner
+      career_bands:
+        - junior
+        - mid
+        - senior
+        - tl
+        - staff
+        - principal
+      language: en_us
