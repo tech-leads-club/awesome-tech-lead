@@ -163,6 +163,7 @@ dar feedback.
 | [Creative Selection: Inside Apple's Design Process During the Golden Age of Steve Jobs](https://www.goodreads.com/book/show/37638098-creative-selection?from_search=true&from_srp=true&qid=J40lH7Wsln&rank=1) por Ken Kocienda | `Qualidade` `Iniciante` `Livro` `Pago` |
 | [Crucial Conversations: Tools for Talking When Stakes are High](https://www.goodreads.com/book/show/15014.Crucial_Conversations) por Kerry Patterson, Stephen R. Covey, Joseph Grenny, Ron McMillan, Al Switzler | `Iniciante` `Livro` `Pago` |
 | [Drive: The Surprising Truth About What Motivates Us](https://www.goodreads.com/book/show/6452796-drive) por Daniel H. Pink | `Intermediário` `Livro` `Pago` |
+| [Get your work recognized - write a brag document](https://jvns.ca/blog/brag-documents/) por Julia Evans | `Gestão` `Carreira` `Iniciante` `Artigo` `Grátis` |
 | [Maker's Schedule, Manager's Schedule](https://paulgraham.com/makersschedule.html) por Paul Graham | `Intermediário` `Artigo` `Grátis` |
 | [On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html) por Birgitta Böckeler, Nina Siessegger | `Intermediário` `Artigo` `Grátis` |
 | [Radical Candor: Be a Kickass Boss Without Losing Your Humanity](https://www.goodreads.com/book/show/29939161-radical-candor?from_search=true&from_srp=true&qid=LDCsMnYFBv&rank=1) por Kim Malone Scott | `Avançado` `Livro` `Pago` |
