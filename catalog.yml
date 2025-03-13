@@ -1424,6 +1424,22 @@ catalog:
         - tl
         - principal
       language: en_us
+    - url: https://www.youtube.com/watch?v=nNFgOtN9Gts
+      title: 'Balancing Coupling in Software Design (Vlad Khononov)'
+      author: Vlad Khononov
+      type: video
+      tags:
+        - Excelência Técnica
+        - Arquitetura e Design
+      is_paid: false
+      level: advanced
+      duration: "90"
+      career_bands:
+        - staff
+        - senior
+        - tl
+        - principal
+      language: en_us
     - url: https://www.amazon.com.br/Fundamentos-Arquitetura-Software-Abordagem-Engenharia/dp/8550819859
       title: 'Fundamentos da Arquitetura de Software: uma Abordagem de Engenharia'
       author: 'Mark Richards, Neal Ford '
