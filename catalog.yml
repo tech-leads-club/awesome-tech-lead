@@ -1895,8 +1895,7 @@ catalog:
       author: Wes Kao
       type: article
       tags:
-        - Excelência Técnica
-        - Liderança
+        - Liderança e Inspiração
         - Feedbacks
         - Qualidade
       is_paid: false
@@ -1907,3 +1906,4 @@ catalog:
         - staff
         - principal
       language: en_us
+
