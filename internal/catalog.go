@@ -24,6 +24,9 @@ func ParseCatalog(data []byte) ([]CatalogItem, error) {
 		Catalog []CatalogItem `yaml:"catalog"`
 	}
 
+	seenURLs := make(map[string]bool)
+	seenTitles := make(map[string]bool)
+
 	if err := yaml.Unmarshal(data, &catalog); err != nil {
 		return nil, fmt.Errorf("invalid YAML: %w", err)
 	}
@@ -32,6 +35,16 @@ func ParseCatalog(data []byte) ([]CatalogItem, error) {
 		if err := validateCatalogItem(item); err != nil {
 			return nil, fmt.Errorf("validation error for item %q: %w", item.Title, err)
 		}
+
+		if seenURLs[item.URL] {
+			return nil, fmt.Errorf("duplicate URL found: %s", item.URL)
+		}
+		seenURLs[item.URL] = true
+
+		if seenTitles[item.Title] {
+			return nil, fmt.Errorf("duplicate title found: %s", item.Title)
+		}
+		seenTitles[item.Title] = true
 	}
 
 	return catalog.Catalog, nil
