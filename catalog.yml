@@ -1949,3 +1949,17 @@ catalog:
         - staff
         - principal
       language: en_us
+    - url: HTTP/3 is everywhere but nowhere
+      title: Crafting Interpreters
+      author: Tim Perry
+      type: article
+      tags:
+        - Excelência Técnica
+      is_paid: true
+      level: advanced
+      career_bands:
+        - senior
+        - tl
+        - staff
+        - principal
+      language: en_us

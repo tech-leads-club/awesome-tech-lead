@@ -45,6 +45,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [Como diminuir os tradeoffs de usar UUID em bancos relacionais](https://www.techleads.club/c/desenvolvimento-e-arquitetura-de-software/como-diminuir-os-tradeoffs-de-usar-uuid-em-bancos-relacionais) por Waldemar Neto | `Arquitetura e Design` `Avançado` `Artigo` `Pago` |
 | [Construindo APIs testáveis com Node.js](https://leanpub.com/construindo-apis-testaveis-com-nodejs/) por Waldemar Neto | `Arquitetura e Design` `Iniciante` `Livro` `Grátis` |
 | [Crafting Interpreters](https://craftinginterpreters.com/) por Robert Nystrom | `Avançado` `Livro` `Pago` |
+| [Crafting Interpreters](HTTP/3 is everywhere but nowhere) por Tim Perry | `Avançado` `Artigo` `Pago` |
 | [Curso de Clean Code e Clean Architecture com Rodrigo Branas](https://branas.io/) por Rodrigo Branas | `Arquitetura e Design` `Intermediário` `Curso` `Pago` |
 | [Curso de Node.js completo com Typescript, Jest, TDD](https://www.youtube.com/watch?v=W2ld5xRS3cY&list=PLz_YTBuxtxt6_Zf1h-qzNsvVt46H8ziKh) por Waldemar Neto | `Arquitetura e Design` `Intermediário` `Curso` `Grátis` |
 | [Código Limpo: Habilidades Práticas do Agile Software](https://www.amazon.com.br/C%C3%B3digo-limpo-Robert-C-Martin/dp/8576082675) por Robert C. Martin  | `Arquitetura e Design` `Iniciante` `Livro` `Pago` |
