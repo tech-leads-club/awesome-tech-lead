@@ -35,6 +35,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [Arquiteturas Modulares em Go e Node.js - Elton Minetto e Waldemar Neto](https://www.youtube.com/watch?v=_lVf836ZJ4o) por Waldemar Neto, Elton Minetto | `Arquitetura e Design` `Intermediário` `Podcast` `Pago` |
 | [Arquiteturas Modulares em Go e Node.js - Elton Minetto e Waldemar Neto](https://www.youtube.com/live/_lVf836ZJ4o?si=J7Z9ywnUY2M9hQ3W) por Waldemar Neto, Elton Minetto | `Abrangência de Impacto` `Arquitetura e Design` `Intermediário` `Vídeo` `Grátis` |
 | [Aumentando a disponibilidade e oferta de integrações com serviços](https://www.techleads.club/c/desenvolvimento-e-arquitetura-de-software/aumentando-a-disponibilidade-e-oferta-de-integracoes-com-servicos) por William Calderipe | `Arquitetura e Design` `Intermediário` `Artigo` `Pago` |
+| [Balancing Coupling in Software Design (Vlad Khononov)](https://www.youtube.com/watch?v=nNFgOtN9Gts) por Vlad Khononov | `Arquitetura e Design` `Avançado` `Vídeo` `Grátis` |
 | [Balancing Coupling in Software Design: Universal Design Principles for Architecting Modular Software Systems](https://www.amazon.com/Balancing-Coupling-Software-Design-Addison-wesley/dp/0137353480) por Vlad Khononov | `Arquitetura e Design` `Avançado` `Livro` `Pago` |
 | [Building Event-Driven Microservices: Leveraging Organizational Data at Scale](https://www.amazon.com/Building-Event-Driven-Microservices-Leveraging-Organizational/dp/1492057894) por Adam Bellemare | `Arquitetura e Design` `Impacto no Negócio` `Abrangência de Impacto` `Avançado` `Livro` `Pago` |
 | [Building Evolutionary Architectures: Support Constant Change](https://www.amazon.com.br/Building-Evolutionary-Architectures-Neal-Ford/dp/1491986360) por Neal Ford, Patrick Kua, Rebecca Parsons | `Arquitetura e Design` `Impacto no Negócio` `Abrangência de Impacto` `Avançado` `Livro` `Pago` |
@@ -153,6 +154,7 @@ dar feedback.
 
 | Título                                                          | Tags        |
 |-----------------------------------------------------------------|-------------|
+| [17 Traits of Awesome Tech Leads](https://www.trinitytakei.io/blog/17-traits-of-awesome-tech-leads) por Trinity Takei | `Intermediário` `Artigo` `Grátis` |
 | [A Day in the Life of a Thoughtworks' Tech Lead: Robin Doherty](https://www.thoughtworks.com/insights/blog/day-life-thoughtworks-tech-lead-robin-doherty) por Robin Doherty | `Intermediário` `Artigo` `Grátis` |
 | [Accelerate: Building and Scaling High Performing Technology Organizations](https://www.goodreads.com/book/show/35747076-accelerate) por Nicole Forsgren, Jez Humble, Gene Kim | `Site Reliability Engineering` `Avançado` `Livro` `Pago` |
 | [An Elegant Puzzle: Systems of Engineering Management](https://press.stripe.com/an-elegant-puzzle) por Will Larson | `Gestão` `Carreira` `Impacto no Negócio` `Intermediário` `Livro` `Pago` |
@@ -161,6 +163,7 @@ dar feedback.
 | [Creative Selection: Inside Apple's Design Process During the Golden Age of Steve Jobs](https://www.goodreads.com/book/show/37638098-creative-selection?from_search=true&from_srp=true&qid=J40lH7Wsln&rank=1) por Ken Kocienda | `Qualidade` `Iniciante` `Livro` `Pago` |
 | [Crucial Conversations: Tools for Talking When Stakes are High](https://www.goodreads.com/book/show/15014.Crucial_Conversations) por Kerry Patterson, Stephen R. Covey, Joseph Grenny, Ron McMillan, Al Switzler | `Iniciante` `Livro` `Pago` |
 | [Drive: The Surprising Truth About What Motivates Us](https://www.goodreads.com/book/show/6452796-drive) por Daniel H. Pink | `Intermediário` `Livro` `Pago` |
+| [Get your work recognized - write a brag document](https://jvns.ca/blog/brag-documents/) por Julia Evans | `Gestão` `Carreira` `Iniciante` `Artigo` `Grátis` |
 | [Looks good to me is a lazy default - Why managers should give feedback on work output](https://newsletter.weskao.com/p/looks-good-to-me-is-a-lazy-default-managers-should-give-feedback/) por Wes Kao | `Feedbacks` `Qualidade` `Avançado` `Artigo` `Grátis` |
 | [Maker's Schedule, Manager's Schedule](https://paulgraham.com/makersschedule.html) por Paul Graham | `Intermediário` `Artigo` `Grátis` |
 | [On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html) por Birgitta Böckeler, Nina Siessegger | `Intermediário` `Artigo` `Grátis` |
