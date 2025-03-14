@@ -45,7 +45,6 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [Como diminuir os tradeoffs de usar UUID em bancos relacionais](https://www.techleads.club/c/desenvolvimento-e-arquitetura-de-software/como-diminuir-os-tradeoffs-de-usar-uuid-em-bancos-relacionais) por Waldemar Neto | `Arquitetura e Design` `Avançado` `Artigo` `Pago` |
 | [Construindo APIs testáveis com Node.js](https://leanpub.com/construindo-apis-testaveis-com-nodejs/) por Waldemar Neto | `Arquitetura e Design` `Iniciante` `Livro` `Grátis` |
 | [Crafting Interpreters](https://craftinginterpreters.com/) por Robert Nystrom | `Avançado` `Livro` `Pago` |
-| [Crafting Interpreters](HTTP/3 is everywhere but nowhere) por Tim Perry | `Avançado` `Artigo` `Pago` |
 | [Curso de Clean Code e Clean Architecture com Rodrigo Branas](https://branas.io/) por Rodrigo Branas | `Arquitetura e Design` `Intermediário` `Curso` `Pago` |
 | [Curso de Node.js completo com Typescript, Jest, TDD](https://www.youtube.com/watch?v=W2ld5xRS3cY&list=PLz_YTBuxtxt6_Zf1h-qzNsvVt46H8ziKh) por Waldemar Neto | `Arquitetura e Design` `Intermediário` `Curso` `Grátis` |
 | [Código Limpo: Habilidades Práticas do Agile Software](https://www.amazon.com.br/C%C3%B3digo-limpo-Robert-C-Martin/dp/8576082675) por Robert C. Martin  | `Arquitetura e Design` `Iniciante` `Livro` `Pago` |
@@ -63,6 +62,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [Fundamentals of Software Architecture: An Engineering Approach](https://www.goodreads.com/book/show/44144493-fundamentals-of-software-architecture?from_search=true&from_srp=true&qid=0koXDtLRrO&rank=1) por Neal Ford, Mark Richards | `Arquitetura e Design` `Intermediário` `Livro` `Pago` |
 | [Fundamentos da Arquitetura de Software: uma Abordagem de Engenharia](https://www.amazon.com.br/Fundamentos-Arquitetura-Software-Abordagem-Engenharia/dp/8550819859) por Mark Richards, Neal Ford  | `Arquitetura e Design` `Impacto no Negócio` `Abrangência de Impacto` `Intermediário` `Livro` `Pago` |
 | [Fundamentos do Desenvolvimento de Software Enterprise](https://www.techleads.club/c/fundamentos-do-desenvolvimento-de-software-enterprise) por Waldemar Neto | `Arquitetura e Design` `Avançado` `Curso` `Pago` |
+| [HTTP/3 is everywhere but nowhere](https://httptoolkit.com/blog/http3-quic-open-source-support-nowhere/) por Tim Perry | `Avançado` `Artigo` `Pago` |
 | [Implementando Domain-Driven Design](https://www.amazon.com/Implementando-Domain-Driven-Design-Portuguese-Brasil/dp/8576089521) por Vaughn Vernon | `Arquitetura e Design` `Impacto no Negócio` `Intermediário` `Livro` `Pago` |
 | [Introducing Domain-Oriented Microservice Architecture (DOMA)](https://www.uber.com/en-FR/blog/microservice-architecture/) por Adam Gluck | `Arquitetura e Design` `Avançado` `Artigo` `Grátis` |
 | [Introdução a observabilidade com OpenTelemetry](https://www.techleads.club/c/aulas-da-comunidade/aula-introducao-a-observabilidade-com-opentelemetry) por Rodrigo Klaes | `Site Reliability Engineering` `Intermediário` `Vídeo` `Pago` |
