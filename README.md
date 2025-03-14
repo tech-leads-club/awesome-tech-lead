@@ -176,4 +176,5 @@ dar feedback.
 | [The Staff Engineer's Path: A Guide for Individual Contributors Navigating Growth and Change](https://www.goodreads.com/book/show/61058107-the-staff-engineer-s-path?from_search=true&from_srp=true&qid=DiDv1cKwYy&rank=1) por Tanya Reilly | `Avançado` `Livro` `Pago` |
 | [The Team that Managed Itself: A Story of Leadership](https://www.goodreads.com/book/show/53108540-the-team-that-managed-itself?from_search=true&from_srp=true&qid=L7C8WR5EMN&rank=1) por Christina Wodtke  | `Intermediário` `Livro` `Pago` |
 | [Working with Emotional Intelligence](https://www.goodreads.com/book/show/27537.Working_with_Emotional_Intelligence) por Daniel Goleman | `Iniciante` `Livro` `Pago` |
+| [De Dev a Tech Lead](https://de-dev-a-tech-lead.techleadership.rocks/) por Eduardo Matos | `Iniciante` `Livro` `Pago` |
 
