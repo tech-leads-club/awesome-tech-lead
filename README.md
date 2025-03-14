@@ -164,6 +164,7 @@ dar feedback.
 | [Crucial Conversations: Tools for Talking When Stakes are High](https://www.goodreads.com/book/show/15014.Crucial_Conversations) por Kerry Patterson, Stephen R. Covey, Joseph Grenny, Ron McMillan, Al Switzler | `Iniciante` `Livro` `Pago` |
 | [Drive: The Surprising Truth About What Motivates Us](https://www.goodreads.com/book/show/6452796-drive) por Daniel H. Pink | `Intermediário` `Livro` `Pago` |
 | [Get your work recognized - write a brag document](https://jvns.ca/blog/brag-documents/) por Julia Evans | `Gestão` `Carreira` `Iniciante` `Artigo` `Grátis` |
+| [Looks good to me is a lazy default - Why managers should give feedback on work output](https://newsletter.weskao.com/p/looks-good-to-me-is-a-lazy-default-managers-should-give-feedback/) por Wes Kao | `Feedbacks` `Qualidade` `Avançado` `Artigo` `Grátis` |
 | [Maker's Schedule, Manager's Schedule](https://paulgraham.com/makersschedule.html) por Paul Graham | `Intermediário` `Artigo` `Grátis` |
 | [On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html) por Birgitta Böckeler, Nina Siessegger | `Intermediário` `Artigo` `Grátis` |
 | [Radical Candor: Be a Kickass Boss Without Losing Your Humanity](https://www.goodreads.com/book/show/29939161-radical-candor?from_search=true&from_srp=true&qid=LDCsMnYFBv&rank=1) por Kim Malone Scott | `Avançado` `Livro` `Pago` |

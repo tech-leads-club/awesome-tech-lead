@@ -1906,6 +1906,17 @@ catalog:
         - staff
         - principal
       language: en_us
+    - url: https://newsletter.weskao.com/p/looks-good-to-me-is-a-lazy-default-managers-should-give-feedback/
+      title: Looks good to me is a lazy default - Why managers should give feedback on work output
+      author: Wes Kao
+      type: article
+      tags:
+        - Liderança e Inspiração
+        - Feedbacks
+        - Qualidade
+      is_paid: false
+      level: advanced
+      language: en_us
     - url: https://www.trinitytakei.io/blog/17-traits-of-awesome-tech-leads
       title: 17 Traits of Awesome Tech Leads
       author: Trinity Takei

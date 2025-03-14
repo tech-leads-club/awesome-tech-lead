@@ -21,7 +21,7 @@ Para adicionar um novo item ao catálogo, você deve editar o arquivo
 ```yaml
 - url: https://exemplo.com/conteudo
   title: Título do Conteúdo
-  authors: Nome do Autor (OPCIONAL)
+  author: Nome do Autor (OPCIONAL)
   type: article
   tags:
     - Arquitetura e Design
@@ -83,7 +83,7 @@ Para adicionar um novo item ao catálogo, você deve editar o arquivo
 
 #### `language`
 
-Código ISO do idioma (ex: `pt_br`, `en`, `es`, etc.)
+Código ISO do idioma (ex: `pt_br`, `en_us`, `es`, etc.)
 
 ## Processo de Revisão
 
