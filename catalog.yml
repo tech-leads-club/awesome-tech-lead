@@ -1949,3 +1949,18 @@ catalog:
         - staff
         - principal
       language: en_us
+    - url: https://de-dev-a-tech-lead.techleadership.rocks/
+      title: De Dev a Tech Lead
+      author: Eduardo Matos
+      type: book
+      tags:
+        - Liderança
+        - Carreira
+      is_paid: true
+      level: beginner
+      career_bands:
+        - junior
+        - mid
+        - senior
+        - tl
+      language: pt_br
