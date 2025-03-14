@@ -1949,8 +1949,8 @@ catalog:
         - staff
         - principal
       language: en_us
-    - url: HTTP/3 is everywhere but nowhere
-      title: Crafting Interpreters
+    - url: https://httptoolkit.com/blog/http3-quic-open-source-support-nowhere/
+      title: HTTP/3 is everywhere but nowhere
       author: Tim Perry
       type: article
       tags:
