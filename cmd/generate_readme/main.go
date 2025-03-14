@@ -178,15 +178,15 @@ func GenerateREADME(items []catalog.CatalogItem) (string, error) {
 	})
 
 	technicalExcellence := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
-		return hasTag(item, "Excelência Técnica")
+		return hasTag(item, catalog.TechnicalExcellenceTag)
 	}))
 
 	leadershipAndInspiration := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
-		return hasTag(item, "Liderança e Inspiração")
+		return hasTag(item, catalog.LeadershipAndInspirationTag)
 	}))
 
 	deliveringValue := formatCatalogItems(filterItem(items, func(item catalog.CatalogItem) bool {
-		return hasTag(item, "Entrega de Valor")
+		return hasTag(item, catalog.DeliveringValueTag)
 	}))
 
 	const readmeTemplate = `
