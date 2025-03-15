@@ -2,7 +2,15 @@ package catalog
 
 import (
 	"fmt"
+	"regexp"
+	"strings"
+	"unicode"
 
+	"net/url"
+
+	"golang.org/x/text/runes"
+	"golang.org/x/text/transform"
+	"golang.org/x/text/unicode/norm"
 	"gopkg.in/yaml.v3"
 )
 
@@ -24,6 +32,9 @@ func ParseCatalog(data []byte) ([]CatalogItem, error) {
 		Catalog []CatalogItem `yaml:"catalog"`
 	}
 
+	seenURLs := make(map[string]bool)
+	seenTitles := make(map[string]bool)
+
 	if err := yaml.Unmarshal(data, &catalog); err != nil {
 		return nil, fmt.Errorf("invalid YAML: %w", err)
 	}
@@ -32,9 +43,52 @@ func ParseCatalog(data []byte) ([]CatalogItem, error) {
 		if err := validateCatalogItem(item); err != nil {
 			return nil, fmt.Errorf("validation error for item %q: %w", item.Title, err)
 		}
+
+		cleanedURL, err := cleanURL(item.URL)
+		if err != nil {
+			fmt.Println("validation error URL:", err)
+			continue
+		}
+
+		if seenURLs[cleanedURL] {
+			return nil, fmt.Errorf("duplicate URL found: %s", item.URL)
+		}
+		seenURLs[cleanedURL] = true
+
+		slugTitle := generateSlug(item.Title)
+		if seenTitles[slugTitle] {
+			return nil, fmt.Errorf("duplicate title found: %s", item.Title)
+		}
+		seenTitles[slugTitle] = true
 	}
 
 	return catalog.Catalog, nil
+}
+
+func cleanURL(rawURL string) (string, error) {
+	parsedURL, err := url.Parse(rawURL)
+	if err != nil {
+		return "", err
+	}
+
+	parsedURL.RawQuery = ""
+	parsedURL.Fragment = ""
+
+	return strings.TrimSuffix(parsedURL.String(), "/"), nil
+}
+
+func generateSlug(title string) string {
+	t := transform.Chain(norm.NFD, runes.Remove(runes.In(unicode.Mn)), norm.NFC)
+	result, _, _ := transform.String(t, title)
+
+	result = strings.ToLower(result)
+
+	reg, _ := regexp.Compile("[^a-z0-9-]+")
+	result = reg.ReplaceAllString(result, "-")
+
+	result = strings.Trim(regexp.MustCompile(`-+`).ReplaceAllString(result, "-"), "-")
+
+	return result
 }
 
 func validateCatalogItem(item CatalogItem) error {
