@@ -162,6 +162,7 @@ catalog:
       author: Felipe Adamoli
       type: video
       tags:
+        - Excelência Técnica
         - Carreira
       is_paid: true
       level: beginner
@@ -291,6 +292,7 @@ catalog:
       author: Jason Fried, David Heinemeier Hansson
       type: book
       tags:
+        - Liderança e Inspiração
         - Gestão
       is_paid: true
       level: intermediate

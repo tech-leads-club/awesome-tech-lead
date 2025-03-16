@@ -74,6 +74,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [Monitoramento de aplicações por onde começar ? - 4 golden signals do SRE](https://www.youtube.com/watch?v=ahy6PDWoVHM) por Fabricio Veronez | `Site Reliability Engineering` `Intermediário` `Vídeo` `Grátis` |
 | [Monitoring Modern Infrastructure eBook](https://www.datadoghq.com/ebook/monitoring-modern-infrastructure/) por DataDog | `Site Reliability Engineering` `Intermediário` `Livro` `Grátis` |
 | [Monolito Modular na prática](https://www.techleads.club/c/eventos-da-comunidade/live-monolito-modular-na-pratica) por Victor | `Arquitetura e Design` `Intermediário` `Vídeo` `Pago` |
+| [Montando um PDI - Plano de Desenvolvimento Individual](https://www.techleads.club/c/aulas-semanais/) por Felipe Adamoli | `Carreira` `Iniciante` `Vídeo` `Pago` |
 | [O fantástico mundo da observabilidade](https://www.youtube.com/watch?v=rcwcysvwykU) por Dose De Telemetria | `Site Reliability Engineering` `Iniciante` `Vídeo` `Grátis` |
 | [O Projeto Fênix - Um Romance Sobre TI, DevOps e Sobre Ajudar o seu Negócio a Vencer](https://www.goodreads.com/book/show/40782611-o-projeto-f-nix-um-romance-sobre-ti-devops-e-sobre-ajudar-o-seu-neg-ci) por Gene Kim, Kevin Behr, George Spafford | `Arquitetura e Design` `Iniciante` `Livro` `Pago` |
 | [O que é a Engenharia do Caos e o Exército Símio da Netflix](https://pablo-christian.medium.com/o-que-%C3%A9-a-engenharia-do-caos-e-o-ex%C3%A9rcito-s%C3%ADmio-da-netflix-934dbfe04fe2) por Pablo Christian Pereira Nazareth | `Site Reliability Engineering` `Intermediário` `Artigo` `Grátis` |
@@ -169,6 +170,7 @@ dar feedback.
 | [Maker's Schedule, Manager's Schedule](https://paulgraham.com/makersschedule.html) por Paul Graham | `Intermediário` `Artigo` `Grátis` |
 | [On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html) por Birgitta Böckeler, Nina Siessegger | `Intermediário` `Artigo` `Grátis` |
 | [Radical Candor: Be a Kickass Boss Without Losing Your Humanity](https://www.goodreads.com/book/show/29939161-radical-candor?from_search=true&from_srp=true&qid=LDCsMnYFBv&rank=1) por Kim Malone Scott | `Avançado` `Livro` `Pago` |
+| [Remote: Office Not Required](https://www.goodreads.com/book/show/17316682-remote?from_search=true&from_srp=true&qid=K4D8QJoPob&rank=1) por Jason Fried, David Heinemeier Hansson | `Gestão` `Intermediário` `Livro` `Pago` |
 | [Scaling People](https://press.stripe.com/scaling-people) por Claire Hughes Johnson | `Carreira` `Gestão` `Abrangência de Impacto` `Impacto no Negócio` `Intermediário` `Livro` `Pago` |
 | [Team Topologies: Organizing Business and Technology Teams for Fast Flow](https://www.goodreads.com/book/show/44135420-team-topologies) por Matthew Skelton, Manuel Pais | `Avançado` `Livro` `Pago` |
 | [The Five Dysfunctions of a Team](https://www.goodreads.com/book/show/21343.The_Five_Dysfunctions_of_a_Team) por Patrick Lencioni | `Gestão` `Intermediário` `Livro` `Pago` |
