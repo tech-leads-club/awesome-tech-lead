@@ -6,6 +6,12 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+const (
+        TechnicalExcellenceTag      = "Excelência Técnica"
+        LeadershipAndInspirationTag = "Liderança e Inspiração"
+        DeliveringValueTag          = "Entrega de Valor"
+)
+
 type CatalogItem struct {
 	URL         string   `yaml:"url"`
 	Title       string   `yaml:"title"`
@@ -56,5 +62,18 @@ func validateCatalogItem(item CatalogItem) error {
 		return fmt.Errorf("tags cannot be empty")
 	}
 
-	return nil
+	pillarTags := map[string]bool{
+		TechnicalExcellenceTag:      true,
+		LeadershipAndInspirationTag: true,
+		DeliveringValueTag:          true,
+	}
+
+	for _, tag := range item.Tags {
+		if pillarTags[tag] {
+			return nil
+		}
+	}
+
+	return fmt.Errorf("item must have at least one pillar tag: %s, %s, or %s", 
+		TechnicalExcellenceTag, LeadershipAndInspirationTag, DeliveringValueTag)
 }
