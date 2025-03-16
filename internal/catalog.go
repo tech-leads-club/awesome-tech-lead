@@ -2,22 +2,19 @@ package catalog
 
 import (
 	"fmt"
-	"regexp"
 	"strings"
-	"unicode"
 
 	"net/url"
 
-	"golang.org/x/text/runes"
-	"golang.org/x/text/transform"
-	"golang.org/x/text/unicode/norm"
 	"gopkg.in/yaml.v3"
+
+	"github.com/gosimple/slug"
 )
 
 const (
-        TechnicalExcellenceTag      = "Excelência Técnica"
-        LeadershipAndInspirationTag = "Liderança e Inspiração"
-        DeliveringValueTag          = "Entrega de Valor"
+	TechnicalExcellenceTag      = "Excelência Técnica"
+	LeadershipAndInspirationTag = "Liderança e Inspiração"
+	DeliveringValueTag          = "Entrega de Valor"
 )
 
 type CatalogItem struct {
@@ -61,7 +58,7 @@ func ParseCatalog(data []byte) ([]CatalogItem, error) {
 		}
 		seenURLs[cleanedURL] = true
 
-		slugTitle := generateSlug(item.Title)
+		slugTitle := slug.Make(item.Title)
 		if seenTitles[slugTitle] {
 			return nil, fmt.Errorf("duplicate title found: %s", item.Title)
 		}
@@ -81,20 +78,6 @@ func cleanURL(rawURL string) (string, error) {
 	parsedURL.Fragment = ""
 
 	return strings.TrimSuffix(parsedURL.String(), "/"), nil
-}
-
-func generateSlug(title string) string {
-	t := transform.Chain(norm.NFD, runes.Remove(runes.In(unicode.Mn)), norm.NFC)
-	result, _, _ := transform.String(t, title)
-
-	result = strings.ToLower(result)
-
-	reg, _ := regexp.Compile("[^a-z0-9-]+")
-	result = reg.ReplaceAllString(result, "-")
-
-	result = strings.Trim(regexp.MustCompile(`-+`).ReplaceAllString(result, "-"), "-")
-
-	return result
 }
 
 func validateCatalogItem(item CatalogItem) error {
@@ -128,6 +111,6 @@ func validateCatalogItem(item CatalogItem) error {
 		}
 	}
 
-	return fmt.Errorf("item must have at least one pillar tag: %s, %s, or %s", 
+	return fmt.Errorf("item must have at least one pillar tag: %s, %s, or %s",
 		TechnicalExcellenceTag, LeadershipAndInspirationTag, DeliveringValueTag)
 }
