@@ -2,9 +2,6 @@ package catalog
 
 import (
 	"fmt"
-	"strings"
-
-	"net/url"
 
 	"gopkg.in/yaml.v3"
 
@@ -47,16 +44,10 @@ func ParseCatalog(data []byte) ([]CatalogItem, error) {
 			return nil, fmt.Errorf("validation error for item %q: %w", item.Title, err)
 		}
 
-		cleanedURL, err := cleanURL(item.URL)
-		if err != nil {
-			fmt.Println("validation error URL:", err)
-			continue
-		}
-
-		if seenURLs[cleanedURL] {
+		if seenURLs[item.URL] {
 			return nil, fmt.Errorf("duplicate URL found: %s", item.URL)
 		}
-		seenURLs[cleanedURL] = true
+		seenURLs[item.URL] = true
 
 		slugTitle := slug.Make(item.Title)
 		if seenTitles[slugTitle] {
@@ -66,18 +57,6 @@ func ParseCatalog(data []byte) ([]CatalogItem, error) {
 	}
 
 	return catalog.Catalog, nil
-}
-
-func cleanURL(rawURL string) (string, error) {
-	parsedURL, err := url.Parse(rawURL)
-	if err != nil {
-		return "", err
-	}
-
-	parsedURL.RawQuery = ""
-	parsedURL.Fragment = ""
-
-	return strings.TrimSuffix(parsedURL.String(), "/"), nil
 }
 
 func validateCatalogItem(item CatalogItem) error {
