@@ -1949,3 +1949,15 @@ catalog:
         - staff
         - principal
       language: pt_br
+    - url: https://engsoftmoderna.info/
+      title: Engenharia de Software Moderna
+      author: Marco Tullio Valente
+      type: book
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: beginner
+      career_bands:
+        - junior
+        - mid
+      language: pt_br
