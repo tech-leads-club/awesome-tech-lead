@@ -1965,3 +1965,33 @@ catalog:
         - senior
         - tl
       language: en_us
+    - url: https://www.amazon.com/-/pt/dp/8543108683/ref=sr_1_1?crid=3OGRZCH2VDUJO&dib=eyJ2IjoiMSJ9.J-hmIqMyxrbpOpQO1_gAi39RTd34MfPSWWv7fwGoq8jwgiYY5Pt9nUOBV8LK0I12E_MoTJbOf1VYRMqcw7fFc-K8zOtr-qLWT97HiFh-_PtnS-TjHv-2WFrkyRSJ-SmpbdUhNQNOYwMzlKOIISDvobyv6tVywwnZbjdS4Ri4N2FmmGYsL07uRHeZ9udBwmDp3TFznKB9TEPQl4DGYOLPjpHtH5WMkgk-K8uF7Em9WXM.BoBTzH0Biy9NZihzVQe65Y2u3y17l6euPHtQ3UpkBB8&dib_tag=se&keywords=como+fazer+amigos+e+influenciar+pessoas&qid=1742153807&sprefix=como+fazer+amigos+e+influ%2Caps%2C211&sr=8-1
+      title: Como fazer amigos e influenciar pessoas
+      author: Dale Carnegie
+      type: book
+      tags:
+        - Liderança e Inspiração
+        - Gestão
+      is_paid: true
+      level: advanced
+      career_bands:
+        - senior
+        - tl
+        - staff
+        - principal
+      language: pt_br
+    - url: https://www.amazon.com/-/pt/dp/8578607783/ref=sr_1_3?__mk_pt_BR=ÅMÅŽÕÑ&crid=1NZ6EP6JRSK53&dib=eyJ2IjoiMSJ9.u30rY4P-Lt4fM7q_DqqhnypAmwkct3cIQ0yAZoZKFa1i1iAhTzXombtDoIYcd5uZqWOHzIlY6rdMEHIf6Zi5rGCzc8O2BWLfH7kXw7tDk6XTM_Q7xYfIrZcNK0P8tlWyQco_C5rD0IaaB1-Bp0lefA7Ftyuzz2PmdNRjeHzHNoYzSTaSHSf5fnqpfXBpvzf4_U_Di37JkhkzMSoSY0U0IzM4yGg1wGsF3UAPN4hN-ng.oq5BT2aFBxsNE3CPgGiqan-aUXFj7whxxloTFi6B28o&dib_tag=se&keywords=As+21+irrefutáveis+leis+da+liderança&qid=1742154215&sprefix=as+21+irrefutáveis+leis+da+liderança%2Caps%2C534&sr=8-3
+      title: As 21 irrefutáveis leis da liderança
+      author: John C. Maxwell
+      type: book
+      tags:
+        - Liderança e Inspiração
+        - Gestão
+      is_paid: true
+      level: advanced
+      career_bands:
+        - senior
+        - tl
+        - staff
+        - principal
+      language: pt_br
