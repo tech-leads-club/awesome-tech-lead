@@ -4,12 +4,14 @@ import (
 	"fmt"
 
 	"gopkg.in/yaml.v3"
+
+	"github.com/gosimple/slug"
 )
 
 const (
-        TechnicalExcellenceTag      = "Excelência Técnica"
-        LeadershipAndInspirationTag = "Liderança e Inspiração"
-        DeliveringValueTag          = "Entrega de Valor"
+	TechnicalExcellenceTag      = "Excelência Técnica"
+	LeadershipAndInspirationTag = "Liderança e Inspiração"
+	DeliveringValueTag          = "Entrega de Valor"
 )
 
 type CatalogItem struct {
@@ -30,6 +32,9 @@ func ParseCatalog(data []byte) ([]CatalogItem, error) {
 		Catalog []CatalogItem `yaml:"catalog"`
 	}
 
+	seenURLs := make(map[string]bool)
+	seenTitles := make(map[string]bool)
+
 	if err := yaml.Unmarshal(data, &catalog); err != nil {
 		return nil, fmt.Errorf("invalid YAML: %w", err)
 	}
@@ -38,6 +43,17 @@ func ParseCatalog(data []byte) ([]CatalogItem, error) {
 		if err := validateCatalogItem(item); err != nil {
 			return nil, fmt.Errorf("validation error for item %q: %w", item.Title, err)
 		}
+
+		if seenURLs[item.URL] {
+			return nil, fmt.Errorf("duplicate URL found: %s", item.URL)
+		}
+		seenURLs[item.URL] = true
+
+		slugTitle := slug.Make(item.Title)
+		if seenTitles[slugTitle] {
+			return nil, fmt.Errorf("duplicate title found: %s", item.Title)
+		}
+		seenTitles[slugTitle] = true
 	}
 
 	return catalog.Catalog, nil
@@ -74,6 +90,6 @@ func validateCatalogItem(item CatalogItem) error {
 		}
 	}
 
-	return fmt.Errorf("item must have at least one pillar tag: %s, %s, or %s", 
+	return fmt.Errorf("item must have at least one pillar tag: %s, %s, or %s",
 		TechnicalExcellenceTag, LeadershipAndInspirationTag, DeliveringValueTag)
 }

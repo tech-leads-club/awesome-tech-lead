@@ -33,7 +33,6 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [Arquitetura Frontend com William Grasel](https://www.techleads.club/c/eventos-da-comunidade/live-arquitetura-frontend-com-william-grasel) por William Grasel | `Arquitetura e Design` `Intermediário` `Vídeo` `Pago` |
 | [Arquitetura Limpa: o Guia do Artesão Para Estrutura e Design de Software](https://www.amazon.com.br/Arquitetura-Limpa-Artes%C3%A3o-Estrutura-Software/dp/8550804606) por Robert C. Martin  | `Arquitetura e Design` `Intermediário` `Livro` `Pago` |
 | [Arquiteturas Modulares em Go e Node.js - Elton Minetto e Waldemar Neto](https://www.youtube.com/watch?v=_lVf836ZJ4o) por Waldemar Neto, Elton Minetto | `Arquitetura e Design` `Intermediário` `Podcast` `Pago` |
-| [Arquiteturas Modulares em Go e Node.js - Elton Minetto e Waldemar Neto](https://www.youtube.com/live/_lVf836ZJ4o?si=J7Z9ywnUY2M9hQ3W) por Waldemar Neto, Elton Minetto | `Abrangência de Impacto` `Arquitetura e Design` `Intermediário` `Vídeo` `Grátis` |
 | [Aumentando a disponibilidade e oferta de integrações com serviços](https://www.techleads.club/c/desenvolvimento-e-arquitetura-de-software/aumentando-a-disponibilidade-e-oferta-de-integracoes-com-servicos) por William Calderipe | `Arquitetura e Design` `Intermediário` `Artigo` `Pago` |
 | [Balancing Coupling in Software Design (Vlad Khononov)](https://www.youtube.com/watch?v=nNFgOtN9Gts) por Vlad Khononov | `Arquitetura e Design` `Avançado` `Vídeo` `Grátis` |
 | [Balancing Coupling in Software Design: Universal Design Principles for Architecting Modular Software Systems](https://www.amazon.com/Balancing-Coupling-Software-Design-Addison-wesley/dp/0137353480) por Vlad Khononov | `Arquitetura e Design` `Avançado` `Livro` `Pago` |
@@ -104,7 +103,6 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [The Art of Doing Science and Engineering](https://press.stripe.com/the-art-of-doing-science-and-engineering) por Richard W. Hamming | `Avançado` `Livro` `Pago` |
 | [The C4 model for visualising software architecture](https://c4model.com/) por C4 Model | `Arquitetura e Design` `Intermediário` `Artigo` `Grátis` |
 | [The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations](https://www.goodreads.com/book/show/26083308-the-devops-handbook) por Gene Kim, Patrick Debois, John Willis, Jez Humble | `Site Reliability Engineering` `Qualidade` `Intermediário` `Livro` `Pago` |
-| [The Pragmatic Programmer: From Journeyman to Master](https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer) por Dave Thomas, Andy Hunt | `Iniciante` `Livro` `Pago` |
 | [The Site Reliability Workbook: Practical Ways to Implement SRE](https://www.amazon.com.br/Site-Reliability-Workbook-Betsy-Beyer/dp/1492029505) por Betsy Beyer, Niall Richard Murphy, David K. Rensin, Kent Kawahara | `Avançado` `Livro` `Pago` |
 | [The Twelve Factor App](https://12factor.net/) por Heroku | `Arquitetura e Design` `Intermediário` `Artigo` `Grátis` |
 | [Tornado tático, conhece algum?](https://www.techleads.club/c/cafezinho/tornado-tatico-conhece-algum) por Waldemar Neto | `Arquitetura e Design` `Intermediário` `Artigo` `Pago` |
@@ -175,7 +173,6 @@ dar feedback.
 | [Remote: Office Not Required](https://www.goodreads.com/book/show/17316682-remote?from_search=true&from_srp=true&qid=K4D8QJoPob&rank=1) por Jason Fried, David Heinemeier Hansson | `Gestão` `Intermediário` `Livro` `Pago` |
 | [Scaling People](https://press.stripe.com/scaling-people) por Claire Hughes Johnson | `Carreira` `Gestão` `Abrangência de Impacto` `Impacto no Negócio` `Intermediário` `Livro` `Pago` |
 | [Team Topologies: Organizing Business and Technology Teams for Fast Flow](https://www.goodreads.com/book/show/44135420-team-topologies) por Matthew Skelton, Manuel Pais | `Avançado` `Livro` `Pago` |
-| [The Five Dysfunctions of a Team](https://www.goodreads.com/book/show/21343.The_Five_Dysfunctions_of_a_Team) por Patrick Lencioni | `Gestão` `Intermediário` `Livro` `Pago` |
 | [The Five Dysfunctions of a Team: A Leadership Fable](https://www.goodreads.com/book/show/21343.The_Five_Dysfunctions_of_a_Team) por Patrick Lencioni | `Intermediário` `Livro` `Pago` |
 | [The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change](https://www.goodreads.com/book/show/33369254-the-manager-s-path?from_search=true&from_srp=true&qid=LLOYJQShZ7&rank=1) por Camille Fournier | `Avançado` `Livro` `Pago` |
 | [The Staff Engineer's Path: A Guide for Individual Contributors Navigating Growth and Change](https://www.goodreads.com/book/show/61058107-the-staff-engineer-s-path?from_search=true&from_srp=true&qid=DiDv1cKwYy&rank=1) por Tanya Reilly | `Avançado` `Livro` `Pago` |
