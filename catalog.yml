@@ -1961,3 +1961,17 @@ catalog:
         - junior
         - mid
       language: pt_br
+    - url: https://github.com/ZachGoldberg/Startup-CTO-Handbook/blob/main/StartupCTOHandbook.md
+      title: The Startup CTO's Handbook
+      author: Zach Goldberg
+      type: book
+      tags:
+        - Entrega de Valor
+        - Liderança e Inspiração
+      is_paid: false
+      level: advanced
+      career_bands:
+        - tl
+        - staff
+        - principal
+      language: en_us
