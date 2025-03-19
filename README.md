@@ -143,6 +143,7 @@ necessidades do negócio.
 | [The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change](https://www.goodreads.com/book/show/33369254-the-manager-s-path?from_search=true&from_srp=true&qid=LLOYJQShZ7&rank=1) por Camille Fournier | `Avançado` `Livro` `Pago` |
 | [The Pragmatic Programmer: From Journeyman to Master](https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer?ref=rae_1) por Dave Thomas, Andy Hunt | `Arquitetura e Design` `Iniciante` `Livro` `Pago` |
 | [The Staff Engineer's Path: A Guide for Individual Contributors Navigating Growth and Change](https://www.goodreads.com/book/show/61058107-the-staff-engineer-s-path?from_search=true&from_srp=true&qid=DiDv1cKwYy&rank=1) por Tanya Reilly | `Avançado` `Livro` `Pago` |
+| [The Startup CTO's Handbook](https://github.com/ZachGoldberg/Startup-CTO-Handbook/blob/main/StartupCTOHandbook.md) por Zach Goldberg | `Avançado` `Livro` `Grátis` |
 | [The Team that Managed Itself: A Story of Leadership](https://www.goodreads.com/book/show/53108540-the-team-that-managed-itself?from_search=true&from_srp=true&qid=L7C8WR5EMN&rank=1) por Christina Wodtke  | `Intermediário` `Livro` `Pago` |
 | [The Zendesk Triple Diamond](https://medium.com/zendesk-creative-blog/the-zendesk-triple-diamond-process-fd857a11c179) por Mike Chen | `Intermediário` `Artigo` `Grátis` |
 
@@ -177,6 +178,7 @@ dar feedback.
 | [The Five Dysfunctions of a Team: A Leadership Fable](https://www.goodreads.com/book/show/21343.The_Five_Dysfunctions_of_a_Team) por Patrick Lencioni | `Intermediário` `Livro` `Pago` |
 | [The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change](https://www.goodreads.com/book/show/33369254-the-manager-s-path?from_search=true&from_srp=true&qid=LLOYJQShZ7&rank=1) por Camille Fournier | `Avançado` `Livro` `Pago` |
 | [The Staff Engineer's Path: A Guide for Individual Contributors Navigating Growth and Change](https://www.goodreads.com/book/show/61058107-the-staff-engineer-s-path?from_search=true&from_srp=true&qid=DiDv1cKwYy&rank=1) por Tanya Reilly | `Avançado` `Livro` `Pago` |
+| [The Startup CTO's Handbook](https://github.com/ZachGoldberg/Startup-CTO-Handbook/blob/main/StartupCTOHandbook.md) por Zach Goldberg | `Avançado` `Livro` `Grátis` |
 | [The Team that Managed Itself: A Story of Leadership](https://www.goodreads.com/book/show/53108540-the-team-that-managed-itself?from_search=true&from_srp=true&qid=L7C8WR5EMN&rank=1) por Christina Wodtke  | `Intermediário` `Livro` `Pago` |
 | [Working with Emotional Intelligence](https://www.goodreads.com/book/show/27537.Working_with_Emotional_Intelligence) por Daniel Goleman | `Iniciante` `Livro` `Pago` |
 
