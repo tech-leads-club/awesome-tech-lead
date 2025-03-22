@@ -2,6 +2,7 @@ package catalog
 
 import (
 	"fmt"
+	"strings"
 
 	"gopkg.in/yaml.v3"
 
@@ -13,6 +14,31 @@ const (
 	LeadershipAndInspirationTag = "Liderança e Inspiração"
 	DeliveringValueTag          = "Entrega de Valor"
 )
+
+var PillarTags = map[string]bool{
+	TechnicalExcellenceTag:      true,
+	LeadershipAndInspirationTag: true,
+	DeliveringValueTag:          true,
+}
+
+var ValidTypes = map[string]struct{}{
+	"article": {},
+	"book":    {},
+	"course":  {},
+	"feed":    {},
+	"podcast": {},
+	"roadmap": {},
+	"video":   {},
+}
+
+var ValidCareerBands = map[string]struct{}{
+	"junior":    {},
+	"mid":       {},
+	"senior":    {},
+	"tl":        {},
+	"staff":     {},
+	"principal": {},
+}
 
 type CatalogItem struct {
 	URL         string   `yaml:"url"`
@@ -60,36 +86,51 @@ func ParseCatalog(data []byte) ([]CatalogItem, error) {
 }
 
 func validateCatalogItem(item CatalogItem) error {
-	allowedTypes := map[string]bool{
-		"article": true,
-		"book":    true,
-		"course":  true,
-		"feed":    true,
-		"podcast": true,
-		"roadmap": true,
-		"video":   true,
+	var errs []string
+
+	if _, ok := ValidTypes[item.Type]; !ok {
+		errs = append(errs, fmt.Sprintf("invalid type %q, valid options are: %s", item.Type, joinKeys(ValidTypes)))
 	}
 
-	if !allowedTypes[item.Type] {
-		return fmt.Errorf("invalid type: %s", item.Type)
-	}
-
-	if len(item.Tags) == 0 {
-		return fmt.Errorf("tags cannot be empty")
-	}
-
-	pillarTags := map[string]bool{
-		TechnicalExcellenceTag:      true,
-		LeadershipAndInspirationTag: true,
-		DeliveringValueTag:          true,
-	}
-
-	for _, tag := range item.Tags {
-		if pillarTags[tag] {
-			return nil
+	if len(item.CareerBands) == 0 {
+		errs = append(errs, "career bands cannot be empty")
+	} else {
+		for _, band := range item.CareerBands {
+			if _, ok := ValidCareerBands[band]; !ok {
+				errs = append(errs, fmt.Sprintf("invalid career band %q, valid options are: %s", band, joinKeys(ValidCareerBands)))
+			}
 		}
 	}
 
-	return fmt.Errorf("item must have at least one pillar tag: %s, %s, or %s",
-		TechnicalExcellenceTag, LeadershipAndInspirationTag, DeliveringValueTag)
+	if len(item.Tags) == 0 {
+		errs = append(errs, "tags cannot be empty")
+	} else if !hasPillarTag(item.Tags) {
+		errs = append(errs, fmt.Sprintf("item must have at least one pillar tag: %s", joinPillarTags()))
+	}
+
+	if len(errs) > 0 {
+		return fmt.Errorf("validation errors: %s", strings.Join(errs, "; "))
+	}
+	return nil
+}
+
+func hasPillarTag(tags []string) bool {
+	for _, tag := range tags {
+		if PillarTags[tag] {
+			return true
+		}
+	}
+	return false
+}
+
+func joinKeys(m map[string]struct{}) string {
+	keys := make([]string, 0, len(m))
+	for k := range m {
+		keys = append(keys, k)
+	}
+	return strings.Join(keys, ", ")
+}
+
+func joinPillarTags() string {
+	return fmt.Sprintf("%q, %q, %q", TechnicalExcellenceTag, LeadershipAndInspirationTag, DeliveringValueTag)
 }

@@ -1872,6 +1872,11 @@ catalog:
         - Qualidade
       is_paid: false
       level: advanced
+      career_bands:
+        - senior
+        - tl
+        - staff
+        - principal
       language: en_us
     - url: https://www.trinitytakei.io/blog/17-traits-of-awesome-tech-leads
       title: 17 Traits of Awesome Tech Leads
