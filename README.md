@@ -7,13 +7,15 @@ Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
 O conteúdo está categorizado nos três pilares da comunidade: Excelência
 Técnica, Entrega de Valor e Liderança e Inspiração.
 
-## 🎽 Contribuir
+## 🗂️ Índice
 
-Deseja contribuir com esse repositório? Saiba mais em
-[CONTRIBUTING.md](./CONTRIBUTING.md).
+- [🏆 Excelência Técnica](#excelencia-tecnica)
+- [📦 Entrega de Valor](#entrega-de-valor)
+- [🤝 Liderança e Inspiração](#lideranca-e-inspiracao)
+- [🎽 Como Contribuir?](#como-contribuir)
 
 
-## 🏆 Excelência Técnica
+<h2 id="excelencia-tecnica">🏆 Excelência Técnica</h2>
 
 Pilar focado no domínio e aplicação eficaz de tecnologias, práticas e
 arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
@@ -111,7 +113,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 
 
 
-## 📦 Entrega de Valor 
+<h2 id="entrega-de-valor">📦 Entrega de Valor</h2>
 
 Pilar relacionado a práticas ágeis e à capacidade de entregar projetos de
 software de maneira eficiente, com alinhamento estratégico e foco nas
@@ -149,7 +151,7 @@ necessidades do negócio.
 
 
 
-## 🤝 Liderança e Inspiração 
+<h2 id="lideranca-e-inspiracao">🤝 Liderança e Inspiração</h2>
 
 Pilar focado na habilidade de liderar times, pessoas, alinhar expectativas, mentorar colegas e
 dar feedback.
@@ -182,3 +184,8 @@ dar feedback.
 | [The Team that Managed Itself: A Story of Leadership](https://www.goodreads.com/book/show/53108540-the-team-that-managed-itself?from_search=true&from_srp=true&qid=L7C8WR5EMN&rank=1) por Christina Wodtke  | `Intermediário` `Livro` `Pago` |
 | [Working with Emotional Intelligence](https://www.goodreads.com/book/show/27537.Working_with_Emotional_Intelligence) por Daniel Goleman | `Iniciante` `Livro` `Pago` |
 
+
+<h2 id="como-contribuir">🎽 Como Contribuir?</h2>
+
+Deseja contribuir com esse repositório? Saiba mais em
+[CONTRIBUTING.md](./CONTRIBUTING.md).
