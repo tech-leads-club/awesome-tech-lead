@@ -198,13 +198,15 @@ Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
 O conteúdo está categorizado nos três pilares da comunidade: Excelência
 Técnica, Entrega de Valor e Liderança e Inspiração.
 
-## 🎽 Contribuir
+## 🗂️ Índice
 
-Deseja contribuir com esse repositório? Saiba mais em
-[CONTRIBUTING.md](./CONTRIBUTING.md).
+- [🏆 Excelência Técnica](#excelencia-tecnica)
+- [📦 Entrega de Valor](#entrega-de-valor)
+- [🤝 Liderança e Inspiração](#lideranca-e-inspiracao)
+- [🎽 Como Contribuir?](#como-contribuir)
 
 {{if .TechnicalExcellence}}
-## 🏆 Excelência Técnica
+<h2 id="excelencia-tecnica">🏆 Excelência Técnica</h2>
 
 Pilar focado no domínio e aplicação eficaz de tecnologias, práticas e
 arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
@@ -217,7 +219,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 {{end}}
 
 {{if .DeliveringValue}}
-## 📦 Entrega de Valor 
+<h2 id="entrega-de-valor">📦 Entrega de Valor</h2>
 
 Pilar relacionado a práticas ágeis e à capacidade de entregar projetos de
 software de maneira eficiente, com alinhamento estratégico e foco nas
@@ -231,7 +233,7 @@ necessidades do negócio.
 {{end}}
 
 {{if .LeadershipAndInspiration}}
-## 🤝 Liderança e Inspiração 
+<h2 id="lideranca-e-inspiracao">🤝 Liderança e Inspiração</h2>
 
 Pilar focado na habilidade de liderar times, pessoas, alinhar expectativas, mentorar colegas e
 dar feedback.
@@ -242,6 +244,11 @@ dar feedback.
 | [{{ .Title }}]({{ .URL }}){{if .Author}} por {{.Author}}{{end}} | {{ .Tags }} |
 {{- end }}
 {{end}}
+
+<h2 id="como-contribuir">🎽 Como Contribuir?</h2>
+
+Deseja contribuir com esse repositório? Saiba mais em
+[CONTRIBUTING.md](./CONTRIBUTING.md).
 `
 
 	tmpl, err := template.New("readme").Parse(readmeTemplate)
