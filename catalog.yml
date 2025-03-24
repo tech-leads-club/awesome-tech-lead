@@ -1954,8 +1954,7 @@ catalog:
       author: Eduardo Matos
       type: book
       tags:
-        - Liderança
-        - Carreira
+        - Liderança e Inspiração
       is_paid: true
       level: beginner
       career_bands:
