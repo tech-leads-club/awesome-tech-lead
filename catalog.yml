@@ -47,21 +47,6 @@ catalog:
         - staff
         - principal
       language: en_us
-    - url: https://www.goodreads.com/book/show/21343.The_Five_Dysfunctions_of_a_Team
-      title: The Five Dysfunctions of a Team
-      author: Patrick Lencioni
-      type: book
-      tags:
-        - Liderança e Inspiração
-        - Gestão
-      is_paid: true
-      level: intermediate
-      career_bands:
-        - senior
-        - tl
-        - staff
-        - principal
-      language: en_us
     - url: https://www.goodreads.com/book/show/67833.Extreme_Programming_Explained?ref=nav_sb_ss_1_20
       title: 'Extreme Programming Explained: Embrace Change'
       author: Kent Beck, Cynthia Andres
@@ -594,19 +579,6 @@ catalog:
       career_bands:
         - junior
         - mid
-      language: en_us
-    - url: https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer
-      title: 'The Pragmatic Programmer: From Journeyman to Master'
-      author: Dave Thomas, Andy Hunt
-      type: book
-      tags:
-        - Excelência Técnica
-      is_paid: true
-      level: beginner
-      career_bands:
-        - junior
-        - mid
-        - senior
       language: en_us
     - url: https://martinfowler.com/articles/on-pair-programming.html
       title: On Pair Programming
@@ -1617,24 +1589,6 @@ catalog:
         - staff
         - principal
       language: pt_br
-    - url: https://www.youtube.com/live/_lVf836ZJ4o?si=J7Z9ywnUY2M9hQ3W
-      title: Arquiteturas Modulares em Go e Node.js - Elton Minetto e Waldemar Neto
-      author: Waldemar Neto, Elton Minetto
-      type: video
-      tags:
-        - Excelência Técnica
-        - Abrangência de Impacto
-        - Arquitetura e Design
-      is_paid: false
-      level: intermediate
-      career_bands:
-        - mid
-        - senior
-        - junior
-        - tl
-        - staff
-        - principal
-      language: pt_br
     - url: https://youtu.be/47KxEv2F8TY?si=cmNSY52A1ysIZK00
       title: DVC 15 - Rest vs GraphQL vs gRPC com Elton Minetto
       author: Waldemar Neto, Elton Minetto
@@ -1918,6 +1872,11 @@ catalog:
         - Qualidade
       is_paid: false
       level: advanced
+      career_bands:
+        - senior
+        - tl
+        - staff
+        - principal
       language: en_us
     - url: https://www.trinitytakei.io/blog/17-traits-of-awesome-tech-leads
       title: 17 Traits of Awesome Tech Leads
@@ -2019,6 +1978,32 @@ catalog:
       level: advanced
       career_bands:
         - senior
+        - tl
+        - staff
+        - principal
+      language: en_us
+    - url: https://engsoftmoderna.info/
+      title: Engenharia de Software Moderna
+      author: Marco Tullio Valente
+      type: book
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: beginner
+      career_bands:
+        - junior
+        - mid
+      language: pt_br
+    - url: https://github.com/ZachGoldberg/Startup-CTO-Handbook/blob/main/StartupCTOHandbook.md
+      title: The Startup CTO's Handbook
+      author: Zach Goldberg
+      type: book
+      tags:
+        - Entrega de Valor
+        - Liderança e Inspiração
+      is_paid: false
+      level: advanced
+      career_bands:
         - tl
         - staff
         - principal

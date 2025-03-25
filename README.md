@@ -7,13 +7,15 @@ Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
 O conteúdo está categorizado nos três pilares da comunidade: Excelência
 Técnica, Entrega de Valor e Liderança e Inspiração.
 
-## 🎽 Contribuir
+## 🗂️ Índice
 
-Deseja contribuir com esse repositório? Saiba mais em
-[CONTRIBUTING.md](./CONTRIBUTING.md).
+- [🏆 Excelência Técnica](#excelencia-tecnica)
+- [📦 Entrega de Valor](#entrega-de-valor)
+- [🤝 Liderança e Inspiração](#lideranca-e-inspiracao)
+- [🎽 Como Contribuir?](#como-contribuir)
 
 
-## 🏆 Excelência Técnica
+<h2 id="excelencia-tecnica">🏆 Excelência Técnica</h2>
 
 Pilar focado no domínio e aplicação eficaz de tecnologias, práticas e
 arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
@@ -33,7 +35,6 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [Arquitetura Frontend com William Grasel](https://www.techleads.club/c/eventos-da-comunidade/live-arquitetura-frontend-com-william-grasel) por William Grasel | `Arquitetura e Design` `Intermediário` `Vídeo` `Pago` |
 | [Arquitetura Limpa: o Guia do Artesão Para Estrutura e Design de Software](https://www.amazon.com.br/Arquitetura-Limpa-Artes%C3%A3o-Estrutura-Software/dp/8550804606) por Robert C. Martin  | `Arquitetura e Design` `Intermediário` `Livro` `Pago` |
 | [Arquiteturas Modulares em Go e Node.js - Elton Minetto e Waldemar Neto](https://www.youtube.com/watch?v=_lVf836ZJ4o) por Waldemar Neto, Elton Minetto | `Arquitetura e Design` `Intermediário` `Podcast` `Pago` |
-| [Arquiteturas Modulares em Go e Node.js - Elton Minetto e Waldemar Neto](https://www.youtube.com/live/_lVf836ZJ4o?si=J7Z9ywnUY2M9hQ3W) por Waldemar Neto, Elton Minetto | `Abrangência de Impacto` `Arquitetura e Design` `Intermediário` `Vídeo` `Grátis` |
 | [Aumentando a disponibilidade e oferta de integrações com serviços](https://www.techleads.club/c/desenvolvimento-e-arquitetura-de-software/aumentando-a-disponibilidade-e-oferta-de-integracoes-com-servicos) por William Calderipe | `Arquitetura e Design` `Intermediário` `Artigo` `Pago` |
 | [Balancing Coupling in Software Design (Vlad Khononov)](https://www.youtube.com/watch?v=nNFgOtN9Gts) por Vlad Khononov | `Arquitetura e Design` `Avançado` `Vídeo` `Grátis` |
 | [Balancing Coupling in Software Design: Universal Design Principles for Architecting Modular Software Systems](https://www.amazon.com/Balancing-Coupling-Software-Design-Addison-wesley/dp/0137353480) por Vlad Khononov | `Arquitetura e Design` `Avançado` `Livro` `Pago` |
@@ -57,6 +58,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [DVC 13 - Arquitetura de Software com Rodrigo Branas e Elton Minetto](https://youtu.be/t4o1tOV3q78?si=dhSqzGGnAg3-S4yq) por Waldemar Neto, Rodrigo Branas e Elton Minetto | `Arquitetura e Design` `Intermediário` `Vídeo` `Grátis` |
 | [DVC 14 - Arquitetura Frontend com William Grasel e Emilio Aiolfi](https://youtu.be/PtS60XE4y9g?si=jt4wVKI3E4g5b9gs) por Waldemar Neto, William Grasel, Emilio Aiolfi | `Abrangência de Impacto` `Arquitetura e Design` `Avançado` `Vídeo` `Grátis` |
 | [DVC 15 - Rest vs GraphQL vs gRPC com Elton Minetto](https://youtu.be/47KxEv2F8TY?si=cmNSY52A1ysIZK00) por Waldemar Neto, Elton Minetto | `Arquitetura e Design` `Avançado` `Vídeo` `Grátis` |
+| [Engenharia de Software Moderna](https://engsoftmoderna.info/) por Marco Tullio Valente | `Iniciante` `Livro` `Grátis` |
 | [Exemplo de Arquiteturas Evolutivas com Governança Automatizada e fitness functions: Checagem automática de estrutura de projeto JS/TS](https://www.techleads.club/c/desenvolvimento-e-arquitetura-de-software/exemplo-de-arquiteturas-evolutivas-com-governanca-automatizada-e-fitness-functions-checagem-automatica-de-estrutura-de-projeto-js-ts) por Waldemar Neto | `Arquitetura e Design` `Intermediário` `Artigo` `Pago` |
 | [Formação SRE Alura](https://www.alura.com.br/formacao-sre) por Alura | `Site Reliability Engineering` `Intermediário` `Curso` `Pago` |
 | [Fundamentals of Software Architecture: An Engineering Approach](https://www.goodreads.com/book/show/44144493-fundamentals-of-software-architecture?from_search=true&from_srp=true&qid=0koXDtLRrO&rank=1) por Neal Ford, Mark Richards | `Arquitetura e Design` `Intermediário` `Livro` `Pago` |
@@ -104,7 +106,6 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [The Art of Doing Science and Engineering](https://press.stripe.com/the-art-of-doing-science-and-engineering) por Richard W. Hamming | `Avançado` `Livro` `Pago` |
 | [The C4 model for visualising software architecture](https://c4model.com/) por C4 Model | `Arquitetura e Design` `Intermediário` `Artigo` `Grátis` |
 | [The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations](https://www.goodreads.com/book/show/26083308-the-devops-handbook) por Gene Kim, Patrick Debois, John Willis, Jez Humble | `Site Reliability Engineering` `Qualidade` `Intermediário` `Livro` `Pago` |
-| [The Pragmatic Programmer: From Journeyman to Master](https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer) por Dave Thomas, Andy Hunt | `Iniciante` `Livro` `Pago` |
 | [The Site Reliability Workbook: Practical Ways to Implement SRE](https://www.amazon.com.br/Site-Reliability-Workbook-Betsy-Beyer/dp/1492029505) por Betsy Beyer, Niall Richard Murphy, David K. Rensin, Kent Kawahara | `Avançado` `Livro` `Pago` |
 | [The Twelve Factor App](https://12factor.net/) por Heroku | `Arquitetura e Design` `Intermediário` `Artigo` `Grátis` |
 | [Tornado tático, conhece algum?](https://www.techleads.club/c/cafezinho/tornado-tatico-conhece-algum) por Waldemar Neto | `Arquitetura e Design` `Intermediário` `Artigo` `Pago` |
@@ -112,7 +113,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 
 
 
-## 📦 Entrega de Valor 
+<h2 id="entrega-de-valor">📦 Entrega de Valor</h2>
 
 Pilar relacionado a práticas ágeis e à capacidade de entregar projetos de
 software de maneira eficiente, com alinhamento estratégico e foco nas
@@ -144,12 +145,13 @@ necessidades do negócio.
 | [The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change](https://www.goodreads.com/book/show/33369254-the-manager-s-path?from_search=true&from_srp=true&qid=LLOYJQShZ7&rank=1) por Camille Fournier | `Avançado` `Livro` `Pago` |
 | [The Pragmatic Programmer: From Journeyman to Master](https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer?ref=rae_1) por Dave Thomas, Andy Hunt | `Arquitetura e Design` `Iniciante` `Livro` `Pago` |
 | [The Staff Engineer's Path: A Guide for Individual Contributors Navigating Growth and Change](https://www.goodreads.com/book/show/61058107-the-staff-engineer-s-path?from_search=true&from_srp=true&qid=DiDv1cKwYy&rank=1) por Tanya Reilly | `Avançado` `Livro` `Pago` |
+| [The Startup CTO's Handbook](https://github.com/ZachGoldberg/Startup-CTO-Handbook/blob/main/StartupCTOHandbook.md) por Zach Goldberg | `Avançado` `Livro` `Grátis` |
 | [The Team that Managed Itself: A Story of Leadership](https://www.goodreads.com/book/show/53108540-the-team-that-managed-itself?from_search=true&from_srp=true&qid=L7C8WR5EMN&rank=1) por Christina Wodtke  | `Intermediário` `Livro` `Pago` |
 | [The Zendesk Triple Diamond](https://medium.com/zendesk-creative-blog/the-zendesk-triple-diamond-process-fd857a11c179) por Mike Chen | `Intermediário` `Artigo` `Grátis` |
 
 
 
-## 🤝 Liderança e Inspiração 
+<h2 id="lideranca-e-inspiracao">🤝 Liderança e Inspiração</h2>
 
 Pilar focado na habilidade de liderar times, pessoas, alinhar expectativas, mentorar colegas e
 dar feedback.
@@ -175,10 +177,15 @@ dar feedback.
 | [Remote: Office Not Required](https://www.goodreads.com/book/show/17316682-remote?from_search=true&from_srp=true&qid=K4D8QJoPob&rank=1) por Jason Fried, David Heinemeier Hansson | `Gestão` `Intermediário` `Livro` `Pago` |
 | [Scaling People](https://press.stripe.com/scaling-people) por Claire Hughes Johnson | `Carreira` `Gestão` `Abrangência de Impacto` `Impacto no Negócio` `Intermediário` `Livro` `Pago` |
 | [Team Topologies: Organizing Business and Technology Teams for Fast Flow](https://www.goodreads.com/book/show/44135420-team-topologies) por Matthew Skelton, Manuel Pais | `Avançado` `Livro` `Pago` |
-| [The Five Dysfunctions of a Team](https://www.goodreads.com/book/show/21343.The_Five_Dysfunctions_of_a_Team) por Patrick Lencioni | `Gestão` `Intermediário` `Livro` `Pago` |
 | [The Five Dysfunctions of a Team: A Leadership Fable](https://www.goodreads.com/book/show/21343.The_Five_Dysfunctions_of_a_Team) por Patrick Lencioni | `Intermediário` `Livro` `Pago` |
 | [The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change](https://www.goodreads.com/book/show/33369254-the-manager-s-path?from_search=true&from_srp=true&qid=LLOYJQShZ7&rank=1) por Camille Fournier | `Avançado` `Livro` `Pago` |
 | [The Staff Engineer's Path: A Guide for Individual Contributors Navigating Growth and Change](https://www.goodreads.com/book/show/61058107-the-staff-engineer-s-path?from_search=true&from_srp=true&qid=DiDv1cKwYy&rank=1) por Tanya Reilly | `Avançado` `Livro` `Pago` |
+| [The Startup CTO's Handbook](https://github.com/ZachGoldberg/Startup-CTO-Handbook/blob/main/StartupCTOHandbook.md) por Zach Goldberg | `Avançado` `Livro` `Grátis` |
 | [The Team that Managed Itself: A Story of Leadership](https://www.goodreads.com/book/show/53108540-the-team-that-managed-itself?from_search=true&from_srp=true&qid=L7C8WR5EMN&rank=1) por Christina Wodtke  | `Intermediário` `Livro` `Pago` |
 | [Working with Emotional Intelligence](https://www.goodreads.com/book/show/27537.Working_with_Emotional_Intelligence) por Daniel Goleman | `Iniciante` `Livro` `Pago` |
 
+
+<h2 id="como-contribuir">🎽 Como Contribuir?</h2>
+
+Deseja contribuir com esse repositório? Saiba mais em
+[CONTRIBUTING.md](./CONTRIBUTING.md).
