@@ -176,6 +176,7 @@ dar feedback.
 | [Radical Candor: Be a Kickass Boss Without Losing Your Humanity](https://www.goodreads.com/book/show/29939161-radical-candor?from_search=true&from_srp=true&qid=LDCsMnYFBv&rank=1) por Kim Malone Scott | `Avançado` `Livro` `Pago` |
 | [Remote: Office Not Required](https://www.goodreads.com/book/show/17316682-remote?from_search=true&from_srp=true&qid=K4D8QJoPob&rank=1) por Jason Fried, David Heinemeier Hansson | `Gestão` `Intermediário` `Livro` `Pago` |
 | [Scaling People](https://press.stripe.com/scaling-people) por Claire Hughes Johnson | `Carreira` `Gestão` `Abrangência de Impacto` `Impacto no Negócio` `Intermediário` `Livro` `Pago` |
+| [Talking with Tech Leads - From Novices to Practitioners](https://www.goodreads.com/book/show/26499604-talking-with-tech-leads) por Patrick Kua | `Iniciante` `Livro` `Pago` |
 | [Team Topologies: Organizing Business and Technology Teams for Fast Flow](https://www.goodreads.com/book/show/44135420-team-topologies) por Matthew Skelton, Manuel Pais | `Avançado` `Livro` `Pago` |
 | [The Five Dysfunctions of a Team: A Leadership Fable](https://www.goodreads.com/book/show/21343.The_Five_Dysfunctions_of_a_Team) por Patrick Lencioni | `Intermediário` `Livro` `Pago` |
 | [The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change](https://www.goodreads.com/book/show/33369254-the-manager-s-path?from_search=true&from_srp=true&qid=LLOYJQShZ7&rank=1) por Camille Fournier | `Avançado` `Livro` `Pago` |

@@ -1980,3 +1980,15 @@ catalog:
         - staff
         - principal
       language: en_us
+    - url: https://www.goodreads.com/book/show/26499604-talking-with-tech-leads
+      title: Talking with Tech Leads - From Novices to Practitioners
+      author: Patrick Kua
+      type: book
+      tags:
+        - Liderança e Inspiração
+      is_paid: true
+      level: beginner
+      career_bands:
+        - senior
+        - tl
+      language: en_us
