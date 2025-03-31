@@ -2049,7 +2049,7 @@ catalog:
       language: en_us
     - url: https://www.youtube.com/watch?v=l_Vqp1dPuPo
       title: RailsConf 2014 - You are Not an Impostor by Nickolas Means
-      author: Confreaks
+      author: Nickolas Means
       type: video
       tags:
         - Excelência Técnica
