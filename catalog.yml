@@ -2020,3 +2020,216 @@ catalog:
         - senior
         - tl
       language: en_us
+    - url: https://www.youtube.com/watch?v=jMpCF0Z623s
+      title: A Guide To Managing Technical Teams
+      author: Modern Software Engineering
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - Managing Technical Teams
+        - Dave Farley
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=bCEmRwsmmlY
+      title: How To Manage Your Boss! (Managing Up)
+      author: Modern Software Engineering
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - Dave Farley
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=l_Vqp1dPuPo
+      title: RailsConf 2014 - You are Not an Impostor by Nickolas Means
+      author: Nickolas Means
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=sNdkwaW_LwQ
+      title: Be a Better Leader | Simon Sinek
+      author: Simon Sinek
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - simon sinek
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=MAfGb-AYx6I
+      title: Building Trusting Teams
+      author: Simon Sinek
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - simon sinek
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=Zop0wTPrbk8
+      title: Managing Manager‐less Processes • Fred George • GOTO 2017
+      author: GOTO Conferences
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - GOTO Conference
+        - Fred George
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=I-gBHq3od2s
+      title: Better 1:1 Meetings | Software Engineering
+      author: Phil Whelan
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - one-on-one
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=oxgfehnJ7GE
+      title: Camille Fournier on Managing Technical Teams
+      author: Y Combinator
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - YC
+        - Camille Fournier
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=fUVfkLUmII4
+      title: The Art of Software Development • Sander Mak • GOTO 2023
+      author: GOTO Conferences
+      type: video
+      tags:
+        - Excelência Técnica
+        - GOTO
+        - Sander Mak
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=i53Gi_K3o7I
+      title: 20 System Design Concepts Explained in 10 Minutes
+      author: NeetCode
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=G6uBAwVrxHw
+      title: The State of Software Engineering 🔨 — with Kent Beck
+      author: Refactoring
+      type: video
+      tags:
+        - Excelência Técnica
+        - Kent Beck
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=aWZFRk-w3ng
+      title: Build Abstractions Not Illusions • Gregor Hohpe • YOW! 2023
+      author: GOTO Conferences
+      type: video
+      tags:
+        - Excelência Técnica
+        - Gregor Hohpe
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=IcgmSRJHu_8
+      title: '"Making Impossible States Impossible" by Richard Feldman'
+      author: elm-conf
+      type: video
+      tags:
+        - Excelência Técnica
+        - Richard Feldman
+        - elm-conf
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=FLe5dvqV6xs
+      title: I Bet You’re Overengineering Your Software
+      author: Modern Software Engineering
+      type: video
+      tags:
+        - Excelência Técnica
+        - Dave Farley
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=CNBxIhxHHxM
+      title: >-
+        Simon Sinek & Trevor Noah on Friendship, Loneliness, Vulnerability, and More
+        | Full Conversation
+      author: Simon Sinek
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - simon sinek
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=Q6RfMmMwhvM
+      title: 'Software Architecture: The Hard Parts - Neal Ford'
+      author: Developer Summit
+      type: video
+      tags:
+        - Excelência Técnica
+        - Neal Ford
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
