@@ -2233,3 +2233,15 @@ catalog:
         - mid
         - senior
       language: en_us
+    - url: https://martinfowler.com/articles/feature-toggles.html
+      title: 'Feature Toggles (aka Feature Flags)'
+      author: Pete Hodgson
+      type: article
+      tags:
+        - Excelência Técnica        
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
