@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Awesome Tech Lead</title>
     <link rel="icon" type="image/x-icon" href="/public/images/favicon/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/public/images/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/public/images/favicon/site.webmanifest">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
 </head>
@@ -25,7 +26,7 @@
                 <span class="text-gray-700 font-medium">Filtros:</span>
                 
                 <div class="relative">
-                    <select id="tag" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-10 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select id="tag" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="">Tags</option>
                         {{range .Filters.Tags}}
                             <option value="{{.}}">{{.}}</option>
@@ -34,7 +35,7 @@
                 </div>
 
                 <div class="relative">
-                    <select id="type" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-10 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select id="type" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="">Tipo</option>
                         {{range .Filters.Types}}
                             <option value="{{.}}">{{.}}</option>
@@ -43,7 +44,7 @@
                 </div>
 
                 <div class="relative">
-                    <select id="level" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-10 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select id="level" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="">Nível</option>
                         {{range .Filters.Levels}}
                             <option value="{{.}}">{{.}}</option>
@@ -52,16 +53,16 @@
                 </div>
 
                 <div class="relative">
-                    <select id="language" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-10 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select id="language" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="">Idioma</option>
                         {{range .Filters.Languages}}
-                            <option value="{{.}}">{{formatLanguage .}}</option>
+                            <option value="{{formatLanguage .}}">{{formatLanguage .}}</option>
                         {{end}}
                     </select>
                 </div>
 
                 <div class="relative">
-                    <select id="price" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-10 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select id="price" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="">Preço</option>
                         {{range .Filters.Prices}}
                             <option value="{{.}}">{{.}}</option>
