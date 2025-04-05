@@ -26,7 +26,7 @@ func StartServer(items []catalog.CatalogItem) error {
 		tmpl.Execute(w, data)
 	})
 
-	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("."))))
+	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
 	log.Printf("Server starting at http://localhost:8080")
 	return http.ListenAndServe(":8080", nil)
 }
