@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Tech Lead</title>
+    <link rel="icon" type="image/x-icon" href="/public/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/public/images/favicon/site.webmanifest">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
 </head>
 <body class="bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="text-center mb-12">
-            <img src="/public/tech-leads-club.jpeg" alt="Tech Leads Club" class="h-24 mx-auto mb-4">
+            <img src="/public/images/tlc-logo.png" alt="Tech Leads Club" class="h-24 mx-auto mb-4">
             <h1 class="text-3xl font-bold text-gray-900">awesome-tech-lead</h1>
             <p class="mt-2 text-lg text-gray-600">Uma coleção curada de recursos para líderes técnicos e engenheiros que desejam aprimorar suas habilidades técnicas e de liderança.</p>
         </div>
@@ -97,11 +102,14 @@
                     <span> {{formatLanguage .Language}}</span>
                 </div>
 
-                <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg w-full mt-auto hover:bg-blue-600">
-                    <a href="{{.URL}}" target="_blank" rel="noopener noreferrer">
-                        Ver Recurso
-                    </a>
-                </button>
+                <a 
+                    href="{{.URL}}" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg w-full mt-auto hover:bg-blue-600 text-center"
+                >
+                    Ver Recurso
+                </a>
             </div>
             {{end}}
         </div>
