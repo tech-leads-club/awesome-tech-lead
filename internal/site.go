@@ -1,6 +1,7 @@
 package catalog
 
 import (
+	"encoding/json"
 	"fmt"
 	"os"
 	"sort"
@@ -22,7 +23,13 @@ type Filters struct {
 
 func SiteTmpl() *template.Template {
 	funcMap := template.FuncMap{
-		"formatLanguage": FormatLanguage,
+		"toJson": func(v interface{}) string {
+			b, err := json.Marshal(v)
+			if err != nil {
+				return ""
+			}
+			return string(b)
+		},
 	}
 
 	tmpl, err := template.New("index.html").Funcs(funcMap).ParseFiles("templates/index.html")
@@ -81,15 +88,4 @@ func keyMapToSortedSlice(m map[string]bool) []string {
 	}
 	sort.Strings(slice)
 	return slice
-}
-
-func FormatLanguage(lang string) string {
-	switch lang {
-	case "pt_br":
-		return "🇧🇷 Português"
-	case "en_us":
-		return "🇺🇸 Inglês"
-	default:
-		return lang
-	}
 }

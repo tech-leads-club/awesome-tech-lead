@@ -10,171 +10,238 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/public/images/favicon/apple-touch-icon.png">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body class="bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('catalog', () => {
+                const params = new URLSearchParams(window.location.search);
+                
+                return {
+                    items: {{ .Items | toJson }},
+                    filters: {{ .Filters | toJson }},
+
+                    get filteredItems() {
+                        return this.items.filter(item => {
+                            const hasFilter = [];
+                            if (this.currentFilters.language.size) {
+                                hasFilter.push(this.currentFilters.language.has(item.Language));
+                            }
+                            if (this.currentFilters.price.size) {
+                                hasFilter.push(this.currentFilters.price.has(item.IsPaid));
+                            }
+                            if (this.currentFilters.level.size) {
+                                hasFilter.push(this.currentFilters.level.has(item.Level));
+                            }
+                            if (this.currentFilters.type.size) {
+                                hasFilter.push(this.currentFilters.type.has(item.Type));
+                            }
+                            if (this.currentFilters.tag.size) {
+                                hasFilter.push(item.Tags.some(tag => this.currentFilters.tag.has(tag)));
+                            }
+                            return hasFilter.every(v => v);
+                        })
+                    },
+
+                    currentFilters: {
+                        tag: new Set(params.getAll('tag')),
+                        type: new Set(params.getAll('type')),
+                        level: new Set(params.getAll('level')),
+                        language: new Set(params.getAll('language')),
+                        price: new Set(params.getAll('price'))
+                    }, 
+
+                    handleChangeFilter(type, event) {
+                        const value = event.target.value;
+                        this.changeFilter(type, value);
+                        event.target.value = '';
+                    },
+
+                    changeFilter(type, value) {
+                        const alreadySelected = this.currentFilters[type].has(value);
+                        if (alreadySelected) {
+                            this.currentFilters[type].delete(value);
+                        } else {
+                            this.currentFilters[type].add(value);
+                        }
+
+                        this.updateFiltersOnURL();
+                    },
+
+                    updateFiltersOnURL() {
+                        const params = new URLSearchParams();
+                        for (const [key, values] of Object.entries(this.currentFilters)) {
+                            values.forEach(value => params.append(key, value));
+                        }
+                        window.history.pushState(null, '', `?${params.toString()}`);
+                    },
+
+                    clearAllFilters() {
+                        this.currentFilters = {
+                            tag: new Set(),
+                            type: new Set(),
+                            level: new Set(),
+                            language: new Set(),
+                            price: new Set()
+                        };
+                        this.updateFiltersOnURL();
+                    },
+
+                    formatLanguage(lang) {
+                        switch (lang) {
+                            case "pt_br":
+                                return "🇧🇷 Português"
+                            case "en_us":
+                                return "🇺🇸 Inglês"
+                            default:
+                                return lang
+                        }
+                    },
+                }
+            })
+        })
+    </script> 
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" x-data="catalog">
         <div class="text-center mb-12">
             <img src="/public/images/tlc-logo.png" alt="Tech Leads Club" class="h-24 mx-auto mb-4">
             <h1 class="text-3xl font-bold text-gray-900">Awesome Tech Lead</h1>
             <p class="mt-2 text-lg text-gray-600">Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade TechLeads.club 💎</p>
         </div>
 
-        <div class="mb-8">
+        <div class="mb-4">
             <div class="flex flex-wrap gap-4 items-center">
                 <span class="text-gray-700 font-medium">Filtros:</span>
                 
                 <div class="relative">
-                    <select id="tag" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select 
+                        @change="handleChangeFilter('tag', $event)"
+                        id="tag"
+                        class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
                         <option value="">Tags</option>
-                        {{range .Filters.Tags}}
-                            <option value="{{.}}">{{.}}</option>
-                        {{end}}
+                        <template x-for="tag in filters.Tags">
+                            <option :value="tag" x-text="tag"></option>
+                        </template>
                     </select>
                 </div>
 
                 <div class="relative">
-                    <select id="type" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select 
+                        @change="handleChangeFilter('type', $event)"
+                        id="type" 
+                        class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
                         <option value="">Tipo</option>
-                        {{range .Filters.Types}}
-                            <option value="{{.}}">{{.}}</option>
-                        {{end}}
+                        <template x-for="type in filters.Types">
+                            <option :value="type" x-text="type"></option>
+                        </template>
                     </select>
                 </div>
 
                 <div class="relative">
-                    <select id="level" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select 
+                        @change="handleChangeFilter('level', $event)"
+                        id="level" 
+                        class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
                         <option value="">Nível</option>
-                        {{range .Filters.Levels}}
-                            <option value="{{.}}">{{.}}</option>
-                        {{end}}
+                        <template x-for="level in filters.Levels">
+                            <option :value="level" x-text="level"></option>
+                        </template>
                     </select>
                 </div>
 
                 <div class="relative">
-                    <select id="language" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select
+                        @change="handleChangeFilter('language', $event)"
+                        id="language" 
+                        class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
                         <option value="">Idioma</option>
-                        {{range .Filters.Languages}}
-                            <option value="{{formatLanguage .}}">{{formatLanguage .}}</option>
-                        {{end}}
+                        <template x-for="language in filters.Languages">
+                            <option :value="language" x-text="formatLanguage(language)"></option>
+                        </template>
                     </select>
                 </div>
 
                 <div class="relative">
-                    <select id="price" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select 
+                        @change="handleChangeFilter('price', $event)"
+                        id="price" 
+                        class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
                         <option value="">Preço</option>
-                        {{range .Filters.Prices}}
-                            <option value="{{.}}">{{.}}</option>
-                        {{end}}
+                        <template x-for="price in filters.Prices">
+                            <option :value="price" x-text="price"></option>
+                        </template>
                     </select>
                 </div>
+
+                <button @click="clearAllFilters()" class="inline-flex items-center gap-1 cursor-pointer ml-1 text-blue-600 hover:text-blue-800">
+                    <span class="text-sm">Limpar Filtros</span>
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
 
-            <div id="activeFilters" class="mt-4 flex flex-wrap gap-2">
+            <div class="mt-4 flex flex-wrap gap-2">
+                <template x-for="(values, key) in currentFilters">
+                    <template x-for="value in Array.from(values)">
+                        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800">
+                            <span x-text="formatLanguage(value)"></span> 
+                            <button @click="changeFilter(key, value)" class="cursor-pointer ml-1 text-blue-600 hover:text-blue-800">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </span>
+                    </template>
+                </template>
             </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {{range .Items}}
-            <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col hover:shadow-md transition-shadow duration-200 border border-gray-100">
-                <div class="flex items-start justify-between">
-                    <h3 class="text-lg font-semibold text-gray-900">
-                        {{.Title}}
-                    </h3>
-                    {{if .IsPaid}}
-                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Pago</span>
-                    {{else}}
-                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Gratuito</span>
-                    {{end}}
+            <template
+                x-for="(item, index) in filteredItems"
+                :key="index"
+            >
+                <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col hover:shadow-md transition-shadow duration-200 border border-gray-100">
+                    <div class="flex items-start justify-between">
+                        <h3 x-text="item.Title" class="text-lg font-semibold text-gray-900"></h3>
+                        <template x-if="item.IsPaid">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Pago</span>
+                        </template>
+                        <template x-if="!item.IsPaid">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Gratuito</span>
+                        </template>
+                    </div>
+    
+                    <p class="mt-2 text-sm text-gray-600">Por <span x-text="item.Author"></span></p>
+                    
+                    <div class="mt-2 flex flex-wrap gap-2">
+                        <template x-for="tag in item.Tags">
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded" x-text="tag"></span>
+                        </template>
+                    </div>
+    
+                    <div class="mt-2 flex flex-wrap gap-2 text-sm text-gray-600 mb-4">
+                        <span class="flex gap-[0.2rem]"> <strong class="leading-[0] text-4xl">.</strong> <span x-text="item.Type"></span></span>
+                        <span class="flex gap-[0.2rem]"> <strong class="leading-[0] text-4xl">.</strong> <span x-text="item.Level"></span></span>
+                        <span x-text="formatLanguage(item.Language)"></span>
+                    </div>
+    
+                    <a 
+                        :href="item.URL" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg w-full mt-auto hover:bg-blue-600 text-center"
+                    >
+                        Ver Recurso
+                    </a>
                 </div>
-
-                <p class="mt-2 text-sm text-gray-600">Por {{.Author}}</p>
-
-                <div class="mt-2 flex flex-wrap gap-2">
-                    {{range .Tags}}
-                    <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">{{.}}</span>
-                    {{end}}
-                </div>
-
-                <div class="mt-2 flex flex-wrap gap-2 text-sm text-gray-600 mb-4">
-                    <span class="flex gap-[0.2rem]"> <strong class="leading-[0] text-4xl">.</strong> {{.Type}}</span>
-                    <span class="flex gap-[0.2rem]"> <strong class="leading-[0] text-4xl">.</strong> {{.Level}}</span>
-                    <span> {{formatLanguage .Language}}</span>
-                </div>
-
-                <a 
-                    href="{{.URL}}" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg w-full mt-auto hover:bg-blue-600 text-center"
-                >
-                    Ver Recurso
-                </a>
-            </div>
-            {{end}}
+            </template>
         </div>
     </div>
-
-    <script>
-        const params = new URLSearchParams(window.location.search);
-
-        const filters = {
-            tag: new Set(params.getAll('tag')),
-            type: new Set(params.getAll('type')),
-            level: new Set(params.getAll('level')),
-            language: new Set(params.getAll('language')),
-            price: new Set(params.getAll('price'))
-        };
-
-        updateActiveFilters();
-
-        function updateActiveFilters() {
-            const container = document.getElementById('activeFilters');
-            container.innerHTML = '';
-            for (const [type, values] of Object.entries(filters)) {
-                values.forEach(value => {
-                    container.appendChild(createFilterBadge(type, value));
-                });
-            }
-        }
-        
-        function createFilterBadge(type, value) {
-            const badge = document.createElement('span');
-            badge.className = 'inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800';
-            badge.innerHTML = `
-                ${value} 
-                <button class="ml-1 text-blue-600 hover:text-blue-800">
-                    <i class="fas fa-times"></i>
-                </button>`;
-            badge.querySelector('button').onclick = () => {
-                filters[type].delete(value);
-                updateFiltersOnURL();
-                updateActiveFilters();
-            };
-            return badge;
-        }
-
-        function updateFiltersOnURL() {
-            const params = new URLSearchParams();
-            for (const [key, values] of Object.entries(filters)) {
-                values.forEach(value => params.append(key, value));
-            }
-            window.history.pushState(null, '', `?${params.toString()}`);
-        }
-
-        document.querySelectorAll('select').forEach(select => {
-            const type = select.id.toLowerCase();
-            select.addEventListener('change', (event) => {
-                const value = event.target.value;
-                if (value) {
-                    filters[type].add(value);
-                    updateFiltersOnURL();
-                    updateActiveFilters();
-                    event.target.value = '';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
