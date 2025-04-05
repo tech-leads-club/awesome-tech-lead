@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Tech Lead</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center mb-12">
+            <img src="/public/tech-leads-club.jpeg" alt="Tech Leads Club" class="h-24 mx-auto mb-4">
+            <h1 class="text-3xl font-bold text-gray-900">awesome-tech-lead</h1>
+            <p class="mt-2 text-lg text-gray-600">Uma coleção curada de recursos para líderes técnicos e engenheiros que desejam aprimorar suas habilidades técnicas e de liderança.</p>
+        </div>
+
+        <div class="mb-8">
+            <div class="flex flex-wrap gap-4 items-center">
+                <span class="text-gray-700 font-medium">Filtros:</span>
+                
+                <div class="relative">
+                    <select id="tag" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-10 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Tags</option>
+                        {{range .Filters.Tags}}
+                            <option value="{{.}}">{{.}}</option>
+                        {{end}}
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <select id="type" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-10 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Tipo</option>
+                        {{range .Filters.Types}}
+                            <option value="{{.}}">{{.}}</option>
+                        {{end}}
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <select id="level" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-10 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Nível</option>
+                        {{range .Filters.Levels}}
+                            <option value="{{.}}">{{.}}</option>
+                        {{end}}
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <select id="language" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-10 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Idioma</option>
+                        {{range .Filters.Languages}}
+                            <option value="{{.}}">{{formatLanguage .}}</option>
+                        {{end}}
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <select id="price" class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-10 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Preço</option>
+                        {{range .Filters.Prices}}
+                            <option value="{{.}}">{{.}}</option>
+                        {{end}}
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="activeFilters" class="mt-4 flex flex-wrap gap-2">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {{range .Items}}
+            <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col hover:shadow-md transition-shadow duration-200 border border-gray-100">
+                <div class="flex items-start justify-between">
+                    <h3 class="text-lg font-semibold text-gray-900">
+                        {{.Title}}
+                    </h3>
+                    {{if .IsPaid}}
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Pago</span>
+                    {{else}}
+                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Gratuito</span>
+                    {{end}}
+                </div>
+
+                <p class="mt-2 text-sm text-gray-600">Por {{.Author}}</p>
+
+                <div class="mt-2 flex flex-wrap gap-2">
+                    {{range .Tags}}
+                    <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">{{.}}</span>
+                    {{end}}
+                </div>
+
+                <div class="mt-2 flex flex-wrap gap-2 text-sm text-gray-600 mb-4">
+                    <span> <strong class="leading-[0] text-4xl">.</strong> {{.Type}}</span>
+                    <span> <strong class="leading-[0] text-4xl">.</strong> {{.Level}}</span>
+                    <span> {{formatLanguage .Language}}</span>
+                </div>
+
+                <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg w-full mt-auto hover:bg-blue-600">
+                    <a href="{{.URL}}" target="_blank" rel="noopener noreferrer">
+                        Ver Recurso
+                    </a>
+                </button>
+            </div>
+            {{end}}
+        </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const filters = {
+            tag: new Set(params.getAll('tag')),
+            type: new Set(params.getAll('type')),
+            level: new Set(params.getAll('level')),
+            language: new Set(params.getAll('language')),
+            price: new Set(params.getAll('price'))
+        };
+
+        updateActiveFilters();
+        filterItems();
+
+        function updateActiveFilters() {
+            const container = document.getElementById('activeFilters');
+            container.innerHTML = '';
+            for (const [type, values] of Object.entries(filters)) {
+                values.forEach(value => {
+                    container.appendChild(createFilterBadge(type, value));
+                });
+            }
+        }
+        
+        function createFilterBadge(type, value) {
+            const badge = document.createElement('span');
+            badge.className = 'inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800';
+            badge.innerHTML = `
+                ${value} 
+                <button class="ml-1 text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-times"></i>
+                </button>`;
+            badge.querySelector('button').onclick = () => {
+                filters[type].delete(value);
+                updateFiltersOnURL();
+                updateActiveFilters();
+            };
+            return badge;
+        }
+
+        function updateFiltersOnURL() {
+            const params = new URLSearchParams();
+            for (const [key, values] of Object.entries(filters)) {
+                values.forEach(value => params.append(key, value));
+            }
+            window.history.pushState(null, '', `?${params.toString()}`);
+        }
+
+        document.querySelectorAll('select').forEach(select => {
+            const type = select.id.toLowerCase();
+            select.addEventListener('change', (event) => {
+                const value = event.target.value;
+                if (value) {
+                    filters[type].add(value);
+                    updateFiltersOnURL();
+                    updateActiveFilters();
+                    event.target.value = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
