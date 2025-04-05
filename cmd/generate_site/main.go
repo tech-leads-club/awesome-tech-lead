@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"html/template"
 	"os"
 
 	catalog "github.com/tech-leads-club/awesome-tech-lead/internal"
@@ -22,16 +21,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	funcMap := template.FuncMap{
-		"formatLanguage": catalog.FormatLanguage,
-	}
-
-	tmpl, err := template.New("index.html").Funcs(funcMap).ParseFiles("templates/index.html")
-	if err != nil {
-		fmt.Println("error parsing template:", err)
-		os.Exit(1)
-	}
-
+	tmpl := catalog.SiteTmpl()
 	pageData := catalog.BuildPageData(items)
 
 	var buf bytes.Buffer

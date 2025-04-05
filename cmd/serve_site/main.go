@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"html/template"
 	"log"
 	"net/http"
 	"os"
@@ -11,14 +10,7 @@ import (
 )
 
 func StartServer(items []catalog.CatalogItem) error {
-	funcMap := template.FuncMap{
-		"formatLanguage": catalog.FormatLanguage,
-	}
-
-	tmpl, err := template.New("index.html").Funcs(funcMap).ParseFiles("templates/index.html")
-	if err != nil {
-		return err
-	}
+	tmpl := catalog.SiteTmpl()
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		data := catalog.BuildPageData(items)

@@ -1,7 +1,10 @@
 package catalog
 
 import (
+	"fmt"
+	"os"
 	"sort"
+	"text/template"
 )
 
 type PageData struct {
@@ -15,6 +18,20 @@ type Filters struct {
 	Levels    []string
 	Languages []string
 	Prices    []string
+}
+
+func SiteTmpl() *template.Template {
+	funcMap := template.FuncMap{
+		"formatLanguage": FormatLanguage,
+	}
+
+	tmpl, err := template.New("index.html").Funcs(funcMap).ParseFiles("templates/index.html")
+	if err != nil {
+		fmt.Println("error parsing template:", err)
+		os.Exit(1)
+	}
+
+	return tmpl
 }
 
 func BuildPageData(items []CatalogItem) PageData {
