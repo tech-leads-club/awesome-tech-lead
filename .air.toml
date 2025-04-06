@@ -1,0 +1,16 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+cmd = "make site/generate"
+bin = ""
+include_ext = ["yml"]
+include_file = ["catalog.yml"]
+exclude_dir = ["tmp", "build", "public", "cmd/generate_readme"]
+delay = 1000
+
+[log]
+time = true
+
+[screen]
+clear_on_rebuild = true
