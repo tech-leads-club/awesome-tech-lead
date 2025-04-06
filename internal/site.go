@@ -18,7 +18,6 @@ type Filters struct {
 	Types     []string
 	Levels    []string
 	Languages []string
-	Prices    []string
 }
 
 func SiteTmpl() *template.Template {
@@ -55,7 +54,6 @@ func extractFilters(items []CatalogItem) Filters {
 	typeMap := make(map[string]bool)
 	levelMap := make(map[string]bool)
 	langMap := make(map[string]bool)
-	priceMap := make(map[string]bool)
 
 	for _, item := range items {
 		for _, tag := range item.Tags {
@@ -64,19 +62,12 @@ func extractFilters(items []CatalogItem) Filters {
 		typeMap[item.Type] = true
 		levelMap[item.Level] = true
 		langMap[item.Language] = true
-
-		if item.IsPaid {
-			priceMap["Pago"] = true
-		} else {
-			priceMap["Gratuito"] = true
-		}
 	}
 
 	filters.Tags = keyMapToSortedSlice(tagMap)
 	filters.Types = keyMapToSortedSlice(typeMap)
 	filters.Levels = keyMapToSortedSlice(levelMap)
 	filters.Languages = keyMapToSortedSlice(langMap)
-	filters.Prices = keyMapToSortedSlice(priceMap)
 
 	return filters
 }

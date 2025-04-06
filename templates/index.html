@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/public/images/favicon/apple-touch-icon.png">
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" defer></script>
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
@@ -30,8 +30,8 @@
                             if (this.currentFilters.language.size) {
                                 hasFilter.push(this.currentFilters.language.has(item.Language));
                             }
-                            if (this.currentFilters.price.size) {
-                                hasFilter.push(this.currentFilters.price.has(item.IsPaid));
+                            if (this.currentFilters.isPaid.size) {
+                                hasFilter.push(this.currentFilters.isPaid.has(String(item.IsPaid)));
                             }
                             if (this.currentFilters.level.size) {
                                 hasFilter.push(this.currentFilters.level.has(item.Level));
@@ -46,12 +46,16 @@
                         })
                     },
 
+                    get hasFilters() {
+                        return Object.values(this.currentFilters).some(set => set.size);
+                    },
+
                     currentFilters: {
                         tag: new Set(params.getAll('tag')),
                         type: new Set(params.getAll('type')),
                         level: new Set(params.getAll('level')),
                         language: new Set(params.getAll('language')),
-                        price: new Set(params.getAll('price'))
+                        isPaid: new Set(params.getAll('isPaid'))
                     }, 
 
                     handleChangeFilter(type, event) {
@@ -85,9 +89,20 @@
                             type: new Set(),
                             level: new Set(),
                             language: new Set(),
-                            price: new Set()
+                            isPaid: new Set()
                         };
                         this.updateFiltersOnURL();
+                    },
+
+                    formatFilter(key, value) {
+                        switch (key) {
+                            case "language":
+                                return this.formatLanguage(value)
+                            case "isPaid":
+                                return this.formatIsPaid(value)
+                            default:
+                                return value
+                        }
                     },
 
                     formatLanguage(lang) {
@@ -100,6 +115,10 @@
                                 return lang
                         }
                     },
+
+                    formatIsPaid(isPaid) {
+                        return isPaid === "true" ? "Pago" : "Gratuito"
+                    }
                 }
             })
         })
@@ -170,28 +189,29 @@
 
                 <div class="relative">
                     <select 
-                        @change="handleChangeFilter('price', $event)"
-                        id="price" 
+                        @change="handleChangeFilter('isPaid', $event)"
+                        id="isPaid" 
                         class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                         <option value="">Preço</option>
-                        <template x-for="price in filters.Prices">
-                            <option :value="price" x-text="price"></option>
-                        </template>
+                        <option :value="false">Gratuito</option>
+                        <option :value="true">Pago</option>
                     </select>
                 </div>
 
-                <button @click="clearAllFilters()" class="inline-flex items-center gap-1 cursor-pointer ml-1 text-blue-600 hover:text-blue-800">
-                    <span class="text-sm">Limpar Filtros</span>
-                    <i class="fas fa-times"></i>
-                </button>
+                <template x-if="hasFilters">
+                    <button @click="clearAllFilters()" class="inline-flex items-center gap-1 cursor-pointer ml-1 text-blue-600 hover:text-blue-800">
+                        <span class="text-sm">Limpar Filtros</span>
+                        <i class="fas fa-times"></i>
+                    </button>
+                </template>
             </div>
 
             <div class="mt-4 flex flex-wrap gap-2">
                 <template x-for="(values, key) in currentFilters">
                     <template x-for="value in Array.from(values)">
                         <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800">
-                            <span x-text="formatLanguage(value)"></span> 
+                            <span x-text="formatFilter(key, value)"></span>
                             <button @click="changeFilter(key, value)" class="cursor-pointer ml-1 text-blue-600 hover:text-blue-800">
                                 <i class="fas fa-times"></i>
                             </button>
