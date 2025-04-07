@@ -12,7 +12,6 @@ generate-readme:
 site/generate:
 	@go run cmd/generate_site/main.go
 
-
 SITE_PYTHON := $(shell command -v python3 2> /dev/null || command -v python 2> /dev/null)
 SITE_PORT := $(or $(PORT),8080)
 
@@ -31,4 +30,4 @@ site/serve:
 	@echo "Starting server at http://localhost:$(SITE_PORT)"
 	@$(SITE_PYTHON) -m http.server $(SITE_PORT) --directory public
 
-all: setup generate-readme generate-site
+all: setup generate-readme site/generate
