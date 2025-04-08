@@ -104,23 +104,10 @@
 
                     formatFilter(key, value) {
                         switch (key) {
-                            case "language":
-                                return this.formatLanguage(value)
                             case "isPaid":
                                 return this.formatIsPaid(value)
                             default:
                                 return value
-                        }
-                    },
-
-                    formatLanguage(lang) {
-                        switch (lang) {
-                            case "pt_br":
-                                return "🇧🇷 Português"
-                            case "en_us":
-                                return "🇺🇸 Inglês"
-                            default:
-                                return lang
                         }
                     },
 
@@ -221,7 +208,7 @@
                     >
                         <option value="">Idioma</option>
                         <template x-for="language in filters.Languages">
-                            <option :value="language" x-text="formatLanguage(language)"></option>
+                            <option :value="language" x-text="language"></option>
                         </template>
                     </select>
                 </div>
@@ -279,7 +266,7 @@
                         </template>
                         <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full" x-text="item.Type"></span>
                         <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full" x-text="item.Level"></span>
-                        <span class="bg-transparent text-gray-600 border border-gray-200 text-xs font-medium px-2.5 py-0.5 rounded-full" x-text="formatLanguage(item.Language)"></span>
+                        <span class="bg-transparent text-gray-600 border border-gray-200 text-xs font-medium px-2.5 py-0.5 rounded-full" x-text="item.Language"></span>
                     </div>
 
                      <a 

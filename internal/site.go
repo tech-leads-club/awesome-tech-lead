@@ -41,10 +41,43 @@ func SiteTmpl() *template.Template {
 }
 
 func BuildPageData(items []CatalogItem) PageData {
-	filters := extractFilters(items)
+	translatedItems := translateCatalogItems(items)
+
+	filters := extractFilters(translatedItems)
 	return PageData{
-		Items:   items,
+		Items:   translatedItems,
 		Filters: filters,
+	}
+}
+
+func translateCatalogItems(items []CatalogItem) []CatalogItem {
+	var translatedItems []CatalogItem
+
+	for _, item := range items {
+		translatedItems = append(translatedItems, CatalogItem{
+			URL:      item.URL,
+			Title:    item.Title,
+			Author:   item.Author,
+			Type:     Translate(item.Type),
+			Tags:     item.Tags,
+			IsPaid:   item.IsPaid,
+			Level:    Translate(item.Level),
+			Language: TranslateLanguage(item.Language),
+			Duration: item.Duration,
+		})
+	}
+
+	return translatedItems
+}
+
+func TranslateLanguage(key string) string {
+	switch key {
+	case "pt_br":
+		return "🇧🇷 Português"
+	case "en_us":
+		return "🇺🇸 Inglês"
+	default:
+		return key
 	}
 }
 

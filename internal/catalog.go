@@ -53,6 +53,22 @@ type CatalogItem struct {
 	Duration    *string  `yaml:"duration,omitempty"`
 }
 
+var translations = map[string]string{
+	// Type
+	"article": "Artigo",
+	"book":    "Livro",
+	"course":  "Curso",
+	"feed":    "Feed",
+	"podcast": "Podcast",
+	"roadmap": "Roadmap",
+	"video":   "Vídeo",
+
+	// Level
+	"beginner":     "Iniciante",
+	"intermediate": "Intermediário",
+	"advanced":     "Avançado",
+}
+
 func ParseCatalog(data []byte) ([]CatalogItem, error) {
 	var catalog struct {
 		Catalog []CatalogItem `yaml:"catalog"`
@@ -133,4 +149,11 @@ func joinKeys(m map[string]struct{}) string {
 
 func joinPillarTags() string {
 	return fmt.Sprintf("%q, %q, %q", TechnicalExcellenceTag, LeadershipAndInspirationTag, DeliveringValueTag)
+}
+
+func Translate(key string) string {
+	if val, ok := translations[key]; ok {
+		return val
+	}
+	return key
 }
