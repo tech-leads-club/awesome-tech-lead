@@ -1,0 +1,5 @@
+services:
+  awesome-tech-lead-build:
+    build: .
+    volumes:
+      - ./:/app
