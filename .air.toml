@@ -4,9 +4,9 @@ tmp_dir = "tmp"
 [build]
 cmd = "make site/generate"
 bin = ""
-include_ext = ["yml", "html"]
+include_ext = ["yml", "html", "go"]
 include_file = ["catalog.yml"]
-include_dir = ["templates"]
+include_dir = ["templates", "internal"]
 exclude_dir = ["tmp", "build", "public", "cmd/generate_readme"]
 delay = 1000
 
