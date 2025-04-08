@@ -133,20 +133,20 @@ os novos itens do catálogo.
 
 ### Pré-requisitos
 
-## Usando docker
+#### Usando docker
 
 - [Docker](https://docs.docker.com/get-started/get-docker/) (versão 24.0 ou superior)
 - [Docker compose](https://docs.docker.com/compose/install/) (versão 2.20 ou superior)
 - [Git](https://git-scm.com/downloads)
 
-## Usando GO
+#### Usando GO
 
 - [Go](https://golang.org/doc/install) (versão 1.16 ou superior)
 - [Git](https://git-scm.com/downloads)
 
 ### Instalando Dependências
 
-### Configurando o Ambiente de Desenvolvimento usando docker
+#### Configurando o Ambiente de Desenvolvimento usando docker
 
 1. Clone o repositório:
 
@@ -157,7 +157,7 @@ cd awesome-tech-lead
 
 2. Instale o Docker e o Docker compose:
 
-Verificar documentação do docker (https://docs.docker.com/get-started/get-docker/) e do docker-compose (https://docs.docker.com/compose/install/).
+Verificar documentação do [docker](https://docs.docker.com/get-started/get-docker/) e do [docker-compose](https://docs.docker.com/compose/install/).
 
 3. Execute o script para gerar o README.md:
 
@@ -165,7 +165,7 @@ Verificar documentação do docker (https://docs.docker.com/get-started/get-dock
 ./output.sh
 ```
 
-### Configurando o Ambiente de Desenvolvimento usando GO
+#### Configurando o Ambiente de Desenvolvimento usando GO
 
 1. Clone o repositório:
 
@@ -187,4 +187,4 @@ make generate-readme
 ```
 
 Agradecemos sua contribuição para tornar este catálogo ainda mais valioso para a
-comunidade de TechLeads.club!
+comunidade TechLeads.club!
