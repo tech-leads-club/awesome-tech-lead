@@ -31,7 +31,7 @@ func SiteTmpl() *template.Template {
 		},
 	}
 
-	tmpl, err := template.New("index.html").Funcs(funcMap).ParseFiles("templates/index.html")
+	tmpl, err := template.New("index.html").Funcs(funcMap).ParseFiles("internal/templates/index.html")
 	if err != nil {
 		fmt.Println("error parsing template:", err)
 		os.Exit(1)
