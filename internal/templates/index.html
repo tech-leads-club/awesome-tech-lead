@@ -113,6 +113,10 @@
 
                     formatIsPaid(isPaid) {
                         return isPaid === "true" ? "Pago" : "Gratuito"
+                    },
+                    
+                    excludeAlreadyFiltered(filters = [], key) {
+                        return filters.filter(value => !this.currentFilters[key]?.has(value));
                     }
                 }
             })
@@ -168,7 +172,7 @@
                         class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                         <option value="">Tags</option>
-                        <template x-for="tag in filters.Tags">
+                        <template x-for="tag in excludeAlreadyFiltered(filters.Tags, 'tag')">
                             <option :value="tag" x-text="tag"></option>
                         </template>
                     </select>
@@ -181,7 +185,7 @@
                         class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                         <option value="">Tipo</option>
-                        <template x-for="type in filters.Types">
+                        <template x-for="type in excludeAlreadyFiltered(filters.Types, 'type')">
                             <option :value="type" x-text="type"></option>
                         </template>
                     </select>
@@ -194,7 +198,7 @@
                         class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                         <option value="">Nível</option>
-                        <template x-for="level in filters.Levels">
+                        <template x-for="level in excludeAlreadyFiltered(filters.Levels, 'level')">
                             <option :value="level" x-text="level"></option>
                         </template>
                     </select>
@@ -207,7 +211,7 @@
                         class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                         <option value="">Idioma</option>
-                        <template x-for="language in filters.Languages">
+                        <template x-for="language in excludeAlreadyFiltered(filters.Languages, 'language')">
                             <option :value="language" x-text="language"></option>
                         </template>
                     </select>
