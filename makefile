@@ -8,7 +8,6 @@ generate-readme:
 	@go run cmd/generate_readme/main.go
 
 # === Site ===
-
 site/generate:
 	@go run cmd/generate_site/main.go
 

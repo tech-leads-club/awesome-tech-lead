@@ -2,8 +2,8 @@ root = "."
 tmp_dir = "tmp"
 
 [build]
-cmd = "make site/generate"
-bin = ""
+cmd = "go build -o ./tmp/main ./cmd/generate_site/main.go"
+bin = "./tmp/main"
 include_ext = ["yml", "html", "go"]
 include_file = ["catalog.yml"]
 include_dir = ["templates", "internal"]
