@@ -30,10 +30,26 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println("write public/index.html file")
-	err = os.WriteFile("public/index.html", buf.Bytes(), 0644)
-	if err != nil {
-		fmt.Println("error writing public/index.html", err)
+	if err := os.RemoveAll("build"); err != nil {
+		fmt.Println("error deleting build directory:", err)
+		os.Exit(1)
+	}
+
+	fmt.Println("[site] building...\n[site] creating build directory")
+	if err := os.MkdirAll("build/site", 0755); err != nil {
+		fmt.Println("error creating build directory:", err)
+		os.Exit(1)
+	}
+
+	fmt.Println("[site] copying public directory to build/site")
+	if err := os.CopyFS("build/site", os.DirFS("public")); err != nil {
+		fmt.Println("error copying public directory:", err)
+		os.Exit(1)
+	}
+
+	fmt.Println("[site] writing build/site/index.html")
+	if err := os.WriteFile("build/site/index.html", buf.Bytes(), 0644); err != nil {
+		fmt.Println("error writing build/site/index.html", err)
 		os.Exit(1)
 	}
 }

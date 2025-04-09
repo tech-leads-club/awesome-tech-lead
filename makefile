@@ -28,6 +28,6 @@ site/serve:
 		exit 1; \
 	fi
 	@echo "Starting server at http://localhost:$(SITE_PORT)"
-	@$(SITE_PYTHON) -m http.server $(SITE_PORT) --directory public
+	@$(SITE_PYTHON) -m http.server $(SITE_PORT) --directory build/site
 
 all: setup generate-readme site/generate
