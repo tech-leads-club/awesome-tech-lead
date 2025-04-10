@@ -154,109 +154,100 @@
             </defs>
         </svg>
 
-        <div class="text-center mb-12">
+        <article class="text-center mb-12">
             <h1 class="text-3xl font-bold text-gray-900">Awesome Tech Lead</h1>
             <p class="mt-2 text-lg text-gray-600">Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
                 <a class="text-blue-500" href="https://techleads.club?utm_source=awesome-tech-lead&utm_medium=site" target="_blank">TechLeads.club</a> 💎
             </p>
-        </div>
+        </article>
 
-        <div class="mb-4">
-            <div class="flex flex-wrap gap-4 items-center">
-                <span class="text-gray-700 font-medium">Filtros:</span>
-                
-                <div class="relative">
-                    <select 
-                        @change="handleChangeFilter('tag', $event)"
-                        id="tag"
-                        class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    >
-                        <option value="">Tags</option>
-                        <template x-for="tag in excludeAlreadyFiltered(filters.Tags, 'tag')">
-                            <option :value="tag" x-text="tag"></option>
-                        </template>
-                    </select>
-                </div>
-
-                <div class="relative">
-                    <select 
-                        @change="handleChangeFilter('type', $event)"
-                        id="type" 
-                        class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    >
-                        <option value="">Tipo</option>
-                        <template x-for="type in excludeAlreadyFiltered(filters.Types, 'type')">
-                            <option :value="type" x-text="type"></option>
-                        </template>
-                    </select>
-                </div>
-
-                <div class="relative">
-                    <select 
-                        @change="handleChangeFilter('level', $event)"
-                        id="level" 
-                        class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    >
-                        <option value="">Nível</option>
-                        <template x-for="level in excludeAlreadyFiltered(filters.Levels, 'level')">
-                            <option :value="level" x-text="level"></option>
-                        </template>
-                    </select>
-                </div>
-
-                <div class="relative">
-                    <select
-                        @change="handleChangeFilter('language', $event)"
-                        id="language" 
-                        class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    >
-                        <option value="">Idioma</option>
-                        <template x-for="language in excludeAlreadyFiltered(filters.Languages, 'language')">
-                            <option :value="language" x-text="language"></option>
-                        </template>
-                    </select>
-                </div>
-
-                <div class="relative">
-                    <select 
-                        @change="handleChangeFilter('isPaid', $event)"
-                        id="isPaid" 
-                        class="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    >
-                        <option value="">Preço</option>
-                        <option :value="false">Gratuito</option>
-                        <option :value="true">Pago</option>
-                    </select>
-                </div>
-
-                <template x-if="hasFilters">
-                    <button @click="clearAllFilters()" class="inline-flex items-center gap-1 cursor-pointer ml-1 text-blue-600 hover:text-blue-800">
-                        <span class="text-sm">Limpar Filtros</span>
-                        <i class="fas fa-times"></i>
-                    </button>
-                </template>
-            </div>
-
-            <div class="mt-4 flex flex-wrap gap-2">
-                <template x-for="(values, key) in currentFilters">
-                    <template x-for="value in Array.from(values)">
-                        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800">
-                            <span x-text="formatFilter(key, value)"></span>
-                            <button @click="changeFilter(key, value)" class="cursor-pointer ml-1 text-blue-600 hover:text-blue-800">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </span>
+        <section class="flex flex-wrap gap-2 items-center">
+            <span class="text-gray-700 font-medium">Filtros:</span>
+            
+            <template x-if="hasFilters">
+                <button @click="clearAllFilters()" class="inline-flex items-center gap-1 cursor-pointer ml-1 text-blue-600 order-0 hover:text-blue-800 md:order-1">
+                    <span class="text-sm">Limpar Filtros</span>
+                    <i class="fas fa-times"></i>
+                </button>
+            </template>
+            
+            <div class="flex flex-wrap gap-4">
+                <select
+                    @change="handleChangeFilter('tag', $event)"
+                    id="tag"
+                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                    <option value="">Tags</option>
+                    <template x-for="tag in excludeAlreadyFiltered(filters.Tags, 'tag')">
+                        <option :value="tag" x-text="tag"></option>
                     </template>
-                </template>
-            </div>
-        </div>
+                </select>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <select 
+                    @change="handleChangeFilter('type', $event)"
+                    id="type" 
+                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                    <option value="">Tipo</option>
+                    <template x-for="type in excludeAlreadyFiltered(filters.Types, 'type')">
+                        <option :value="type" x-text="type"></option>
+                    </template>
+                </select>
+
+                <select 
+                    @change="handleChangeFilter('level', $event)"
+                        id="level" 
+                        class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                    <option value="">Nível</option>
+                    <template x-for="level in excludeAlreadyFiltered(filters.Levels, 'level')">
+                        <option :value="level" x-text="level"></option>
+                    </template>
+                </select>
+
+                <select
+                    @change="handleChangeFilter('language', $event)"
+                    id="language" 
+                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                    <option value="">Idioma</option>
+                    <template x-for="language in excludeAlreadyFiltered(filters.Languages, 'language')">
+                        <option :value="language" x-text="language"></option>
+                    </template>
+                </select>
+
+                <select 
+                    @change="handleChangeFilter('isPaid', $event)"
+                    id="isPaid" 
+                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                    <option value="">Preço</option>
+                    <option :value="false">Gratuito</option>
+                    <option :value="true">Pago</option>
+                </select>
+            </div>
+
+        </section>
+
+        <section class="mt-4 flex flex-wrap gap-2 mb-4">
+            <template x-for="(values, key) in currentFilters">
+                <template x-for="value in Array.from(values)">
+                    <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800">
+                        <span x-text="formatFilter(key, value)"></span>
+                        <button @click="changeFilter(key, value)" class="cursor-pointer ml-1 text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </span>
+                </template>
+            </template>
+        </section>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <template
                 x-for="(item, index) in filteredItems"
                 :key="index"
             >
-                <div class="bg-white rounded-lg shadow-sm p-6 flex flex-col hover:shadow-md transition-shadow duration-200 border border-gray-100">
+                <article class="bg-white rounded-lg shadow-sm p-6 flex flex-col hover:shadow-md transition-shadow duration-200 border border-gray-100">
                     <div class="flex items-start justify-between">
                         <h3 x-text="item.Title" class="text-lg font-semibold text-gray-900"></h3>
                         <span class="bg-blue-50 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full" x-text="item.IsPaid ? 'Pago' : 'Gratuito'"></span>
@@ -281,9 +272,9 @@
                     >
                         Ver Recurso
                     </a>
-                </div>
+                </article>
             </template>
-        </div>
+        </main>
     </div>
 </body>
 </html>
