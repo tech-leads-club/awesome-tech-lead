@@ -8,8 +8,12 @@ generate-readme:
 	@go run cmd/generate_readme/main.go
 
 # === Site ===
+site/generate/bin:
+	@go build -o ./tmp/site/main ./cmd/generate_site/main.go
+
 site/generate:
-	@go run cmd/generate_site/main.go
+	@make site/generate/bin
+	@./tmp/site/main
 
 SITE_PYTHON := $(shell command -v python3 2> /dev/null || command -v python 2> /dev/null)
 SITE_PORT := $(or $(PORT),8080)

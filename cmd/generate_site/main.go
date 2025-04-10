@@ -35,13 +35,13 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println("[site] building...\n[site] creating build directory")
+	fmt.Println("[site] building...")
 	if err := os.MkdirAll("build/site", 0755); err != nil {
 		fmt.Println("error creating build directory:", err)
 		os.Exit(1)
 	}
 
-	fmt.Println("[site] copying public directory to build/site")
+	fmt.Println("[site] copying public/ to build/site")
 	if err := os.CopyFS("build/site", os.DirFS("public")); err != nil {
 		fmt.Println("error copying public directory:", err)
 		os.Exit(1)
