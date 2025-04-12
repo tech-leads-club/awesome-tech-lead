@@ -102,19 +102,18 @@ Você pode gerar o README de duas formas:
 - gerando o arquivo utilizando o GO diretamente via terminal (necessita instalar o GO lang)
 
 ### Gerando o README utilizando o docker
-1. Certifique-se de ter o docker (24.0 ou superior) e docker-compose (2.20 ou superior) instalado em sua máquina
-2. Há duas formas de gerar o README:
+1. Certifique-se de ter o docker (24.0 ou superior) instalado em sua máquina
 
-usando o shell script
+primeiro faça o build da imagem docker usando o comando:
 
 ```bash
-./output.sh
+docker build -t iawesome-tech-lead .
 ```
 
-ou diretamente usando o docker-compose (não esquecer de passar a flag, senão o container ficará rodando sem necessidade):
+Logo após isso, execute o comando abaixo, que vai executar um container temporário responsável por gerar o arquivo README.md
 
 ```bash
-docker-compose up --abort-on-container-exit
+docker run --rm -v "$PWD":/app iawesome-tech-lead
 ```
 
 ### Gerando o README utilizando o GO
@@ -136,7 +135,6 @@ os novos itens do catálogo.
 #### Usando docker
 
 - [Docker](https://docs.docker.com/get-started/get-docker/) (versão 24.0 ou superior)
-- [Docker compose](https://docs.docker.com/compose/install/) (versão 2.20 ou superior)
 - [Git](https://git-scm.com/downloads)
 
 #### Usando GO
@@ -157,13 +155,7 @@ cd awesome-tech-lead
 
 2. Instale o Docker e o Docker compose:
 
-Verificar documentação do [docker](https://docs.docker.com/get-started/get-docker/) e do [docker-compose](https://docs.docker.com/compose/install/).
-
-3. Execute o script para gerar o README.md:
-
-```bash
-./output.sh
-```
+Instale a versão correta pro seu sistema operacional, para isso verifique a documentação do [docker](https://docs.docker.com/get-started/get-docker/).
 
 #### Configurando o Ambiente de Desenvolvimento usando GO
 

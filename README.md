@@ -111,6 +111,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [System Design: Serviço para processar transações da blockchain](https://www.techleads.club/c/aulas-semanais/aula-system-design-servico-para-processar-transacoes-da-blockchain) por William Calderipe | `Arquitetura e Design` `Intermediário` `Vídeo` `Pago` |
 | [Terraform para Desenvolvedores: Como dominar a Cloud usando código](https://www.youtube.com/watch?v=UUSbQPyS5xs) por Fabricio Veronez | `Site Reliability Engineering` `Intermediário` `Vídeo` `Grátis` |
 | [Test-Driven Development: By Example](https://www.goodreads.com/book/show/387190.Test_Driven_Development) por Kent Beck | `Qualidade` `Iniciante` `Livro` `Pago` |
+| [Teste Docker](https://martinfowler.comawdawdw/articles/feature-toggles.html) por Pete Hodgson | `Intermediário` `Artigo` `Grátis` |
 | [The Art of Doing Science and Engineering](https://press.stripe.com/the-art-of-doing-science-and-engineering) por Richard W. Hamming | `Avançado` `Livro` `Pago` |
 | [The Art of Software Development • Sander Mak • GOTO 2023](https://www.youtube.com/watch?v=fUVfkLUmII4) por GOTO Conferences | `GOTO` `Sander Mak` `Intermediário` `Vídeo` `Grátis` |
 | [The C4 model for visualising software architecture](https://c4model.com/) por C4 Model | `Arquitetura e Design` `Intermediário` `Artigo` `Grátis` |
@@ -121,6 +122,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [The Twelve Factor App](https://12factor.net/) por Heroku | `Arquitetura e Design` `Intermediário` `Artigo` `Grátis` |
 | [Tornado tático, conhece algum?](https://www.techleads.club/c/cafezinho/tornado-tatico-conhece-algum) por Waldemar Neto | `Arquitetura e Design` `Intermediário` `Artigo` `Pago` |
 | [Tudo sobre instrumentação do OpenTelemetry](https://www.youtube.com/watch?v=2EpXRV3ubuo) por Dose De Telemetria | `Site Reliability Engineering` `Intermediário` `Vídeo` `Grátis` |
+| [Um baita teste está rodando aqui](https://marawdawdadawdawdawdtinfowler.comawdaadwawdw/articles/feature-toggles.html) por Vitinho el brabo | `Intermediário` `Artigo` `Grátis` |
 
 
 
