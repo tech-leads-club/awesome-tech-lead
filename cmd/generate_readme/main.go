@@ -18,22 +18,6 @@ type FormattedItem struct {
 	URL    string
 }
 
-var translations = map[string]string{
-	// Type
-	"article": "Artigo",
-	"book":    "Livro",
-	"course":  "Curso",
-	"feed":    "Feed",
-	"podcast": "Podcast",
-	"roadmap": "Roadmap",
-	"video":   "Vídeo",
-
-	// Level
-	"beginner":     "Iniciante",
-	"intermediate": "Intermediário",
-	"advanced":     "Avançado",
-}
-
 func main() {
 	data, err := os.ReadFile("catalog.yml")
 	if err != nil {
@@ -62,14 +46,6 @@ func main() {
 		fmt.Println("error writing README.md", err)
 		os.Exit(1)
 	}
-}
-
-func translate(key string) string {
-	if val, ok := translations[key]; ok {
-		return val
-	}
-
-	return key
 }
 
 type FilterItemFn func(catalog.CatalogItem) bool
@@ -127,8 +103,8 @@ func formatCatalogItems(items []catalog.CatalogItem) []FormattedItem {
 		item = removeTag(item, "Liderança e Inspiração")
 		item = removeTag(item, "Entrega de Valor")
 
-		item.Tags = append(item.Tags, translate(item.Level))
-		item.Tags = append(item.Tags, translate(item.Type))
+		item.Tags = append(item.Tags, catalog.Translate(item.Level))
+		item.Tags = append(item.Tags, catalog.Translate(item.Type))
 
 		if item.IsPaid {
 			item.Tags = append(item.Tags, "Pago")
