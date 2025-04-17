@@ -5,7 +5,7 @@ jobs:
     permissions:
       contents: read
       deployments: write
-    name: Deploy to Cloudflare Pages
+    name: Deploy site to Cloudflare Pages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -17,6 +17,6 @@ jobs:
           branch: main
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: awesome-tech-lead
+          projectName: ${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}
           directory: build/site
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
