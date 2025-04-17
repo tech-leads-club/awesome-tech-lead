@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Awesome Tech Lead</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+
+    <meta name="description" content="Lista de conteúdo sobre liderança técnica curada pelos membros da comunidade Tech Leads club">
+    <meta property="og:title" content="Awesome Tech Lead">
+    <meta property="og:description" content="Lista de conteúdo sobre liderança técnica curada pelos membros da comunidade TechLeads.club">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/opengraph.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+</head>
+<body class="bg-gray-50">
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('catalog', () => {
+                const params = new URLSearchParams(window.location.search);
+                
+                return {
+                    items: {{ .Items | toJson }},
+                    filters: {{ .Filters | toJson }},
+
+                    get filteredItems() {
+                        return this.items.filter(item => {
+                            const hasFilter = [];
+                            if (this.currentFilters.language.size) {
+                                hasFilter.push(this.currentFilters.language.has(item.Language));
+                            }
+                            if (this.currentFilters.isPaid.size) {
+                                hasFilter.push(this.currentFilters.isPaid.has(String(item.IsPaid)));
+                            }
+                            if (this.currentFilters.level.size) {
+                                hasFilter.push(this.currentFilters.level.has(item.Level));
+                            }
+                            if (this.currentFilters.type.size) {
+                                hasFilter.push(this.currentFilters.type.has(item.Type));
+                            }
+                            if (this.currentFilters.tag.size) {
+                                hasFilter.push(item.Tags.some(tag => this.currentFilters.tag.has(tag)));
+                            }
+                            return hasFilter.every(v => v);
+                        })
+                    },
+
+                    get hasFilters() {
+                        return Object.values(this.currentFilters).some(set => set.size);
+                    },
+
+                    currentFilters: {
+                        tag: new Set(params.getAll('tag')),
+                        type: new Set(params.getAll('type')),
+                        level: new Set(params.getAll('level')),
+                        language: new Set(params.getAll('language')),
+                        isPaid: new Set(params.getAll('isPaid'))
+                    }, 
+
+                    handleChangeFilter(type, event) {
+                        const value = event.target.value;
+                        this.changeFilter(type, value);
+                        event.target.value = '';
+                    },
+
+                    changeFilter(type, value) {
+                        const alreadySelected = this.currentFilters[type].has(value);
+                        if (alreadySelected) {
+                            this.currentFilters[type].delete(value);
+                        } else {
+                            this.currentFilters[type].add(value);
+                        }
+
+                        this.updateFiltersOnURL();
+                    },
+
+                    updateFiltersOnURL() {
+                        const params = new URLSearchParams();
+                        for (const [key, values] of Object.entries(this.currentFilters)) {
+                            values.forEach(value => params.append(key, value));
+                        }
+                        window.history.pushState(null, '', `?${params.toString()}`);
+                    },
+
+                    clearAllFilters() {
+                        this.currentFilters = {
+                            tag: new Set(),
+                            type: new Set(),
+                            level: new Set(),
+                            language: new Set(),
+                            isPaid: new Set()
+                        };
+                        this.updateFiltersOnURL();
+                    },
+
+                    formatFilter(key, value) {
+                        switch (key) {
+                            case "isPaid":
+                                return this.formatIsPaid(value)
+                            default:
+                                return value
+                        }
+                    },
+
+                    formatIsPaid(isPaid) {
+                        return isPaid === "true" ? "Pago" : "Gratuito"
+                    },
+                    
+                    excludeAlreadyFiltered(filters = [], key) {
+                        return filters.filter(value => !this.currentFilters[key]?.has(value));
+                    }
+                }
+            })
+        })
+    </script> 
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" x-data="catalog">
+        <article class="text-center mb-12">
+            <h1 class="text-3xl font-bold text-gray-900">Awesome Tech Lead</h1>
+            <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">
+                Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
+            </p>
+            <div class="flex items-center justify-center">
+                <a 
+                    href="https://techleads.club?utm_source=awesome-tech-lead&utm_medium=site" 
+                    class="text-blue-500 text-md flex items-center font-medium hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    TechLeads.club 💎
+                </a>
+                <a
+                    href="https://github.com/tech-leads-club/awesome-tech-lead"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center ml-2"
+                >
+                    <img
+                    alt="GitHub stars"
+                    src="https://img.shields.io/github/stars/tech-leads-club/awesome-tech-lead?style=social"
+                    class="transition-transform hover:scale-105"
+                    />
+                </a>
+            </div>
+        </article>
+
+        <section class="flex flex-wrap gap-2 items-center">
+            <span class="text-gray-700 font-medium">Filtros:</span>
+            
+            <template x-if="hasFilters">
+                <button @click="clearAllFilters()" class="inline-flex items-center gap-1 cursor-pointer ml-1 text-blue-600 order-0 hover:text-blue-800 md:order-1">
+                    <span class="text-sm">Limpar Filtros</span>
+                    <i class="fas fa-times"></i>
+                </button>
+            </template>
+            
+            <div class="flex flex-wrap gap-4">
+                <select
+                    @change="handleChangeFilter('tag', $event)"
+                    id="tag"
+                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                    <option value="">Tags</option>
+                    <template x-for="tag in excludeAlreadyFiltered(filters.Tags, 'tag')">
+                        <option :value="tag" x-text="tag"></option>
+                    </template>
+                </select>
+
+                <select 
+                    @change="handleChangeFilter('type', $event)"
+                    id="type" 
+                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                    <option value="">Tipo</option>
+                    <template x-for="type in excludeAlreadyFiltered(filters.Types, 'type')">
+                        <option :value="type" x-text="type"></option>
+                    </template>
+                </select>
+
+                <select 
+                    @change="handleChangeFilter('level', $event)"
+                        id="level" 
+                        class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                    <option value="">Nível</option>
+                    <template x-for="level in excludeAlreadyFiltered(filters.Levels, 'level')">
+                        <option :value="level" x-text="level"></option>
+                    </template>
+                </select>
+
+                <select
+                    @change="handleChangeFilter('language', $event)"
+                    id="language" 
+                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                    <option value="">Idioma</option>
+                    <template x-for="language in excludeAlreadyFiltered(filters.Languages, 'language')">
+                        <option :value="language" x-text="language"></option>
+                    </template>
+                </select>
+
+                <select 
+                    @change="handleChangeFilter('isPaid', $event)"
+                    id="isPaid" 
+                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                    <option value="">Preço</option>
+                    <option :value="false">Gratuito</option>
+                    <option :value="true">Pago</option>
+                </select>
+            </div>
+
+        </section>
+
+        <section class="mt-4 flex flex-wrap gap-2 mb-4">
+            <template x-for="(values, key) in currentFilters">
+                <template x-for="value in Array.from(values)">
+                    <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800">
+                        <span x-text="formatFilter(key, value)"></span>
+                        <button @click="changeFilter(key, value)" class="cursor-pointer ml-1 text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </span>
+                </template>
+            </template>
+        </section>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <template
+                x-for="(item, index) in filteredItems"
+                :key="index"
+            >
+                <article class="bg-white rounded-lg shadow-sm p-6 flex flex-col hover:shadow-md transition-shadow duration-200 border border-gray-100">
+                    <div class="flex items-start justify-between">
+                        <h3 x-text="item.Title" class="text-lg font-semibold text-gray-900"></h3>
+                        <span class="bg-blue-50 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full" x-text="item.IsPaid ? 'Pago' : 'Gratuito'"></span>
+                    </div>
+    
+                    <p class="mt-1 text-sm text-gray-600 mb-2">Por <span x-text="item.Author"></span></p>
+                    
+                    <div class="flex flex-wrap gap-2 mt-auto mb-4">
+                        <template x-for="tag in item.Tags">
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full" x-text="tag"></span>
+                        </template>
+                        <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full" x-text="item.Type"></span>
+                        <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full" x-text="item.Level"></span>
+                        <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full" x-text="item.Language"></span>
+                    </div>
+
+                     <a 
+                        :href="item.URL" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="mt-2 border border-blue-500 text-blue-800 px-4 py-2 text-sm rounded-lg w-full mt-auto text-center duration-200 hover:bg-blue-600 hover:text-white"
+                    >
+                        Ver Recurso
+                    </a>
+                </article>
+            </template>
+        </main>
+    </div>
+</body>
+</html>

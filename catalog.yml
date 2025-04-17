@@ -47,21 +47,6 @@ catalog:
         - staff
         - principal
       language: en_us
-    - url: https://www.goodreads.com/book/show/21343.The_Five_Dysfunctions_of_a_Team
-      title: The Five Dysfunctions of a Team
-      author: Patrick Lencioni
-      type: book
-      tags:
-        - Liderança e Inspiração
-        - Gestão
-      is_paid: true
-      level: intermediate
-      career_bands:
-        - senior
-        - tl
-        - staff
-        - principal
-      language: en_us
     - url: https://www.goodreads.com/book/show/67833.Extreme_Programming_Explained?ref=nav_sb_ss_1_20
       title: 'Extreme Programming Explained: Embrace Change'
       author: Kent Beck, Cynthia Andres
@@ -162,6 +147,7 @@ catalog:
       author: Felipe Adamoli
       type: video
       tags:
+        - Excelência Técnica
         - Carreira
       is_paid: true
       level: beginner
@@ -291,6 +277,7 @@ catalog:
       author: Jason Fried, David Heinemeier Hansson
       type: book
       tags:
+        - Liderança e Inspiração
         - Gestão
       is_paid: true
       level: intermediate
@@ -592,19 +579,6 @@ catalog:
       career_bands:
         - junior
         - mid
-      language: en_us
-    - url: https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer
-      title: 'The Pragmatic Programmer: From Journeyman to Master'
-      author: Dave Thomas, Andy Hunt
-      type: book
-      tags:
-        - Excelência Técnica
-      is_paid: true
-      level: beginner
-      career_bands:
-        - junior
-        - mid
-        - senior
       language: en_us
     - url: https://martinfowler.com/articles/on-pair-programming.html
       title: On Pair Programming
@@ -1615,24 +1589,6 @@ catalog:
         - staff
         - principal
       language: pt_br
-    - url: https://www.youtube.com/live/_lVf836ZJ4o?si=J7Z9ywnUY2M9hQ3W
-      title: Arquiteturas Modulares em Go e Node.js - Elton Minetto e Waldemar Neto
-      author: Waldemar Neto, Elton Minetto
-      type: video
-      tags:
-        - Excelência Técnica
-        - Abrangência de Impacto
-        - Arquitetura e Design
-      is_paid: false
-      level: intermediate
-      career_bands:
-        - mid
-        - senior
-        - junior
-        - tl
-        - staff
-        - principal
-      language: pt_br
     - url: https://youtu.be/47KxEv2F8TY?si=cmNSY52A1ysIZK00
       title: DVC 15 - Rest vs GraphQL vs gRPC com Elton Minetto
       author: Waldemar Neto, Elton Minetto
@@ -1916,6 +1872,11 @@ catalog:
         - Qualidade
       is_paid: false
       level: advanced
+      career_bands:
+        - senior
+        - tl
+        - staff
+        - principal
       language: en_us
     - url: https://www.trinitytakei.io/blog/17-traits-of-awesome-tech-leads
       title: 17 Traits of Awesome Tech Leads
@@ -1956,10 +1917,344 @@ catalog:
       tags:
         - Liderança e Inspiração
       is_paid: true
-      level: beginner
       career_bands:
         - junior
         - mid
         - senior
         - tl
       language: pt_br
+    - url: https://highscalability.com/lessons-learned-from-scaling-uber-to-2000-engineers-1000-ser
+      title: Lessons Learned from Scaling Uber to 2000 Engineers, 1000 Services, and 8000 Git repositories
+      author: High Scalability
+      type: article
+      tags:
+        - Arquitetura e Design
+        - Excelência Técnica
+      is_paid: false
+      level: advanced
+      career_bands:
+        - mid
+        - senior
+        - tl
+      language: en_us
+    - url: https://www.amazon.com/-/pt/dp/8543108683/ref=sr_1_1?crid=3OGRZCH2VDUJO&dib=eyJ2IjoiMSJ9.J-hmIqMyxrbpOpQO1_gAi39RTd34MfPSWWv7fwGoq8jwgiYY5Pt9nUOBV8LK0I12E_MoTJbOf1VYRMqcw7fFc-K8zOtr-qLWT97HiFh-_PtnS-TjHv-2WFrkyRSJ-SmpbdUhNQNOYwMzlKOIISDvobyv6tVywwnZbjdS4Ri4N2FmmGYsL07uRHeZ9udBwmDp3TFznKB9TEPQl4DGYOLPjpHtH5WMkgk-K8uF7Em9WXM.BoBTzH0Biy9NZihzVQe65Y2u3y17l6euPHtQ3UpkBB8&dib_tag=se&keywords=como+fazer+amigos+e+influenciar+pessoas&qid=1742153807&sprefix=como+fazer+amigos+e+influ%2Caps%2C211&sr=8-1
+      title: Como fazer amigos e influenciar pessoas
+      author: Dale Carnegie
+      type: book
+      tags:
+        - Liderança e Inspiração
+        - Gestão
+      is_paid: true
+      level: advanced
+      career_bands:
+        - senior
+        - tl
+        - staff
+        - principal
+      language: pt_br
+    - url: https://www.amazon.com/-/pt/dp/8578607783/ref=sr_1_3?__mk_pt_BR=ÅMÅŽÕÑ&crid=1NZ6EP6JRSK53&dib=eyJ2IjoiMSJ9.u30rY4P-Lt4fM7q_DqqhnypAmwkct3cIQ0yAZoZKFa1i1iAhTzXombtDoIYcd5uZqWOHzIlY6rdMEHIf6Zi5rGCzc8O2BWLfH7kXw7tDk6XTM_Q7xYfIrZcNK0P8tlWyQco_C5rD0IaaB1-Bp0lefA7Ftyuzz2PmdNRjeHzHNoYzSTaSHSf5fnqpfXBpvzf4_U_Di37JkhkzMSoSY0U0IzM4yGg1wGsF3UAPN4hN-ng.oq5BT2aFBxsNE3CPgGiqan-aUXFj7whxxloTFi6B28o&dib_tag=se&keywords=As+21+irrefutáveis+leis+da+liderança&qid=1742154215&sprefix=as+21+irrefutáveis+leis+da+liderança%2Caps%2C534&sr=8-3
+      title: As 21 irrefutáveis leis da liderança
+      author: John C. Maxwell
+      type: book
+      tags:
+        - Liderança e Inspiração
+        - Gestão
+      is_paid: true
+      level: advanced
+      career_bands:
+        - senior
+        - tl
+        - staff
+        - principal
+      language: pt_br
+    - url: https://substack.wasteman.codes/p/engineering-principles-and-best-practices
+      title: Engineering Principles for Building Financial Systems
+      author: wasteman
+      type: article
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: advanced
+      career_bands:
+        - senior
+        - tl
+        - staff
+        - principal
+      language: en_us
+    - url: https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/
+      title: The Law of Leaky Abstractions
+      author: Joel Spolsky
+      type: article
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: advanced
+      career_bands:
+        - senior
+        - tl
+        - staff
+        - principal
+      language: en_us
+    - url: https://engsoftmoderna.info/
+      title: Engenharia de Software Moderna
+      author: Marco Tullio Valente
+      type: book
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: beginner
+      career_bands:
+        - junior
+        - mid
+      language: pt_br
+    - url: https://github.com/ZachGoldberg/Startup-CTO-Handbook/blob/main/StartupCTOHandbook.md
+      title: The Startup CTO's Handbook
+      author: Zach Goldberg
+      type: book
+      tags:
+        - Entrega de Valor
+        - Liderança e Inspiração
+      is_paid: false
+      level: advanced
+      career_bands:
+        - tl
+        - staff
+        - principal
+      language: en_us
+    - url: https://www.goodreads.com/book/show/26499604-talking-with-tech-leads
+      title: Talking with Tech Leads - From Novices to Practitioners
+      author: Patrick Kua
+      type: book
+      tags:
+        - Liderança e Inspiração
+      is_paid: true
+      level: beginner
+      career_bands:
+        - senior
+        - tl
+      language: en_us
+    - url: https://www.youtube.com/watch?v=jMpCF0Z623s
+      title: A Guide To Managing Technical Teams
+      author: Modern Software Engineering
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - Managing Technical Teams
+        - Dave Farley
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=bCEmRwsmmlY
+      title: How To Manage Your Boss! (Managing Up)
+      author: Modern Software Engineering
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - Dave Farley
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=l_Vqp1dPuPo
+      title: RailsConf 2014 - You are Not an Impostor by Nickolas Means
+      author: Nickolas Means
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=sNdkwaW_LwQ
+      title: Be a Better Leader | Simon Sinek
+      author: Simon Sinek
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - simon sinek
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=MAfGb-AYx6I
+      title: Building Trusting Teams
+      author: Simon Sinek
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - simon sinek
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=Zop0wTPrbk8
+      title: Managing Manager‐less Processes • Fred George • GOTO 2017
+      author: GOTO Conferences
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - GOTO Conference
+        - Fred George
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=I-gBHq3od2s
+      title: Better 1:1 Meetings | Software Engineering
+      author: Phil Whelan
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - one-on-one
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=oxgfehnJ7GE
+      title: Camille Fournier on Managing Technical Teams
+      author: Y Combinator
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - YC
+        - Camille Fournier
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=fUVfkLUmII4
+      title: The Art of Software Development • Sander Mak • GOTO 2023
+      author: GOTO Conferences
+      type: video
+      tags:
+        - Excelência Técnica
+        - GOTO
+        - Sander Mak
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=i53Gi_K3o7I
+      title: 20 System Design Concepts Explained in 10 Minutes
+      author: NeetCode
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=G6uBAwVrxHw
+      title: The State of Software Engineering 🔨 — with Kent Beck
+      author: Refactoring
+      type: video
+      tags:
+        - Excelência Técnica
+        - Kent Beck
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=aWZFRk-w3ng
+      title: Build Abstractions Not Illusions • Gregor Hohpe • YOW! 2023
+      author: GOTO Conferences
+      type: video
+      tags:
+        - Excelência Técnica
+        - Gregor Hohpe
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=IcgmSRJHu_8
+      title: '"Making Impossible States Impossible" by Richard Feldman'
+      author: elm-conf
+      type: video
+      tags:
+        - Excelência Técnica
+        - Richard Feldman
+        - elm-conf
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=FLe5dvqV6xs
+      title: I Bet You’re Overengineering Your Software
+      author: Modern Software Engineering
+      type: video
+      tags:
+        - Excelência Técnica
+        - Dave Farley
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=CNBxIhxHHxM
+      title: >-
+        Simon Sinek & Trevor Noah on Friendship, Loneliness, Vulnerability, and More
+        | Full Conversation
+      author: Simon Sinek
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - simon sinek
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://www.youtube.com/watch?v=Q6RfMmMwhvM
+      title: 'Software Architecture: The Hard Parts - Neal Ford'
+      author: Developer Summit
+      type: video
+      tags:
+        - Excelência Técnica
+        - Neal Ford
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
+    - url: https://martinfowler.com/articles/feature-toggles.html
+      title: 'Feature Toggles (aka Feature Flags)'
+      author: Pete Hodgson
+      type: article
+      tags:
+        - Excelência Técnica        
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+      language: en_us
