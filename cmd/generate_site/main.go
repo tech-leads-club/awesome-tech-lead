@@ -30,6 +30,7 @@ func main() {
 		os.Exit(1)
 	}
 
+	fmt.Println("[site] deleting build directory...")
 	if err := os.RemoveAll("build"); err != nil {
 		fmt.Println("error deleting build directory:", err)
 		os.Exit(1)
