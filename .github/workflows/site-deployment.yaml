@@ -1,22 +1,21 @@
 on: [push]
 jobs:
   deploy:
+    name: Deploy site to Cloudflare Pages
     runs-on: ubuntu-latest
     permissions:
       contents: read
       deployments: write
-    name: Deploy site to Cloudflare Pages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Build
         run: make site/generate
-      - name: Publish
-        uses: cloudflare/pages-action@v1
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
         with:
           branch: main
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}
-          directory: build/site
+          command: pages deploy build/site --project-name=${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
