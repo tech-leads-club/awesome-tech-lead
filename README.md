@@ -184,6 +184,7 @@ dar feedback.
 | [Continuous improvement in a safe environment](https://www.thoughtworks.com/en-br/insights/blog/continuous-improvement-safe-environment) por Alexandre Klaser | `Intermediário` `Artigo` `Grátis` |
 | [Creative Selection: Inside Apple's Design Process During the Golden Age of Steve Jobs](https://www.goodreads.com/book/show/37638098-creative-selection?from_search=true&from_srp=true&qid=J40lH7Wsln&rank=1) por Ken Kocienda | `Qualidade` `Iniciante` `Livro` `Pago` |
 | [Crucial Conversations: Tools for Talking When Stakes are High](https://www.goodreads.com/book/show/15014.Crucial_Conversations) por Kerry Patterson, Stephen R. Covey, Joseph Grenny, Ron McMillan, Al Switzler | `Iniciante` `Livro` `Pago` |
+| [De Dev a Tech Lead](https://de-dev-a-tech-lead.techleadership.rocks/) por Eduardo Matos | `Iniciante` `Livro` `Pago` |
 | [Drive: The Surprising Truth About What Motivates Us](https://www.goodreads.com/book/show/6452796-drive) por Daniel H. Pink | `Intermediário` `Livro` `Pago` |
 | [Get your work recognized - write a brag document](https://jvns.ca/blog/brag-documents/) por Julia Evans | `Gestão` `Carreira` `Iniciante` `Artigo` `Grátis` |
 | [How To Manage Your Boss! (Managing Up)](https://www.youtube.com/watch?v=bCEmRwsmmlY) por Modern Software Engineering | `Dave Farley` `Intermediário` `Vídeo` `Grátis` |
@@ -203,7 +204,6 @@ dar feedback.
 | [The Startup CTO's Handbook](https://github.com/ZachGoldberg/Startup-CTO-Handbook/blob/main/StartupCTOHandbook.md) por Zach Goldberg | `Avançado` `Livro` `Grátis` |
 | [The Team that Managed Itself: A Story of Leadership](https://www.goodreads.com/book/show/53108540-the-team-that-managed-itself?from_search=true&from_srp=true&qid=L7C8WR5EMN&rank=1) por Christina Wodtke  | `Intermediário` `Livro` `Pago` |
 | [Working with Emotional Intelligence](https://www.goodreads.com/book/show/27537.Working_with_Emotional_Intelligence) por Daniel Goleman | `Iniciante` `Livro` `Pago` |
-| [De Dev a Tech Lead](https://de-dev-a-tech-lead.techleadership.rocks/) por Eduardo Matos | `Iniciante` `Livro` `Pago` |
 
 
 <h2 id="como-contribuir">🎽 Como Contribuir?</h2>

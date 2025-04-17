@@ -1917,6 +1917,7 @@ catalog:
       tags:
         - Liderança e Inspiração
       is_paid: true
+      level: beginner
       career_bands:
         - junior
         - mid
