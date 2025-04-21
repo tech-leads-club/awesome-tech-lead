@@ -1910,6 +1910,20 @@ catalog:
         - staff
         - principal
       language: en_us
+    - url: https://de-dev-a-tech-lead.techleadership.rocks/
+      title: De Dev a Tech Lead
+      author: Eduardo Matos
+      type: book
+      tags:
+        - Liderança e Inspiração
+      is_paid: true
+      level: beginner
+      career_bands:
+        - junior
+        - mid
+        - senior
+        - tl
+      language: pt_br
     - url: https://highscalability.com/lessons-learned-from-scaling-uber-to-2000-engineers-1000-ser
       title: Lessons Learned from Scaling Uber to 2000 Engineers, 1000 Services, and 8000 Git repositories
       author: High Scalability

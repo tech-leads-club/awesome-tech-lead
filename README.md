@@ -184,6 +184,7 @@ dar feedback.
 | [Continuous improvement in a safe environment](https://www.thoughtworks.com/en-br/insights/blog/continuous-improvement-safe-environment) por Alexandre Klaser | `Intermediário` `Artigo` `Grátis` |
 | [Creative Selection: Inside Apple's Design Process During the Golden Age of Steve Jobs](https://www.goodreads.com/book/show/37638098-creative-selection?from_search=true&from_srp=true&qid=J40lH7Wsln&rank=1) por Ken Kocienda | `Qualidade` `Iniciante` `Livro` `Pago` |
 | [Crucial Conversations: Tools for Talking When Stakes are High](https://www.goodreads.com/book/show/15014.Crucial_Conversations) por Kerry Patterson, Stephen R. Covey, Joseph Grenny, Ron McMillan, Al Switzler | `Iniciante` `Livro` `Pago` |
+| [De Dev a Tech Lead](https://de-dev-a-tech-lead.techleadership.rocks/) por Eduardo Matos | `Iniciante` `Livro` `Pago` |
 | [Drive: The Surprising Truth About What Motivates Us](https://www.goodreads.com/book/show/6452796-drive) por Daniel H. Pink | `Intermediário` `Livro` `Pago` |
 | [Get your work recognized - write a brag document](https://jvns.ca/blog/brag-documents/) por Julia Evans | `Gestão` `Carreira` `Iniciante` `Artigo` `Grátis` |
 | [How To Manage Your Boss! (Managing Up)](https://www.youtube.com/watch?v=bCEmRwsmmlY) por Modern Software Engineering | `Dave Farley` `Intermediário` `Vídeo` `Grátis` |
