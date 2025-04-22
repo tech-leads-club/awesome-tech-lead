@@ -16,11 +16,12 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="/images/opengraph.png">
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <link href="/css/main.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
     <script>
@@ -126,13 +127,13 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" x-data="catalog">
         <article class="text-center mb-12">
             <h1 class="text-3xl font-bold text-gray-900">Awesome Tech Lead</h1>
-            <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">
                 Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
-            </p>
+            </h2>
             <div class="flex items-center justify-center">
                 <a 
                     href="https://techleads.club?utm_source=awesome-tech-lead&utm_medium=site" 
-                    class="text-blue-500 text-md flex items-center font-medium hover:underline"
+                    class="text-blue-600 text-md flex items-center font-medium hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -145,9 +146,11 @@
                     class="inline-flex items-center ml-2"
                 >
                     <img
-                    alt="GitHub stars"
-                    src="https://img.shields.io/github/stars/tech-leads-club/awesome-tech-lead?style=social"
-                    class="transition-transform hover:scale-105"
+                        alt="GitHub stars"
+                        width="88"
+                        height="20"
+                        src="https://img.shields.io/github/stars/tech-leads-club/awesome-tech-lead?style=social"
+                        class="transition-transform hover:scale-105"
                     />
                 </a>
             </div>
@@ -167,6 +170,7 @@
                 <select
                     @change="handleChangeFilter('tag', $event)"
                     id="tag"
+                    aria-label="Filtrar por tags"
                     class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                     <option value="">Tags</option>
@@ -177,7 +181,8 @@
 
                 <select 
                     @change="handleChangeFilter('type', $event)"
-                    id="type" 
+                    id="type"
+                    aria-label="Filtrar por tipo"
                     class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                     <option value="">Tipo</option>
@@ -188,8 +193,9 @@
 
                 <select 
                     @change="handleChangeFilter('level', $event)"
-                        id="level" 
-                        class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    id="level"
+                    aria-label="Filtrar por nível"
+                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                     <option value="">Nível</option>
                     <template x-for="level in excludeAlreadyFiltered(filters.Levels, 'level')">
@@ -199,7 +205,8 @@
 
                 <select
                     @change="handleChangeFilter('language', $event)"
-                    id="language" 
+                    id="language"
+                    aria-label="Filtrar por idioma"
                     class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                     <option value="">Idioma</option>
@@ -210,7 +217,8 @@
 
                 <select 
                     @change="handleChangeFilter('isPaid', $event)"
-                    id="isPaid" 
+                    id="isPaid"
+                    aria-label="Filtrar por preço"
                     class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                     <option value="">Preço</option>

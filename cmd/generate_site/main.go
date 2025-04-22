@@ -4,9 +4,13 @@ import (
 	"bytes"
 	"fmt"
 	"os"
+	"os/exec"
+	"runtime"
 
 	catalog "github.com/tech-leads-club/awesome-tech-lead/internal"
 )
+
+const tailwindInstallDoc = "https://tailwindcss.com/blog/standalone-cli"
 
 func main() {
 	data, err := os.ReadFile("catalog.yml")
@@ -53,4 +57,34 @@ func main() {
 		fmt.Println("error writing build/site/index.html", err)
 		os.Exit(1)
 	}
+
+	fmt.Println("[site] compiling css...")
+
+	if _, err := os.Stat("./tailwindcss"); os.IsNotExist(err) {
+		fmt.Printf(`
+ERROR: Tailwind CSS binary not found.
+To install the standalone Tailwind CSS CLI:
+1. Download the appropriate binary for your system (%s)
+2. Place it in your project root as 'tailwindcss'
+3. Make it executable (chmod +x tailwindcss on Unix systems)
+
+Installation documentation: %s
+
+`, runtime.GOOS, tailwindInstallDoc)
+		os.Exit(1)
+	}
+
+	cmd := exec.Command(
+		"./tailwindcss",
+		"-i", "public/css/main.css",
+		"-o", "build/site/css/main.css",
+		"--minify",
+	)
+	output, err := cmd.CombinedOutput()
+	if err != nil {
+		fmt.Printf("error compiling css: %v\noutput: %s\n", err, output)
+		os.Exit(1)
+	}
+
+	fmt.Println("[site] css built successfully")
 }
