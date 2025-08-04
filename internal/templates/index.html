@@ -135,29 +135,44 @@
             <h2 class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
                 Lista de conteúdo sobre <span class="font-semibold text-blue-700">liderança técnica</span> curada pelos membros da comunidade
             </h2>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a 
-                    href="https://techleads.club?utm_source=awesome-tech-lead&utm_medium=site" 
-                    class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-sm hover:shadow-md"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    TechLeads.club 💎
-                </a>
-                <a
-                    href="https://github.com/tech-leads-club/awesome-tech-lead"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg hover:border-gray-400 transition-colors duration-200 shadow-sm hover:shadow-md"
-                >
-                    <img
-                        alt="GitHub stars"
-                        width="88"
-                        height="20"
-                        src="https://img.shields.io/github/stars/tech-leads-club/awesome-tech-lead?style=social"
-                        class="transition-transform hover:scale-105"
-                    />
-                </a>
+            <div class="space-y-4">
+                <!-- Link principal TechLeads.club -->
+                <div class="flex justify-center">
+                    <a 
+                        href="https://techleads.club?utm_source=awesome-tech-lead&utm_medium=site" 
+                        class="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg hover:scale-105"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span>Acesse a TechLeads.club</span>
+                        <span class="ml-2">💎</span>
+                    </a>
+                </div>
+                
+                <!-- Links secundários -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a
+                        href="https://github.com/tech-leads-club/awesome-tech-lead"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 text-gray-600 hover:text-gray-800 transition-colors"
+                    >
+                        <i class="fab fa-github text-lg"></i>
+                        <span class="text-sm">Ver no GitHub</span>
+                    </a>
+                    
+                    <span class="text-gray-300 hidden sm:block">|</span>
+                    
+                    <div class="inline-flex items-center">
+                        <img
+                            alt="GitHub stars"
+                            width="88"
+                            height="20"
+                            src="https://img.shields.io/github/stars/tech-leads-club/awesome-tech-lead?style=social"
+                            class="transition-transform hover:scale-105"
+                        />
+                    </div>
+                </div>
             </div>
         </article>
 
