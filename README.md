@@ -1,8 +1,12 @@
 
-# Awesome Tech Lead [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<div align="center">
+  <img src="public/images/awesome-tech-lead-logo.svg" alt="Awesome Tech Lead Logo" width="240" height="120">
+  
+  # Awesome Tech Lead [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
-[TechLeads.club 💎](https://comece.techleads.club?utm_source=awesome-tech-lead&utm_medium=readme).
+  Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
+  [TechLeads.club 💎](https://comece.techleads.club?utm_source=awesome-tech-lead&utm_medium=readme).
+</div>
 
 O conteúdo está categorizado nos três pilares da comunidade: Excelência
 Técnica, Entrega de Valor e Liderança e Inspiração.
