@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="public/images/awesome-tech-lead-logo.svg" alt="Awesome Tech Lead Logo" width="240" height="120">
+  <img src="public/images/awesome-tech-lead-logo.svg" alt="Awesome Tech Lead Logo" height="150">
   
   # Awesome Tech Lead [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
