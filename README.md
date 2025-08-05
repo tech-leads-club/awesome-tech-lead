@@ -6,6 +6,7 @@
   </a>
 </div>
 <br>
+
 Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
 [TechLeads.club 💎](https://comece.techleads.club?utm_source=awesome-tech-lead&utm_medium=readme).
 
