@@ -1,12 +1,11 @@
-
 <div align="center">
-  <img src="public/images/awesome-tech-lead-logo.svg" alt="Awesome Tech Lead Logo" height="180">
-  
-  <p style="margin-top: 25px;">
-    <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  </p>
+  <img src="public/images/awesome-tech-lead-logo.svg" alt="Awesome Tech Lead Logo" height="200">
+  <br><br>
+  <a href="https://awesome.re">
+    <img src="https://awesome.re/badge.svg" alt="Awesome">
+  </a>
 </div>
-
+<br>
 Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
 [TechLeads.club 💎](https://comece.techleads.club?utm_source=awesome-tech-lead&utm_medium=readme).
 
