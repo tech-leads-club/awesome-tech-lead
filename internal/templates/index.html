@@ -125,108 +125,109 @@
     </script> 
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" x-data="catalog">
-        <article class="text-center mb-12">
-            <h1 class="text-3xl font-bold text-gray-900">Awesome Tech Lead</h1>
-            <h2 class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">
-                Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
+        <article class="text-center mb-16 bg-gradient-to-b from-gray-50 to-white py-12 px-6 rounded-2xl border border-gray-100">
+            <div class="flex justify-center mb-8">
+                <img src="/images/awesome-tech-lead-logo.svg" 
+                     alt="Awesome Tech Lead Logo" 
+                     class="w-80 h-40 transition-transform duration-300 hover:scale-105">
+            </div>
+            <h2 class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-4">
+                Lista de conteúdo sobre <span class="font-semibold text-blue-700">liderança técnica</span> curada pelos membros da comunidade <a href="https://techleads.club?utm_source=awesome-tech-lead&utm_medium=site" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-semibold underline transition-colors">TechLeads.club</a> 💎
             </h2>
-            <div class="flex items-center justify-center">
-                <a 
-                    href="https://techleads.club?utm_source=awesome-tech-lead&utm_medium=site" 
-                    class="text-blue-600 text-md flex items-center font-medium hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    TechLeads.club 💎
-                </a>
-                <a
-                    href="https://github.com/tech-leads-club/awesome-tech-lead"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center ml-2"
-                >
-                    <img
-                        alt="GitHub stars"
-                        width="88"
-                        height="20"
-                        src="https://img.shields.io/github/stars/tech-leads-club/awesome-tech-lead?style=social"
-                        class="transition-transform hover:scale-105"
-                    />
-                </a>
+            <div class="mt-2">
+                <div class="flex items-center justify-center">
+                    <a
+                        href="https://github.com/tech-leads-club/awesome-tech-lead"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center"
+                    >
+                        <img
+                            alt="GitHub stars"
+                            width="95"
+                            height="30"
+                            src="https://img.shields.io/github/stars/tech-leads-club/awesome-tech-lead?style=social"
+                            class="transition-transform hover:scale-105"
+                        />
+                    </a>
+                </div>
             </div>
         </article>
 
-        <section class="flex flex-wrap gap-2 items-center">
-            <span class="text-gray-700 font-medium">Filtros:</span>
-            
-            <template x-if="hasFilters">
-                <button @click="clearAllFilters()" class="inline-flex items-center gap-1 cursor-pointer ml-1 text-blue-600 order-0 hover:text-blue-800 md:order-1">
-                    <span class="text-sm">Limpar Filtros</span>
-                    <i class="fas fa-times"></i>
-                </button>
-            </template>
-            
-            <div class="flex flex-wrap gap-4">
-                <select
-                    @change="handleChangeFilter('tag', $event)"
-                    id="tag"
-                    aria-label="Filtrar por tags"
-                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                    <option value="">Tags</option>
-                    <template x-for="tag in excludeAlreadyFiltered(filters.Tags, 'tag')">
-                        <option :value="tag" x-text="tag"></option>
+        <section class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-filter text-blue-600"></i>
+                    <span class="text-lg font-semibold text-gray-800">Filtros</span>
+                    <template x-if="hasFilters">
+                        <button @click="clearAllFilters()" class="inline-flex items-center gap-1 px-3 py-1 text-sm text-red-600 hover:text-red-800 hover:bg-red-50 rounded-md transition-colors">
+                            <i class="fas fa-times"></i>
+                            <span>Limpar</span>
+                        </button>
                     </template>
-                </select>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-3 flex-1">
+                    <select
+                        @change="handleChangeFilter('tag', $event)"
+                        id="tag"
+                        aria-label="Filtrar por tags"
+                        class="appearance-none bg-gray-50 border border-gray-300 rounded-lg py-2.5 px-4 text-gray-700 cursor-pointer hover:bg-white hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all"
+                    >
+                        <option value="">🏷️ Tags</option>
+                        <template x-for="tag in excludeAlreadyFiltered(filters.Tags, 'tag')">
+                            <option :value="tag" x-text="tag"></option>
+                        </template>
+                    </select>
 
-                <select 
-                    @change="handleChangeFilter('type', $event)"
-                    id="type"
-                    aria-label="Filtrar por tipo"
-                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                    <option value="">Tipo</option>
-                    <template x-for="type in excludeAlreadyFiltered(filters.Types, 'type')">
-                        <option :value="type" x-text="type"></option>
-                    </template>
-                </select>
+                    <select 
+                        @change="handleChangeFilter('type', $event)"
+                        id="type"
+                        aria-label="Filtrar por tipo"
+                        class="appearance-none bg-gray-50 border border-gray-300 rounded-lg py-2.5 px-4 text-gray-700 cursor-pointer hover:bg-white hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all"
+                    >
+                        <option value="">📄 Tipo</option>
+                        <template x-for="type in excludeAlreadyFiltered(filters.Types, 'type')">
+                            <option :value="type" x-text="type"></option>
+                        </template>
+                    </select>
 
-                <select 
-                    @change="handleChangeFilter('level', $event)"
-                    id="level"
-                    aria-label="Filtrar por nível"
-                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                    <option value="">Nível</option>
-                    <template x-for="level in excludeAlreadyFiltered(filters.Levels, 'level')">
-                        <option :value="level" x-text="level"></option>
-                    </template>
-                </select>
+                    <select 
+                        @change="handleChangeFilter('level', $event)"
+                        id="level"
+                        aria-label="Filtrar por nível"
+                        class="appearance-none bg-gray-50 border border-gray-300 rounded-lg py-2.5 px-4 text-gray-700 cursor-pointer hover:bg-white hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all"
+                    >
+                        <option value="">📊 Nível</option>
+                        <template x-for="level in excludeAlreadyFiltered(filters.Levels, 'level')">
+                            <option :value="level" x-text="level"></option>
+                        </template>
+                    </select>
 
-                <select
-                    @change="handleChangeFilter('language', $event)"
-                    id="language"
-                    aria-label="Filtrar por idioma"
-                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                    <option value="">Idioma</option>
-                    <template x-for="language in excludeAlreadyFiltered(filters.Languages, 'language')">
-                        <option :value="language" x-text="language"></option>
-                    </template>
-                </select>
+                    <select
+                        @change="handleChangeFilter('language', $event)"
+                        id="language"
+                        aria-label="Filtrar por idioma"
+                        class="appearance-none bg-gray-50 border border-gray-300 rounded-lg py-2.5 px-4 text-gray-700 cursor-pointer hover:bg-white hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all"
+                    >
+                        <option value="">🌐 Idioma</option>
+                        <template x-for="language in excludeAlreadyFiltered(filters.Languages, 'language')">
+                            <option :value="language" x-text="language"></option>
+                        </template>
+                    </select>
 
-                <select 
-                    @change="handleChangeFilter('isPaid', $event)"
-                    id="isPaid"
-                    aria-label="Filtrar por preço"
-                    class="appearance-none flex-1 bg-white border border-gray-300 rounded-lg py-2 pl-4 pr-4 text-gray-700 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                    <option value="">Preço</option>
-                    <option :value="false">Gratuito</option>
-                    <option :value="true">Pago</option>
-                </select>
+                    <select 
+                        @change="handleChangeFilter('isPaid', $event)"
+                        id="isPaid"
+                        aria-label="Filtrar por preço"
+                        class="appearance-none bg-gray-50 border border-gray-300 rounded-lg py-2.5 px-4 text-gray-700 cursor-pointer hover:bg-white hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all"
+                    >
+                        <option value="">💰 Preço</option>
+                        <option :value="false">Gratuito</option>
+                        <option :value="true">Pago</option>
+                    </select>
+                </div>
             </div>
-
         </section>
 
         <section class="mt-4 flex flex-wrap gap-2 mb-4">
