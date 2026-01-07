@@ -2277,7 +2277,6 @@ catalog:
       is_paid: true 
       level: intermediate
       career_bands:
-        - junior
         - mid
         - senior
         - tl 
@@ -2293,7 +2292,6 @@ catalog:
       is_paid: true 
       level: intermediate
       career_bands:
-        - junior
         - mid
         - senior
         - tl 
@@ -2761,3 +2759,18 @@ catalog:
         - staff
       language: pt_br
       duration: "15"
+    - url: https://www.youtube.com/watch?v=90lGnXnMqgo
+      title: "IA para Devs: Dos Fundamentos às Ferramentas e Práticas que Aumentam Produtividade"
+      author: Waldemar Neto
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+        - tl
+        - staff
+      language: pt_br
+      duration: "81"
