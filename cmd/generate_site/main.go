@@ -60,12 +60,13 @@ func main() {
 
 	fmt.Println("[site] compiling css...")
 
-	if _, err := os.Stat("./tailwindcss"); os.IsNotExist(err) {
+	tailwindBin := findTailwindBinary()
+	if tailwindBin == "" {
 		fmt.Printf(`
 ERROR: Tailwind CSS binary not found.
 To install the standalone Tailwind CSS CLI:
 1. Download the appropriate binary for your system (%s)
-2. Place it in your project root as 'tailwindcss'
+2. Place it in your project root as 'tailwindcss' OR install globally
 3. Make it executable (chmod +x tailwindcss on Unix systems)
 
 Installation documentation: %s
@@ -74,8 +75,9 @@ Installation documentation: %s
 		os.Exit(1)
 	}
 
+	fmt.Printf("[site] using tailwind binary: %s\n", tailwindBin)
 	cmd := exec.Command(
-		"./tailwindcss",
+		tailwindBin,
 		"-i", "public/css/main.css",
 		"-o", "build/site/css/main.css",
 		"--minify",
@@ -87,4 +89,18 @@ Installation documentation: %s
 	}
 
 	fmt.Println("[site] css built successfully")
+}
+
+func findTailwindBinary() string {
+	// Check project local first
+	if _, err := os.Stat("./tailwindcss"); err == nil {
+		return "./tailwindcss"
+	}
+
+	// Check global PATH
+	if path, err := exec.LookPath("tailwindcss"); err == nil {
+		return path
+	}
+
+	return ""
 }
