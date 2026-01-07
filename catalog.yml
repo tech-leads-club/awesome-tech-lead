@@ -763,6 +763,7 @@ catalog:
         - staff
         - principal
       language: pt_br
+      duration: "40"
     - url: https://www.youtube.com/watch?v=fuIHvIsd_lg
       title: Introdução ao OpenTelemetry
       author: Dose De Telemetria
@@ -779,6 +780,7 @@ catalog:
         - staff
         - principal
       language: pt_br
+      duration: "61"
     - url: https://www.youtube.com/watch?v=rcwcysvwykU
       title: O fantástico mundo da observabilidade
       author: Dose De Telemetria
@@ -795,6 +797,7 @@ catalog:
         - staff
         - principal
       language: pt_br
+      duration: "75"
     - url: https://www.youtube.com/watch?v=2EpXRV3ubuo
       title: Tudo sobre instrumentação do OpenTelemetry
       author: Dose De Telemetria
@@ -811,6 +814,7 @@ catalog:
         - staff
         - principal
       language: pt_br
+      duration: "43"
     - url: https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos
       title: 'SRE fundamentals: SLIs, SLAs and SLOs'
       author: Google Cloud Training
@@ -859,6 +863,7 @@ catalog:
         - staff
         - principal
       language: en_us
+      duration: "9"
     - url: https://www.youtube.com/watch?v=JQTaWPEE80w
       title: Aprenda de vez SLI, SLO e SLA
       author: Fabricio Veronez
@@ -875,6 +880,7 @@ catalog:
         - staff
         - principal
       language: pt_br
+      duration: "10"
     - url: https://www.youtube.com/watch?v=y2ILKr8kCJU
       title: Risk and Error Budgets (class SRE implements DevOps)
       author: Fabricio Veronez
@@ -891,6 +897,7 @@ catalog:
         - staff
         - principal
       language: pt_br
+      duration: "7"
     - url: https://www.youtube.com/watch?v=gMPvWXesHO4
       title: O Que é Tracing Distribuído e Por Que Você Precisa Usar Agora
       author: Fabricio Veronez
@@ -907,6 +914,7 @@ catalog:
         - staff
         - principal
       language: pt_br
+      duration: "11"
     - url: https://www.youtube.com/watch?v=ahy6PDWoVHM
       title: Monitoramento de aplicações por onde começar ? | 4 golden signals do SRE
       author: Fabricio Veronez
@@ -923,6 +931,7 @@ catalog:
         - staff
         - principal
       language: pt_br
+      duration: "12"
     - url: https://www.youtube.com/watch?v=UUSbQPyS5xs
       title: |
         Terraform para Desenvolvedores: Como dominar a Cloud usando código
@@ -2252,10 +2261,503 @@ catalog:
       author: Pete Hodgson
       type: article
       tags:
-        - Excelência Técnica        
+        - Excelência Técnica
       is_paid: false
       level: intermediate
       career_bands:
         - mid
         - senior
       language: en_us
+    - url: https://www.techleads.club/c/trilha-lideranca-de-alta-performance
+      title: 'Trilha Liderança de Alta Performance'
+      author: Tech Leads Club 
+      type: roadmap
+      tags:
+        - Excelência Técnica        
+      is_paid: true 
+      level: intermediate
+      career_bands:
+        - junior
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal 
+      language: pt_br 
+    - url: https://www.techleads.club/c/trilha-desenvolvimento-assistido-por-ia
+      title: 'Trilha Desenvolvimento Assistido por IA'
+      author: Tech Leads Club 
+      type: roadmap
+      tags:
+        - Excelência Técnica        
+      is_paid: true 
+      level: intermediate
+      career_bands:
+        - junior
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal 
+      language: pt_br 
+    - url: https://www.techleads.club/c/arquiteturas-evolutivas-com-ia
+      title: 'Arquiteturas Evolutivas com IA'
+      author: Waldemar Neto 
+      type: course 
+      tags:
+        - Excelência Técnica        
+      is_paid: true 
+      level: advanced 
+      career_bands:
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal 
+      language: pt_br 
+    - url: https://www.techleads.club/c/rag-com-node-js
+      title: 'Construindo Aplicações RAG'
+      author: Daniel Castro
+      type: course 
+      tags:
+        - Excelência Técnica        
+      is_paid: true 
+      level: intermediate 
+      career_bands:
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal 
+      language: pt_br 
+    - url: https://www.techleads.club/c/gestao-de-stakeholders
+      title: 'Gestão De Stakeholders'
+      author: Felipe Adamoli, Alexandre Klaser 
+      type: course 
+      tags:
+        - Liderança e Inspiração 
+      is_paid: true 
+      level: advanced 
+      career_bands:
+        - senior
+        - tl 
+        - staff
+        - principal 
+      language: pt_br 
+    - url: https://www.techleads.club/c/gerenciamento-de-carreira
+      title: 'Gerenciamento de Carreira'
+      author: Waldemar Neto
+      type: course 
+      tags:
+        - Liderança e Inspiração 
+      is_paid: true 
+      level: intermediate 
+      career_bands:
+        - junior 
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal 
+      language: pt_br 
+    - url: https://www.techleads.club/c/formacao-em-feature-leading
+      title: 'Formação em Feature Leading'
+      author: Waldemar Neto
+      type: course 
+      tags:
+        - Entrega de Valor 
+      is_paid: true 
+      level: intermediate 
+      career_bands:
+        - mid
+        - senior
+        - tl 
+        - staff
+      language: pt_br 
+    - url: https://www.youtube.com/watch?v=-Zwdnv3hWbA
+      title: Como Testes de Segurança em IAs Generativas São Feitos
+      author: Roberta Robert
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: advanced 
+      career_bands: 
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal
+      language: pt_br
+    - url: https://www.youtube.com/watch?v=2NHnfnNE0wk
+      title: Big-O no Dia a Dia
+      author: Evelyn Mendes
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: beginner
+      career_bands: 
+        - junior
+        - mid
+      language: pt_br
+    - url: https://www.youtube.com/watch?v=8fGmmLW1Qpw
+      title: Os Desafios do Go To Market no Ecossistema Tech Brasileiro
+      author: Moyses Viana
+      type: video
+      tags:
+        - Entrega de Valor
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal
+      language: pt_br
+    - url: https://www.youtube.com/watch?v=H8L842PhfXc
+      title: 'SAST, DAST e Além: Construindo um Ciclo de Vida de Software Seguro'
+      author: William Fernandes 
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: advanced 
+      career_bands: 
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal
+      language: pt_br
+    - url: https://www.youtube.com/watch?v=NP4bmgG4SV0
+      title: 'Event Storming na Prática: Desvendando Domínios Complexos com Colaboração e Agilidade'
+      author: Samuel Nascimento
+      type: video
+      tags:
+        - Excelência Técnica
+        - Entrega de Valor 
+      is_paid: false
+      level: intermediate
+      career_bands: 
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal
+      language: pt_br
+    - url: https://www.youtube.com/watch?v=RWq42soYrH8
+      title: Criando APIs Cognitivas com RAG e Node.js
+      author: Daniel Castro
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate
+      career_bands: 
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal
+      language: pt_br
+    - url: https://www.youtube.com/watch?v=W1YvnzBExeQ
+      title: Não é magia, é elasticsearch!
+      author: Rodrigo Klaes
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate 
+      career_bands: 
+        - mid
+        - senior
+        - tl 
+        - staff
+      language: pt_br
+    - url: https://www.youtube.com/watch?v=eKcSbxl0RPs
+      title: 'Design for Failure: Como Assim Meu Sistema Falha?'
+      author: Luiz Schons
+      type: video
+      tags:
+        - Excelência Técnica
+        - Site Reliability Engineering
+      is_paid: false
+      level: intermediate
+      career_bands: 
+        - mid
+        - senior
+        - tl 
+        - staff
+      language: pt_br
+    - url: https://www.youtube.com/watch?v=hk8Nq7UNYY0
+      title: Reflexões sobre Coesão e Acoplamento de Software
+      author: Marcel Santos
+      type: video
+      tags:
+        - Excelência Técnica
+        - Arquitetura e Design
+      is_paid: false
+      level: advanced 
+      career_bands: 
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal
+      language: pt_br
+      duration: "32"
+    - url: https://www.youtube.com/watch?v=iK08Kbjcd_k
+      title: Como ser reconhecido no trabalho?
+      author: Jorge Leite 
+      type: video
+      tags:
+        - Liderança e Inspiração
+      is_paid: false
+      level: beginner 
+      career_bands:
+        - junior
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal
+      language: pt_br
+      duration: "29"
+    - url: https://www.youtube.com/watch?v=kGYIRLSk8fY
+      title: Comunique-se Melhor Com Todas as Camadas da Organização
+      author: Gabriel Lisboa
+      type: video
+      tags:
+        - Liderança e Inspiração
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal
+      language: pt_br
+      duration: "25"
+    - url: https://www.youtube.com/watch?v=mBxhBESebzc
+      title: Model Context Protocol (MCP) - the good parts
+      author: Renato de Lima Santos
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate 
+      career_bands:
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal
+      language: pt_br
+      duration: "27"
+    - url: https://www.youtube.com/watch?v=vyQ2UzRR5Lw
+      title: Padrões de Multi Agents e Agents
+      author: Rafael Girolineto
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate 
+      career_bands:
+        - mid
+        - senior
+        - tl 
+        - staff
+        - principal
+      language: pt_br
+      duration: "18"
+    - url: https://www.youtube.com/watch?v=X38znLeXtsU
+      title: 'Multitenancy na Prática: Como Spring pode Contribuir na Arquitetura Inteligente para Aplicações SaaS'
+      author: Anderson Garcia
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+        - tl
+        - staff
+      language: pt_br
+      duration: "23"
+    - url: https://www.youtube.com/watch?v=7tB4SQWTJoE
+      title: Como Aprender Soft Skills Como Dev (Tratando Elas Como Hard Skills)
+      author: Felipe Adamoli
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - Carreira
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+        - tl
+      language: pt_br
+      duration: "14"
+    - url: https://www.youtube.com/watch?v=5QbOjNntjY0
+      title: Por Que Suas Estimativas SEMPRE Atrasam?
+      author: Felipe Adamoli
+      type: video
+      tags:
+        - Entrega de Valor
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+        - tl
+        - staff
+      language: pt_br
+      duration: "23"
+    - url: https://www.youtube.com/watch?v=GIQIs9u5aLA
+      title: 5 Erros de Comunicação que TRAVARAM a MINHA Carreira em Tech
+      author: Felipe Adamoli
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - Carreira
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+        - tl
+      language: pt_br
+      duration: "18"
+    - url: https://www.youtube.com/watch?v=4lKk0Gq8GwQ
+      title: Você é um IMPOSTOR na Sua Carreira em Tech? (E como parar já!)
+      author: Felipe Adamoli
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - Carreira
+      is_paid: false
+      level: beginner
+      career_bands:
+        - junior
+        - mid
+        - senior
+      language: pt_br
+      duration: "12"
+    - url: https://www.youtube.com/watch?v=LrAzPbbWRqk
+      title: Por que Tech Leads "Bonzinhos" Fracassam
+      author: Felipe Adamoli
+      type: video
+      tags:
+        - Liderança e Inspiração
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - senior
+        - tl
+        - staff
+      language: pt_br
+      duration: "9"
+    - url: https://www.youtube.com/watch?v=jehsLnGF2ns
+      title: O Erro Oculto que Trava o Crescimento de Desenvolvedores
+      author: Felipe Adamoli
+      type: video
+      tags:
+        - Entrega de Valor
+        - Carreira
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+        - tl
+      language: pt_br
+      duration: "12"
+    - url: https://www.youtube.com/watch?v=hlCLAg3hkMA
+      title: Pare de Travar a evolução do seu Time Técnico
+      author: Felipe Adamoli
+      type: video
+      tags:
+        - Liderança e Inspiração
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - senior
+        - tl
+        - staff
+      language: pt_br
+      duration: "10"
+    - url: https://www.youtube.com/watch?v=MfY7GitO5-c
+      title: Por que muitos devs não evoluem para sênior
+      author: Felipe Adamoli
+      type: video
+      tags:
+        - Liderança e Inspiração
+        - Carreira
+      is_paid: false
+      level: beginner
+      career_bands:
+        - junior
+        - mid
+      language: pt_br
+      duration: "9"
+    - url: https://www.youtube.com/watch?v=TwMlcc73gtg
+      title: Ser Tech Lead não é sobre resolver tudo sozinho
+      author: Felipe Adamoli
+      type: video
+      tags:
+        - Liderança e Inspiração
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - senior
+        - tl
+        - staff
+      language: pt_br
+      duration: "10"
+    - url: https://www.youtube.com/watch?v=FPi1u80VhFI
+      title: Como Aumentar a Produtividade com IA Como Dev Sênior (Exemplo Completo)
+      author: Waldemar Neto
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - senior
+        - tl
+        - staff
+      language: pt_br
+      duration: "49"
+    - url: https://www.youtube.com/watch?v=ZPtK2f6WwUg
+      title: "Ferramentas, Práticas e Tendências na era da IA com Rodrigo Branas"
+      author: Waldemar Neto
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - senior
+        - tl
+        - staff
+      language: pt_br
+      duration: "108"
+    - url: https://www.youtube.com/watch?v=bliiVueOVpU
+      title: "Como Escalar Monólitos Modulares: O Guia Completo"
+      author: Waldemar Neto
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - senior
+        - tl
+        - staff
+      language: pt_br
+      duration: "15"
