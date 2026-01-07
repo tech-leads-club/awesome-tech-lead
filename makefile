@@ -1,4 +1,4 @@
-.PHONY: generate-readme setup
+.PHONY: generate-readme setup doctor
 
 setup:
 	@echo "Installing golang dependencies"
@@ -6,6 +6,9 @@ setup:
 
 generate-readme:
 	@go run cmd/generate_readme/main.go
+
+doctor:
+	@go run cmd/doctor/main.go
 
 # === Site ===
 site/generate/bin:
@@ -34,3 +37,4 @@ site/serve:
 	@$(SITE_PYTHON) -m http.server $(SITE_PORT) --directory build/site
 
 all: setup generate-readme site/generate
+

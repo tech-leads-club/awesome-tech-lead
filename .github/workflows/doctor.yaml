@@ -1,0 +1,34 @@
+name: Link Health Check
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Every Monday at 9am UTC
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  doctor:
+    name: Check catalog links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.23"
+
+      - name: Run doctor
+        run: make doctor
+
+      - name: Send Discord notification on failure
+        if: failure()
+        uses: stegzilla/discord-notify@v4
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          title: Links quebrados no catálogo
+          color: "#FE0C5C"
+          message: |
+            **[Awesome Tech Lead]** Foram detectados links quebrados no catálogo.
+
+            Detalhes: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
