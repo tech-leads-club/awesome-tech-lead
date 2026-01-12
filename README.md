@@ -61,7 +61,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [Como Testes de Segurança em IAs Generativas São Feitos](https://www.youtube.com/watch?v=-Zwdnv3hWbA) por Roberta Robert | `Avançado` `Vídeo` `Grátis` |
 | [Construindo APIs testáveis com Node.js](https://leanpub.com/construindo-apis-testaveis-com-nodejs/) por Waldemar Neto | `Arquitetura e Design` `Iniciante` `Livro` `Grátis` |
 | [Construindo Aplicações RAG](https://www.techleads.club/c/rag-com-node-js) por Daniel Castro | `Intermediário` `Curso` `Pago` |
-| [Crafting Interpreters](https://craftinginterpreters.com/) por Robert Nystrom | `Avançado` `Livro` `Pago` |
+| [Crafting Interpreters](https://craftinginterpreters.com/) por Robert Nystrom | `Avançado` `Livro` `Grátis` |
 | [Criando APIs Cognitivas com RAG e Node.js](https://www.youtube.com/watch?v=RWq42soYrH8) por Daniel Castro | `Intermediário` `Vídeo` `Grátis` |
 | [Curso de Clean Code e Clean Architecture com Rodrigo Branas](https://branas.io/) por Rodrigo Branas | `Arquitetura e Design` `Intermediário` `Curso` `Pago` |
 | [Curso de Node.js completo com Typescript, Jest, TDD](https://www.youtube.com/watch?v=W2ld5xRS3cY&list=PLz_YTBuxtxt6_Zf1h-qzNsvVt46H8ziKh) por Waldemar Neto | `Arquitetura e Design` `Intermediário` `Curso` `Grátis` |

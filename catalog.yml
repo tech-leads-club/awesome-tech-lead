@@ -1863,7 +1863,7 @@ catalog:
       type: book
       tags:
         - Excelência Técnica
-      is_paid: true
+      is_paid: false
       level: advanced
       career_bands:
         - senior
