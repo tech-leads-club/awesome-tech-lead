@@ -93,7 +93,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [Introdução a observabilidade com OpenTelemetry](https://www.techleads.club/c/aulas-da-comunidade/aula-introducao-a-observabilidade-com-opentelemetry) por Rodrigo Klaes | `Site Reliability Engineering` `Intermediário` `Vídeo` `Pago` |
 | [Introdução ao OpenTelemetry](https://www.youtube.com/watch?v=fuIHvIsd_lg) por Dose De Telemetria | `Site Reliability Engineering` `Iniciante` `Vídeo` `Grátis` |
 | [Lessons Learned from Scaling Uber to 2000 Engineers, 1000 Services, and 8000 Git repositories](https://highscalability.com/lessons-learned-from-scaling-uber-to-2000-engineers-1000-ser) por High Scalability | `Arquitetura e Design` `Avançado` `Artigo` `Grátis` |
-| [Listão de Conteudos Sobre Monolitos Modulares](https://www.techleads.club/c/desenvolvimento-e-arquitetura-de-software/listao-de-conteudo-sobre-monolitos-modulares-b738e94d-a04e-4fc7-bde9-c150170767fd) por Waldemar Neto | `Arquitetura e Design` `Intermediário` `Artigo` `Grátis` |
+| [Listão de Conteudos Sobre Monolitos Modulares](https://www.techleads.club/c/compartilhe-aprenda/listao-de-conteudo-sobre-monolitos-modulares) por Waldemar Neto | `Arquitetura e Design` `Intermediário` `Artigo` `Grátis` |
 | [Making Reliable Distributed Systems in the Presence of Software Errors](https://www.goodreads.com/book/show/17948832-making-reliable-distributed-systems-in-the-presence-of-software-errors) por Joe Armstrong | `Site Reliability Engineering` `Avançado` `Livro` `Pago` |
 | [Manual de incidentes da Atlassian](https://www.atlassian.com/br/incident-management/get-the-handbook) por Atlassian | `Site Reliability Engineering` `Intermediário` `Livro` `Grátis` |
 | [Model Context Protocol (MCP) - the good parts](https://www.youtube.com/watch?v=mBxhBESebzc) por Renato de Lima Santos | `Intermediário` `Vídeo` `Grátis` |
@@ -109,13 +109,14 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [O que é a Engenharia do Caos e o Exército Símio da Netflix](https://pablo-christian.medium.com/o-que-%C3%A9-a-engenharia-do-caos-e-o-ex%C3%A9rcito-s%C3%ADmio-da-netflix-934dbfe04fe2) por Pablo Christian Pereira Nazareth | `Site Reliability Engineering` `Intermediário` `Artigo` `Grátis` |
 | [O que é Site Reliability Engineering](https://www.redhat.com/pt-br/topics/devops/what-is-sre) por RedHat | `Site Reliability Engineering` `Iniciante` `Artigo` `Grátis` |
 | [O Que é Tracing Distribuído e Por Que Você Precisa Usar Agora](https://www.youtube.com/watch?v=gMPvWXesHO4) por Fabricio Veronez | `Site Reliability Engineering` `Intermediário` `Vídeo` `Grátis` |
+| [Observability in deep](https://www.youtube.com/playlist?list=PL6o9L5ukTTEOtEsbMn377QfgYi_dn6Hor) por Mario Valente | `Site Reliability Engineering` `Intermediário` `Curso` `Grátis` |
 | [On Pair Programming](https://martinfowler.com/articles/on-pair-programming.html) por Birgitta Böckeler, Nina Siessegger | `Intermediário` `Artigo` `Grátis` |
 | [On Writing Well: The Classic Guide to Writing Nonfiction](https://www.amazon.com/Writing-Well-Classic-Guide-Nonfiction/dp/0060891548) por William Zinsser  | `Qualidade` `Abrangência de Impacto` `Impacto no Negócio` `Iniciante` `Livro` `Pago` |
 | [Padrões de Multi Agents e Agents](https://www.youtube.com/watch?v=vyQ2UzRR5Lw) por Rafael Girolineto | `Intermediário` `Vídeo` `Grátis` |
 | [Patterns of Enterprise Application Architecture](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420) por Martin Fowler | `Arquitetura e Design` `Avançado` `Livro` `Pago` |
 | [Pragmatic Thinking and Learning: Refactor Your Wetware](https://www.amazon.com/Pragmatic-Thinking-Learning-Refactor-Programmers/dp/1934356050) por Andy Hunt  | `Iniciante` `Livro` `Pago` |
 | [Princípio de Inversão de Dependência: a chave para se proteger de mudanças externas](https://www.techleads.club/c/desenvolvimento-e-arquitetura-de-software/inversao-de-dependencia-protega-se-de-mudancas-externas) por William Calderipe | `Arquitetura e Design` `Intermediário` `Artigo` `Pago` |
-| [Qual o custo de sacrificar qualidade por velocidade?](https://www.techleads.club/c/gerenciamento-e-estrategia/custo-de-sacrificar-qualidade-por-velocidade-bc7eb1b0-db15-4d11-affe-249164d8ba6f) por William Calderipe | `Qualidade` `Intermediário` `Artigo` `Grátis` |
+| [Qual o custo de sacrificar qualidade por velocidade?](https://www.techleads.club/c/compartilhe-aprenda/custo-de-sacrificar-qualidade-por-velocidade) por William Calderipe | `Qualidade` `Intermediário` `Artigo` `Grátis` |
 | [Quanto de Telemetria é Essencial?](https://www.youtube.com/watch?v=e5-rDiFbLfU) por Dose De Telemetria | `Site Reliability Engineering` `Iniciante` `Vídeo` `Grátis` |
 | [RailsConf 2014 - You are Not an Impostor by Nickolas Means](https://www.youtube.com/watch?v=l_Vqp1dPuPo) por Nickolas Means | `Intermediário` `Vídeo` `Grátis` |
 | [Refatoração: Aperfeiçoando o Design de Códigos Existentes](https://www.amazon.com.br/Refatora%C3%A7%C3%A3o-Aperfei%C3%A7oando-Design-C%C3%B3digos-Existentes/dp/8575227246) por Martin Fowler | `Arquitetura e Design` `Intermediário` `Livro` `Pago` |
@@ -180,7 +181,7 @@ necessidades do negócio.
 | [Planejamento e Execução em times de engenharia e produto](https://www.techleads.club/c/aulas-semanais/aula-planejamento-e-execucao-em-times-de-engenharia-e-produto) por Felipe Adamoli | `Avançado` `Vídeo` `Pago` |
 | [Por Que Suas Estimativas SEMPRE Atrasam?](https://www.youtube.com/watch?v=5QbOjNntjY0) por Felipe Adamoli | `Intermediário` `Vídeo` `Grátis` |
 | [Product management is broken. Engineers can fix it](https://newsletter.posthog.com/p/product-management-is-broken-engineers) por James Hawkins | `Gestão` `Intermediário` `Artigo` `Grátis` |
-| [Qual o custo de sacrificar qualidade por velocidade?](https://www.techleads.club/c/gerenciamento-e-estrategia/custo-de-sacrificar-qualidade-por-velocidade-bc7eb1b0-db15-4d11-affe-249164d8ba6f) por William Calderipe | `Qualidade` `Intermediário` `Artigo` `Grátis` |
+| [Qual o custo de sacrificar qualidade por velocidade?](https://www.techleads.club/c/compartilhe-aprenda/custo-de-sacrificar-qualidade-por-velocidade) por William Calderipe | `Qualidade` `Intermediário` `Artigo` `Grátis` |
 | [SCRUM Development Process](https://scrumorg-website-prod.s3.amazonaws.com/drupal/2016-09/Scrum%20OOPSLA%201995.pdf) por Ken Schwaber | `Gestão` `Intermediário` `Artigo` `Grátis` |
 | [Sprint a Sprint: Erros e acertos na transformação cultural de um time ágil](https://www.goodreads.com/book/show/53266589-sprint-a-sprint?from_search=true&from_srp=true&qid=5EOUIYgWqK&rank=1) por Mary Provinciatto, Paulo Caroli | `Gestão` `Iniciante` `Livro` `Pago` |
 | [The Lean Startup](https://www.goodreads.com/book/show/10127019-the-lean-startup) por Eric Ries | `Iniciante` `Livro` `Pago` |
@@ -200,7 +201,6 @@ dar feedback.
 
 | Título                                                          | Tags        |
 |-----------------------------------------------------------------|-------------|
-| [17 Traits of Awesome Tech Leads](https://www.trinitytakei.io/blog/17-traits-of-awesome-tech-leads) por Trinity Takei | `Intermediário` `Artigo` `Grátis` |
 | [5 Erros de Comunicação que TRAVARAM a MINHA Carreira em Tech](https://www.youtube.com/watch?v=GIQIs9u5aLA) por Felipe Adamoli | `Carreira` `Intermediário` `Vídeo` `Grátis` |
 | [A Day in the Life of a Thoughtworks' Tech Lead: Robin Doherty](https://www.thoughtworks.com/insights/blog/day-life-thoughtworks-tech-lead-robin-doherty) por Robin Doherty | `Intermediário` `Artigo` `Grátis` |
 | [A Guide To Managing Technical Teams](https://www.youtube.com/watch?v=jMpCF0Z623s) por Modern Software Engineering | `Managing Technical Teams` `Dave Farley` `Intermediário` `Vídeo` `Grátis` |
