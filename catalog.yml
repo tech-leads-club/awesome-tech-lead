@@ -2760,3 +2760,20 @@ catalog:
         - staff
       language: pt_br
       duration: "81"
+    - url: https://www.youtube.com/playlist?list=PL6o9L5ukTTEOtEsbMn377QfgYi_dn6Hor
+      title: Observability in deep
+      author: Mario Valente
+      type: course
+      tags:
+        - Excelência Técnica
+        - Site Reliability Engineering
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+        - tl
+        - staff
+        - principal
+      language: pt_br
+      duration: "360"
