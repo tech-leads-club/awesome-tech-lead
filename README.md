@@ -8,7 +8,7 @@
 </div>
 <br>
 
-Lista de conteúdo sobre lideraça técnica curada pelos membros da comunidade
+Lista de conteúdo sobre liderança técnica curada pelos membros da comunidade
 [TechLeads.club 💎](https://comece.techleads.club?utm_source=awesome-tech-lead&utm_medium=readme).
 
 O conteúdo está categorizado nos três pilares da comunidade: Excelência
@@ -52,7 +52,7 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [Build Abstractions Not Illusions • Gregor Hohpe • YOW! 2023](https://www.youtube.com/watch?v=aWZFRk-w3ng) por GOTO Conferences | `Gregor Hohpe` `Intermediário` `Vídeo` `Grátis` |
 | [Building Event-Driven Microservices: Leveraging Organizational Data at Scale](https://www.amazon.com/Building-Event-Driven-Microservices-Leveraging-Organizational/dp/1492057894) por Adam Bellemare | `Arquitetura e Design` `Impacto no Negócio` `Abrangência de Impacto` `Avançado` `Livro` `Pago` |
 | [Building Evolutionary Architectures: Support Constant Change](https://www.amazon.com.br/Building-Evolutionary-Architectures-Neal-Ford/dp/1491986360) por Neal Ford, Patrick Kua, Rebecca Parsons | `Arquitetura e Design` `Impacto no Negócio` `Abrangência de Impacto` `Avançado` `Livro` `Pago` |
-| [Clube do Livro - Fundamentos da Arquitetura de Software: Ultimo Encontro](https://www.techleads.club/c/eventos-da-comunidade/clube-do-livro-fundamentos-da-arquitetura-de-software-2-encontro-c073a2-ce3d1f) por Tech Leads club | `Arquitetura e Design` `Intermediário` `Vídeo` `Pago` |
+| [Clube do Livro - Fundamentos da Arquitetura de Software: Último Encontro](https://www.techleads.club/c/eventos-da-comunidade/clube-do-livro-fundamentos-da-arquitetura-de-software-2-encontro-c073a2-ce3d1f) por Tech Leads club | `Arquitetura e Design` `Intermediário` `Vídeo` `Pago` |
 | [CMU Database Group](https://www.youtube.com/@CMUDatabaseGroup) por Carnegie Mellon | `Site Reliability Engineering` `Avançado` `Feed` `Grátis` |
 | [Como Aumentar a Produtividade com IA Como Dev Sênior (Exemplo Completo)](https://www.youtube.com/watch?v=FPi1u80VhFI) por Waldemar Neto | `Intermediário` `Vídeo` `Grátis` |
 | [Como decisões ruins acontecem e como reverter](https://www.techleads.club/c/aulas-semanais/aula-como-decisoes-ruins-acontecem-e-como-reverter) por Waldemar Neto | `Arquitetura e Design` `Abrangência de Impacto` `Impacto no Negócio` `Intermediário` `Vídeo` `Pago` |
@@ -93,12 +93,12 @@ arquiteturas para criar soluções robustas, escaláveis e de alta qualidade.
 | [Introdução a observabilidade com OpenTelemetry](https://www.techleads.club/c/aulas-da-comunidade/aula-introducao-a-observabilidade-com-opentelemetry) por Rodrigo Klaes | `Site Reliability Engineering` `Intermediário` `Vídeo` `Pago` |
 | [Introdução ao OpenTelemetry](https://www.youtube.com/watch?v=fuIHvIsd_lg) por Dose De Telemetria | `Site Reliability Engineering` `Iniciante` `Vídeo` `Grátis` |
 | [Lessons Learned from Scaling Uber to 2000 Engineers, 1000 Services, and 8000 Git repositories](https://highscalability.com/lessons-learned-from-scaling-uber-to-2000-engineers-1000-ser) por High Scalability | `Arquitetura e Design` `Avançado` `Artigo` `Grátis` |
-| [Listão de Conteudos Sobre Monolitos Modulares](https://www.techleads.club/c/compartilhe-aprenda/listao-de-conteudo-sobre-monolitos-modulares) por Waldemar Neto | `Arquitetura e Design` `Intermediário` `Artigo` `Grátis` |
+| [Listão de Conteúdos Sobre Monolitos Modulares](https://www.techleads.club/c/compartilhe-aprenda/listao-de-conteudo-sobre-monolitos-modulares) por Waldemar Neto | `Arquitetura e Design` `Intermediário` `Artigo` `Grátis` |
 | [Making Reliable Distributed Systems in the Presence of Software Errors](https://www.goodreads.com/book/show/17948832-making-reliable-distributed-systems-in-the-presence-of-software-errors) por Joe Armstrong | `Site Reliability Engineering` `Avançado` `Livro` `Pago` |
 | [Manual de incidentes da Atlassian](https://www.atlassian.com/br/incident-management/get-the-handbook) por Atlassian | `Site Reliability Engineering` `Intermediário` `Livro` `Grátis` |
 | [Model Context Protocol (MCP) - the good parts](https://www.youtube.com/watch?v=mBxhBESebzc) por Renato de Lima Santos | `Intermediário` `Vídeo` `Grátis` |
 | [Modelos de Autorização: RBAC, ABAC e ReBAC](https://www.techleads.club/c/aulas-semanais/aula-modelos-de-autorizacao-rbac-abac-e-rebac) por William Calderipe | `Arquitetura e Design` `Iniciante` `Vídeo` `Pago` |
-| [Monitoramento de aplicações por onde começar ? - 4 golden signals do SRE](https://www.youtube.com/watch?v=ahy6PDWoVHM) por Fabricio Veronez | `Site Reliability Engineering` `Intermediário` `Vídeo` `Grátis` |
+| [Monitoramento de aplicações por onde começar? - 4 golden signals do SRE](https://www.youtube.com/watch?v=ahy6PDWoVHM) por Fabricio Veronez | `Site Reliability Engineering` `Intermediário` `Vídeo` `Grátis` |
 | [Monitoring Modern Infrastructure eBook](https://www.datadoghq.com/ebook/monitoring-modern-infrastructure/) por DataDog | `Site Reliability Engineering` `Intermediário` `Livro` `Grátis` |
 | [Monolito Modular na prática](https://www.techleads.club/c/eventos-da-comunidade/live-monolito-modular-na-pratica) por Victor | `Arquitetura e Design` `Intermediário` `Vídeo` `Pago` |
 | [Montando um PDI - Plano de Desenvolvimento Individual](https://www.techleads.club/c/aulas-semanais/) por Felipe Adamoli | `Carreira` `Iniciante` `Vídeo` `Pago` |
