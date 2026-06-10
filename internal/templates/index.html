@@ -75,16 +75,20 @@
                 syncThemeControls(getThemeMode());
 
                 document.querySelectorAll('[data-theme-option]').forEach((button) => {
+                    const selectThemeOption = () => applyThemeMode(button.dataset.themeOption, true);
+
                     button.addEventListener('pointerdown', (event) => {
                         event.preventDefault();
-                        applyThemeMode(button.dataset.themeOption, true);
+                        selectThemeOption();
                         button.focus();
                     });
+
+                    button.addEventListener('click', selectThemeOption);
 
                     button.addEventListener('keydown', (event) => {
                         if (event.key === 'Enter' || event.key === ' ') {
                             event.preventDefault();
-                            applyThemeMode(button.dataset.themeOption, true);
+                            selectThemeOption();
                         }
                     });
                 });
@@ -215,7 +219,7 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" x-data="catalog">
         <div class="mb-6 flex justify-end">
-            <div class="inline-flex rounded-lg border border-gray-200 bg-white p-1 shadow-sm dark:border-gray-700 dark:bg-gray-900" aria-label="Selecionar tema">
+            <div class="inline-flex rounded-lg border border-gray-200 bg-white p-1 shadow-sm dark:border-gray-700 dark:bg-gray-900" role="group" aria-label="Selecionar tema">
                 <button
                     type="button"
                     data-theme-option="system"
