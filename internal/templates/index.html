@@ -81,19 +81,31 @@
                 syncThemeControls(getThemeMode());
 
                 document.querySelectorAll('[data-theme-cycle]').forEach((button) => {
+                    let lastPointerActivation = 0;
                     const cycleThemeOption = () => {
                         const currentMode = getThemeMode();
                         const nextMode = themeModes[(themeModes.indexOf(currentMode) + 1) % themeModes.length];
                         applyThemeMode(nextMode, true);
                     };
 
-                    button.addEventListener('click', cycleThemeOption);
-
-                    button.addEventListener('keydown', (event) => {
-                        if (event.key === 'Enter' || event.key === ' ') {
-                            event.preventDefault();
-                            cycleThemeOption();
+                    button.addEventListener('pointerdown', (event) => {
+                        if (event.button !== undefined && event.button !== 0) {
+                            return;
                         }
+
+                        event.preventDefault();
+                        lastPointerActivation = Date.now();
+                        cycleThemeOption();
+                        button.focus();
+                    });
+
+                    button.addEventListener('click', (event) => {
+                        if (Date.now() - lastPointerActivation < 500) {
+                            event.preventDefault();
+                            return;
+                        }
+
+                        cycleThemeOption();
                     });
                 });
             });
