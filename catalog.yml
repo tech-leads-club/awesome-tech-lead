@@ -2776,4 +2776,19 @@ catalog:
         - staff
         - principal
       language: pt_br
-      duration: "360"
+      duration: "360"    
+    - url: https://www.youtube.com/@benjdicken
+      title: Databases, distributed systems, software engineering
+      author: Ben Dicken
+      type: video
+      tags:
+        - Excelência Técnica
+      is_paid: false
+      level: intermediate
+      career_bands:
+        - mid
+        - senior
+        - tl
+        - staff
+        - principal
+      language: en_us
